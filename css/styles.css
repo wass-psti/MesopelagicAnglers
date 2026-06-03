@@ -1271,3 +1271,178 @@ textarea:focus {
     white-space: normal;
   }
 }
+
+/* SESSION CARDS */
+.session-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.session-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  padding: 22px 20px 24px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(7, 23, 37, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow:
+    0 12px 36px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+.session-card::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: -18px;
+  height: 36px;
+  border-radius: 999px;
+  opacity: 0.95;
+  filter: blur(24px);
+  z-index: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.session-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.session-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.session-card:hover::after {
+  transform: translateY(-4px);
+}
+
+.session-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.session-card h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: clamp(1.25rem, 1.6vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.session-hours {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.session-time {
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.98rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.session-card p {
+  color: rgba(226, 237, 247, 0.82);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* MORNING - YELLOW */
+.session-card.morning {
+  border-color: rgba(250, 204, 21, 0.20);
+}
+
+.session-card.morning .session-kicker,
+.session-card.morning .session-hours {
+  color: #facc15;
+}
+
+.session-card.morning::after {
+  background: rgba(250, 204, 21, 0.44);
+}
+
+.session-card.morning:hover {
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(250, 204, 21, 0.14) inset;
+}
+
+/* AFTERNOON - ORANGE */
+.session-card.afternoon {
+  border-color: rgba(249, 115, 22, 0.20);
+}
+
+.session-card.afternoon .session-kicker,
+.session-card.afternoon .session-hours {
+  color: #fb923c;
+}
+
+.session-card.afternoon::after {
+  background: rgba(249, 115, 22, 0.44);
+}
+
+.session-card.afternoon:hover {
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(249, 115, 22, 0.14) inset;
+}
+
+/* NOCTURNAL - PURPLE */
+.session-card.nocturnal {
+  border-color: rgba(168, 85, 247, 0.22);
+}
+
+.session-card.nocturnal .session-kicker,
+.session-card.nocturnal .session-hours {
+  color: #c084fc;
+}
+
+.session-card.nocturnal::after {
+  background: rgba(168, 85, 247, 0.44);
+}
+
+.session-card.nocturnal:hover {
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(168, 85, 247, 0.16) inset;
+}
+
+/* FULL-DAY - GREEN */
+.session-card.fullday {
+  border-color: rgba(34, 197, 94, 0.22);
+}
+
+.session-card.fullday .session-kicker,
+.session-card.fullday .session-hours {
+  color: #4ade80;
+}
+
+.session-card.fullday::after {
+  background: rgba(34, 197, 94, 0.44);
+}
+
+.session-card.fullday:hover {
+  box-shadow:
+    0 20px 54px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(34, 197, 94, 0.14) inset;
+}

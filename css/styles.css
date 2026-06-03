@@ -1364,5 +1364,76 @@ body {
   .image-card-content {
     padding: 22px;
   }
+}
 
+/* =========================================================
+   SHOWCASE IMAGE FIX
+   Use this for feature visuals like Fleet section
+   ========================================================= */
+
+.showcase-card {
+  position: relative;
+  min-height: 520px;
+  border-radius: 30px;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.showcase-base {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 30px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.14);
+  transition: transform 240ms ease, box-shadow 240ms ease, filter 240ms ease;
+}
+
+.showcase-card:hover .showcase-base {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 32px 90px rgba(8, 145, 178, 0.20);
+  filter: saturate(1.06) contrast(1.02);
+}
+
+/* Optional transparent popout subject layer */
+.showcase-popout {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  width: min(88%, 560px);
+  pointer-events: none;
+  z-index: 5;
+  transition: transform 260ms ease, filter 260ms ease;
+  filter: drop-shadow(0 20px 35px rgba(15, 23, 42, 0.18));
+}
+
+.showcase-card:hover .showcase-popout {
+  transform: translateX(-50%) translateY(-16px) scale(1.03);
+  filter: drop-shadow(0 28px 48px rgba(8, 145, 178, 0.22));
+}
+
+/* Tighten the first fleet grid a bit */
+.fleet-intro-grid {
+  align-items: start;
+}
+
+/* Mobile */
+@media (max-width: 860px) {
+  .showcase-card {
+    min-height: auto;
+  }
+
+  .showcase-base {
+    height: 340px;
+  }
+
+  .showcase-popout {
+    width: 90%;
+    bottom: -10px;
+  }
 }

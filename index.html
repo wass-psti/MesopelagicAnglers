@@ -1,1 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Mesopelagic Anglers | Deep Sea Discovery</title>
+  <meta
+    name="description"
+    content="Mesopelagic Anglers is a deep-sea inspired project exploring ocean life, anglerfish biology, and the mysterious twilight zone of the sea."
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            manrope: ["Manrope", "sans-serif"],
+          },
+          colors: {
+            abyss: "#020617",
+            deep: "#061826",
+            ocean: "#0f766e",
+            glow: "#22d3ee",
+            algae: "#14b8a6",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: "Manrope", sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(34, 211, 238, 0.18), transparent 28%),
+        radial-gradient(circle at 80% 25%, rgba(20, 184, 166, 0.12), transparent 24%),
+        linear-gradient(180deg, #020617 0%, #061826 45%, #020617 100%);
+    }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.68);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .glow-ring {
+      box-shadow:
+        0 0 24px rgba(34, 211, 238, 0.25),
+        inset 0 0 24px rgba(20, 184, 166, 0.12);
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+
+<body class="text-slate-100">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-abyss/85 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400/10 text-cyan-300 glow-ring">
+          ✦
+        </div>
+        <span class="text-lg font-extrabold tracking-wide">
+          Mesopelagic Anglers
+        </span>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm font-semibold text-slate-300 md:flex">
+        <a href="#about" class="transition hover:text-cyan-300">About</a>
+        <a href="#zone" class="transition hover:text-cyan-300">The Zone</a>
+        <a href="#features" class="transition hover:text-cyan-300">Features</a>
+        <a href="#contact" class="transition hover:text-cyan-300">Contact</a>
+      </div>
+
+      <a
+        href="#contact"
+        class="hidden rounded-full bg-cyan-300 px-5 py-2 text-sm font-bold text-slate-950 transition hover:bg-cyan-200 md:inline-flex"
+      >
+        Join the Dive
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="grid-bg relative flex min-h-screen items-center overflow-hidden px-6 pt-28">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-abyss/30 to-abyss"></div>
+
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 py-20 lg:grid-cols-2">
+        <div>
+          <p class="mb-4 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
+            Exploring the ocean’s twilight layer
+          </p>
+
+          <h1 class="max-w-4xl text-5xl font-extrabold leading-tight tracking-tight text-white md:text-7xl">
+            Into the deep, where light becomes a rumor.
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            Mesopelagic Anglers is a deep-sea inspired project focused on the mysterious
+            mesopelagic zone, bioluminescent life, and the strange beauty of anglerfish.
+            It is science, mystery, and ocean design stitched together like a very stylish sea monster.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#about"
+              class="rounded-full bg-cyan-300 px-7 py-3 text-center font-bold text-slate-950 transition hover:bg-cyan-200"
+            >
+              Explore Project
+            </a>
+            <a
+              href="#zone"
+              class="rounded-full border border-white/15 px-7 py-3 text-center font-bold text-white transition hover:border-cyan-300/60 hover:text-cyan-200"
+            >
+              Learn the Zone
+            </a>
+          </div>
+        </div>
+
+        <div class="glass glow-ring relative rounded-[2rem] p-8">
+          <div class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-cyan-300/20 blur-3xl"></div>
+          <div class="absolute -bottom-10 -left-10 h-32 w-32 rounded-full bg-teal-400/20 blur-3xl"></div>
+
+          <div class="rounded-[1.5rem] border border-cyan-300/20 bg-slate-950/70 p-8">
+            <div class="mb-6 flex items-center justify-between">
+              <span class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">
+                Depth Scan
+              </span>
+              <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-200">
+                Active
+              </span>
+            </div>
+
+            <div class="space-y-5">
+              <div>
+                <div class="mb-2 flex justify-between text-sm text-slate-300">
+                  <span>Sunlight</span>
+                  <span>Low</span>
+                </div>
+                <div class="h-3 overflow-hidden rounded-full bg-slate-800">
+                  <div class="h-full w-1/4 rounded-full bg-cyan-300"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2 flex justify-between text-sm text-slate-300">
+                  <span>Bioluminescence</span>
+                  <span>High</span>
+                </div>
+                <div class="h-3 overflow-hidden rounded-full bg-slate-800">
+                  <div class="h-full w-4/5 rounded-full bg-teal-300"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="mb-2 flex justify-between text-sm text-slate-300">
+                  <span>Mystery Level</span>
+                  <span>Absurd</span>
+                </div>
+                <div class="h-3 overflow-hidden rounded-full bg-slate-800">
+                  <div class="h-full w-[95%] rounded-full bg-cyan-200"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-sm leading-7 text-slate-300">
+                <span class="font-bold text-cyan-200">Mission:</span>
+                document, explain, and visualize life in the deep ocean’s twilight region,
+                especially organisms that use light as a tool for survival.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="px-6 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">
+            About the Project
+          </p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+            A tribute to the strange intelligence of the deep sea.
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-300">
+            The mesopelagic zone sits roughly between 200 and 1,000 meters below the ocean surface.
+            It is too deep for strong sunlight, yet not fully dark. Many animals here survive through
+            camouflage, pressure adaptation, vertical migration, and bioluminescence.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="glass rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-cyan-200">Bioluminescence</h3>
+            <p class="mt-3 leading-7 text-slate-300">
+              Many deep-sea creatures generate light to lure prey, communicate, hide, or confuse predators.
+            </p>
+          </article>
+
+          <article class="glass rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-cyan-200">Adaptation</h3>
+            <p class="mt-3 leading-7 text-slate-300">
+              Life in this layer must survive cold temperatures, low food supply, and immense pressure.
+            </p>
+          </article>
+
+          <article class="glass rounded-3xl p-6">
+            <h3 class="text-xl font-bold text-cyan-200">Mystery</h3>
+            <p class="mt-3 leading-7 text-slate-300">
+              The deep sea remains one of Earth’s least explored environments. Basically Earth’s final DLC.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone -->
+    <section id="zone" class="border-y border-white/10 bg-slate-950/50 px-6 py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">
+            The Mesopelagic Zone
+          </p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+            The ocean’s twilight layer.
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-slate-300">
+            This zone is a biological transition area. Sunlight fades, photosynthesis becomes impossible,
+            and animals rely on stealth, light organs, specialized eyes, and energy-efficient movement.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <div class="space-y-5">
+            <div class="rounded-2xl bg-cyan-300/10 p-5">
+              <p class="text-sm font-bold text-cyan-200">Epipelagic Zone</p>
+              <p class="text-slate-300">0–200 m · Sunlit surface waters</p>
+            </div>
+
+            <div class="rounded-2xl border border-cyan-300/30 bg-cyan-300/15 p-5">
+              <p class="text-sm font-bold text-cyan-200">Mesopelagic Zone</p>
+              <p class="text-slate-300">200–1,000 m · Twilight zone</p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 p-5">
+              <p class="text-sm font-bold text-slate-200">Bathypelagic Zone</p>
+              <p class="text-slate-400">1,000–4,000 m · Midnight zone</p>
+            </div>
+
+            <div class="rounded-2xl bg-white/5 p-5">
+              <p class="text-sm font-bold text-slate-200">Abyssopelagic Zone</p>
+              <p class="text-slate-400">4,000–6,000 m · Abyssal zone</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="px-6 py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">
+            Project Features
+          </p>
+          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
+            Built for exploration, learning, and visual storytelling.
+          </h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="glass rounded-3xl p-6">
+            <div class="text-3xl">🐟</div>
+            <h3 class="mt-4 text-lg font-bold text-white">Species Notes</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">
+              Profiles for anglerfish and other deep-sea organisms.
+            </p>
+          </div>
+
+          <div class="glass rounded-3xl p-6">
+            <div class="text-3xl">🌊</div>
+            <h3 class="mt-4 text-lg font-bold text-white">Ocean Zones</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">
+              Simple explanations of depth layers and survival conditions.
+            </p>
+          </div>
+
+          <div class="glass rounded-3xl p-6">
+            <div class="text-3xl">💡</div>
+            <h3 class="mt-4 text-lg font-bold text-white">Light Systems</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">
+              Learn how bioluminescence supports hunting and defense.
+            </p>
+          </div>
+
+          <div class="glass rounded-3xl p-6">
+            <div class="text-3xl">🧭</div>
+            <h3 class="mt-4 text-lg font-bold text-white">Expedition Feel</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">
+              A clean visual interface inspired by research dashboards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="px-6 pb-24">
+      <div class="mx-auto max-w-4xl rounded-[2rem] border border-cyan-300/20 bg-cyan-300/10 p-8 text-center glow-ring md:p-12">
+        <h2 class="text-4xl font-extrabold tracking-tight text-white">
+          Ready to dive deeper?
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl leading-8 text-slate-300">
+          Use this starter page as the base for your GitHub Pages site. Replace the text,
+          add images, connect sections, or expand it into a full project website.
+        </p>
+
+        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+          <a
+            href="mailto:your-email@example.com"
+            class="rounded-full bg-cyan-300 px-7 py-3 font-bold text-slate-950 transition hover:bg-cyan-200"
+          >
+            Contact Us
+          </a>
+          <a
+            href="#"
+            class="rounded-full border border-white/15 px-7 py-3 font-bold text-white transition hover:border-cyan-300/60 hover:text-cyan-200"
+          >
+            Back to Surface
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 px-6 py-8">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-slate-400 md:flex-row">
+      <p>© 2026 Mesopelagic Anglers. All rights reserved.</p>
+      <p>Built for GitHub Pages.</p>
+    </div>
+  </footer>
+</body>
+</html>

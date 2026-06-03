@@ -51,6 +51,7 @@ img {
   margin-inline: auto;
 }
 
+/* HEADER */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -183,6 +184,7 @@ img {
   color: var(--orange);
 }
 
+/* HERO */
 .hero,
 .page-hero {
   position: relative;
@@ -229,11 +231,12 @@ img {
   pointer-events: none;
 }
 
+/* UPDATED IMAGE PATHS: your repo uses images/*.png */
 .hero-home {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.96) 0%, rgba(3, 16, 27, 0.76) 38%, rgba(3, 16, 27, 0.30) 100%),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10) 0%, rgba(3, 16, 27, 0.88) 100%),
-    url("../Images/hero-boat.jpg");
+    url("../images/hero-boat.png");
   background-position: center;
   background-size: cover;
 }
@@ -242,7 +245,7 @@ img {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.94), rgba(3, 16, 27, 0.45)),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10), rgba(3, 16, 27, 0.88)),
-    url("../Images/fishing-time-2.jpg");
+    url("../images/fishing-time-2.png");
   background-position: center;
   background-size: cover;
 }
@@ -251,7 +254,7 @@ img {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.94), rgba(3, 16, 27, 0.42)),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10), rgba(3, 16, 27, 0.88)),
-    url("../Images/game-king-boat.jpg");
+    url("../images/game-king-boat.png");
   background-position: center;
   background-size: cover;
 }
@@ -260,7 +263,7 @@ img {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.94), rgba(3, 16, 27, 0.42)),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10), rgba(3, 16, 27, 0.88)),
-    url("../Images/fishing-rods.jpg");
+    url("../images/fishing-rods.png");
   background-position: center;
   background-size: cover;
 }
@@ -269,7 +272,7 @@ img {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.94), rgba(3, 16, 27, 0.42)),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10), rgba(3, 16, 27, 0.88)),
-    url("../Images/sunset-1.jpg");
+    url("../images/sunset-1.png");
   background-position: center;
   background-size: cover;
 }
@@ -278,7 +281,7 @@ img {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.94), rgba(3, 16, 27, 0.42)),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10), rgba(3, 16, 27, 0.88)),
-    url("../Images/sunset-2.jpg");
+    url("../images/sunset-2.png");
   background-position: center;
   background-size: cover;
 }
@@ -287,7 +290,7 @@ img {
   background:
     linear-gradient(90deg, rgba(3, 16, 27, 0.94), rgba(3, 16, 27, 0.42)),
     linear-gradient(180deg, rgba(3, 16, 27, 0.10), rgba(3, 16, 27, 0.88)),
-    url("../Images/hero-boat2.jpg");
+    url("../images/hero-boat2.png");
   background-position: center;
   background-size: cover;
 }
@@ -405,6 +408,7 @@ p {
   text-transform: uppercase;
 }
 
+/* SECTIONS */
 .section {
   padding: 96px 0;
 }
@@ -437,6 +441,7 @@ p {
   line-height: 1.85;
 }
 
+/* TRUST STRIP */
 .trust-strip {
   position: relative;
   z-index: 5;
@@ -480,6 +485,7 @@ p {
   letter-spacing: 0.06em;
 }
 
+/* GRIDS */
 .grid-2,
 .grid-3,
 .grid-4 {
@@ -499,6 +505,7 @@ p {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* CARDS */
 .card {
   padding: 28px;
   border-radius: var(--radius);
@@ -529,6 +536,7 @@ p {
   text-transform: uppercase;
 }
 
+/* IMAGE CARDS */
 .image-card {
   min-height: 540px;
   display: flex;
@@ -554,37 +562,37 @@ p {
 .img-tier-1 {
   background-image:
     linear-gradient(180deg, rgba(3, 16, 27, 0.24), rgba(3, 16, 27, 0.94)),
-    url("../Images/fishing-time.jpg");
+    url("../images/fishing-time.png");
 }
 
 .img-tier-2 {
   background-image:
     linear-gradient(180deg, rgba(3, 16, 27, 0.18), rgba(3, 16, 27, 0.94)),
-    url("../Images/hero-boat2.jpg");
+    url("../images/hero-boat2.png");
 }
 
 .img-fleet {
   background-image:
     linear-gradient(180deg, rgba(3, 16, 27, 0.20), rgba(3, 16, 27, 0.88)),
-    url("../Images/game-king-boat.jpg");
+    url("../images/game-king-boat.png");
 }
 
 .img-map {
   background-image:
     linear-gradient(180deg, rgba(3, 16, 27, 0.12), rgba(3, 16, 27, 0.82)),
-    url("../Images/maps-1.jpg");
+    url("../images/orange-jeep.png");
 }
 
 .img-baits {
   background-image:
     linear-gradient(180deg, rgba(3, 16, 27, 0.16), rgba(3, 16, 27, 0.88)),
-    url("../Images/fishing-baits.jpg");
+    url("../images/fishing-baits.png");
 }
 
 .img-rods {
   background-image:
     linear-gradient(180deg, rgba(3, 16, 27, 0.16), rgba(3, 16, 27, 0.88)),
-    url("../Images/fishing-rods.jpg");
+    url("../images/fishing-rods.png");
 }
 
 .tags {
@@ -605,6 +613,7 @@ p {
   font-weight: 800;
 }
 
+/* LISTS */
 .check-list {
   display: grid;
   gap: 14px;
@@ -627,6 +636,7 @@ p {
   font-weight: 900;
 }
 
+/* FORM */
 .form-card {
   max-width: 960px;
   padding: 34px;
@@ -687,6 +697,7 @@ textarea:focus {
   color: rgba(199, 213, 228, 0.55);
 }
 
+/* CTA */
 .cta-box {
   text-align: center;
   padding: 76px 34px;
@@ -698,14 +709,12 @@ textarea:focus {
   box-shadow: var(--shadow);
 }
 
-.cta-box h2 {
-  margin-inline: auto;
-}
-
+.cta-box h2,
 .cta-box p {
   margin-inline: auto;
 }
 
+/* FOOTER */
 .site-footer {
   padding: 38px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.10);
@@ -736,6 +745,7 @@ textarea:focus {
   color: var(--orange);
 }
 
+/* RESPONSIVE */
 @media (max-width: 1120px) {
   .grid-4,
   .trust-grid {
@@ -783,7 +793,7 @@ textarea:focus {
   .hero-home {
     background:
       linear-gradient(180deg, rgba(3, 16, 27, 0.82) 0%, rgba(3, 16, 27, 0.96) 100%),
-      url("../Images/hero-boat.jpg");
+      url("../images/hero-boat.png");
     background-position: center;
     background-size: cover;
   }

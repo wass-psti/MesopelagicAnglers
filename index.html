@@ -1,602 +1,1357 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Mesopelagic Anglers | Offshore Sportfishing Charters in Mactan, Cebu</title>
+  <title>Mesopelagic Anglers | Fishing Charters in Mactan, Cebu</title>
   <meta
     name="description"
-    content="Private offshore sportfishing charters from Hadsan Beach Park, Mactan, Cebu to Danajon Bank. Premium boat, sonar, tackle, and guided fishing sessions."
+    content="Private offshore sportfishing charters from Hadsan Beach Park, Mactan, Cebu. Fish Danajon Bank, Caubian Islands, and deep Visayan Sea channels with premium boat, sonar, tackle, and crew."
   />
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   >
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            manrope: ["Manrope", "sans-serif"],
-          },
-          colors: {
-            abyss: "#020617",
-            deep: "#061826",
-            sonar: "#0f766e",
-            glow: "#22d3ee",
-            algae: "#14b8a6",
-            warning: "#f59e0b",
-          },
-        },
-      },
-    };
-  </script>
-
   <style>
+    :root {
+      --navy: #071725;
+      --navy-dark: #03101b;
+      --deep: #061d2d;
+      --blue: #0a3148;
+      --cyan: #21d4f3;
+      --teal: #13b8a6;
+      --orange: #ff7629;
+      --orange-dark: #e95e13;
+      --white: #ffffff;
+      --muted: #c7d5e4;
+      --soft: #90a4b8;
+      --border: rgba(255, 255, 255, 0.12);
+      --glass: rgba(7, 23, 37, 0.76);
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      --radius: 26px;
+      --max-width: 1280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: "Manrope", sans-serif;
+      font-family: "Manrope", Arial, sans-serif;
+      color: var(--white);
       background:
-        radial-gradient(circle at 15% 8%, rgba(34, 211, 238, 0.18), transparent 30%),
-        radial-gradient(circle at 82% 20%, rgba(20, 184, 166, 0.12), transparent 28%),
-        radial-gradient(circle at 50% 85%, rgba(14, 165, 233, 0.10), transparent 34%),
-        linear-gradient(180deg, #020617 0%, #061826 45%, #020617 100%);
+        radial-gradient(circle at 15% 5%, rgba(33, 212, 243, 0.16), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(255, 118, 41, 0.10), transparent 26%),
+        linear-gradient(180deg, #03101b 0%, #071725 45%, #020b12 100%);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-small {
+      padding: 72px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--orange);
+      box-shadow: 0 0 18px rgba(255, 118, 41, 0.6);
+    }
+
+    .section-label {
+      color: var(--orange);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 14px;
+      max-width: 780px;
+      font-size: clamp(2.2rem, 4vw, 4.1rem);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+      font-weight: 900;
+    }
+
+    .section-copy {
+      margin-top: 22px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 900;
+      transition: 180ms ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--orange);
+      box-shadow: 0 14px 30px rgba(255, 118, 41, 0.28);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255, 118, 41, 0.7);
+      color: #ffd2bd;
+      transform: translateY(-2px);
     }
 
     .glass {
-      background: rgba(15, 23, 42, 0.70);
+      background: var(--glass);
+      border: 1px solid var(--border);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      box-shadow: var(--shadow);
     }
 
-    .glass-strong {
-      background: rgba(2, 6, 23, 0.82);
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      background: rgba(7, 23, 37, 0.88);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(18px);
-      border: 1px solid rgba(34, 211, 238, 0.20);
     }
 
-    .glow-ring {
-      box-shadow:
-        0 0 24px rgba(34, 211, 238, 0.25),
-        inset 0 0 24px rgba(20, 184, 166, 0.12);
+    .nav {
+      height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
     }
 
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-      background-size: 40px 40px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: max-content;
     }
 
-    .hero-boat {
-      background-image:
-        linear-gradient(180deg, rgba(2, 6, 23, 0.18), rgba(2, 6, 23, 0.92)),
-        linear-gradient(90deg, rgba(34, 211, 238, 0.10), rgba(20, 184, 166, 0.08)),
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      border: 2px solid rgba(33, 212, 243, 0.35);
+      background:
+        radial-gradient(circle at center, rgba(33, 212, 243, 0.18), transparent 60%),
+        #071725;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(33, 212, 243, 0.25);
+    }
+
+    .brand-name {
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+
+    .nav-links a {
+      transition: 180ms ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.04);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 0 24px 24px;
+      background: rgba(7, 23, 37, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      color: var(--muted);
+      font-weight: 800;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-menu a:hover {
+      color: var(--white);
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 92px;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(3, 16, 27, 0.96) 0%, rgba(3, 16, 27, 0.76) 38%, rgba(3, 16, 27, 0.30) 100%),
+        linear-gradient(180deg, rgba(3, 16, 27, 0.10) 0%, rgba(3, 16, 27, 0.88) 100%),
         url("Images/hero-boat.jpg");
       background-position: center;
       background-size: cover;
     }
 
-    .dock-photo {
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background-image:
-        linear-gradient(180deg, rgba(2, 6, 23, 0.20), rgba(2, 6, 23, 0.88)),
-        url("Images/hadsan-dock.jpg");
-      background-position: center;
-      background-size: cover;
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(90deg, rgba(0,0,0,0.7), transparent 70%);
+      pointer-events: none;
     }
 
-    .danajon-photo {
-      background-image:
-        linear-gradient(180deg, rgba(2, 6, 23, 0.20), rgba(2, 6, 23, 0.90)),
-        url("Images/danajon-waters.jpg");
-      background-position: center;
-      background-size: cover;
-    }
-
-    .sonar-lines {
-      background:
-        radial-gradient(circle, rgba(34, 211, 238, 0.16) 0 2px, transparent 3px),
-        repeating-radial-gradient(circle, rgba(34, 211, 238, 0.18) 0 1px, transparent 1px 38px);
-    }
-
-    .nav-link {
-      color: rgb(203 213 225);
-      transition: color 180ms ease;
-    }
-
-    .nav-link:hover {
-      color: rgb(103 232 249);
-    }
-
-    .section-label {
-      display: inline-flex;
-      border: 1px solid rgba(34, 211, 238, 0.22);
-      background: rgba(34, 211, 238, 0.10);
-      color: rgb(165 243 252);
-      padding: 0.5rem 1rem;
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -160px;
+      width: 540px;
+      height: 540px;
       border-radius: 999px;
-      font-size: 0.875rem;
-      font-weight: 700;
+      border: 1px solid rgba(33, 212, 243, 0.18);
+      box-shadow:
+        0 0 0 52px rgba(33, 212, 243, 0.025),
+        0 0 0 104px rgba(33, 212, 243, 0.018),
+        0 0 0 156px rgba(33, 212, 243, 0.012);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 88px 0;
+    }
+
+    .hero h1 {
+      margin-top: 28px;
+      font-size: clamp(3.4rem, 8vw, 7.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.085em;
+      font-weight: 900;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      margin-top: 26px;
+      max-width: 650px;
+      color: #e2edf7;
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      line-height: 1.78;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: min(700px, 100%);
+      margin-top: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(3, 16, 27, 0.42);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-stat {
+      padding: 20px;
+      border-right: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-stat:last-child {
+      border-right: 0;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: clamp(1.3rem, 2vw, 1.75rem);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hero-stat span {
+      display: block;
+      margin-top: 8px;
+      color: #d3e1ef;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .trust-strip {
+      position: relative;
+      z-index: 4;
+      margin-top: -42px;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      overflow: hidden;
+      border-radius: 18px;
+      background: rgba(7, 23, 37, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .trust-item {
+      padding: 22px 18px;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 900;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 7px;
+      color: var(--soft);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      min-height: 180px;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      transition: 180ms ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 118, 41, 0.42);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .feature-card .number {
+      color: var(--orange);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .feature-card h3 {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: 900;
+    }
+
+    .feature-card p {
+      margin-top: 12px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.95rem;
+    }
+
+    .dark-panel {
+      background:
+        linear-gradient(180deg, rgba(8, 32, 49, 0.86), rgba(3, 16, 27, 0.94)),
+        radial-gradient(circle at 30% 0%, rgba(33, 212, 243, 0.16), transparent 32%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sessions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .session-card {
+      position: relative;
+      min-height: 310px;
+      padding: 28px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+        rgba(7, 23, 37, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: 180ms ease;
+    }
+
+    .session-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 118, 41, 0.5);
+    }
+
+    .session-card.featured {
+      border-color: rgba(255, 118, 41, 0.55);
+      box-shadow: 0 18px 55px rgba(255, 118, 41, 0.12);
+    }
+
+    .session-card::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -70px;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: rgba(33, 212, 243, 0.08);
+      border: 1px solid rgba(33, 212, 243, 0.16);
+    }
+
+    .session-tag {
+      color: var(--orange);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .session-card h3 {
+      margin-top: 16px;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .session-time {
+      margin-top: 14px;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 900;
+    }
+
+    .session-card p {
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .grounds-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 44px;
+    }
+
+    .ground-card {
+      min-height: 560px;
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .ground-card.tier-one {
+      background-image:
+        linear-gradient(180deg, rgba(3, 16, 27, 0.12), rgba(3, 16, 27, 0.92)),
+        url("Images/fishing-grounds.jpg");
+    }
+
+    .ground-card.tier-two {
+      background-image:
+        linear-gradient(180deg, rgba(3, 16, 27, 0.08), rgba(3, 16, 27, 0.94)),
+        url("Images/night-fishing.jpg");
+    }
+
+    .ground-content {
+      width: 100%;
+      padding: 28px;
+      border-radius: 24px;
+      background: rgba(3, 16, 27, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .ground-content h3 {
+      margin-top: 12px;
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+    }
+
+    .ground-content p {
+      margin-top: 18px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .fish-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .fish-tags span {
+      display: inline-flex;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: #ffd9c7;
+      background: rgba(255, 118, 41, 0.11);
+      border: 1px solid rgba(255, 118, 41, 0.20);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .fleet-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .fleet-photo {
+      min-height: 520px;
+      border-radius: 32px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(3, 16, 27, 0.16), rgba(3, 16, 27, 0.86)),
+        url("Images/fleet-boat.jpg");
+      background-position: center;
+      background-size: cover;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .fleet-photo::after {
+      content: "EXTREME 5.7M GAME KING";
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--white);
+      background: rgba(255, 118, 41, 0.88);
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .spec-card {
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid var(--border);
+    }
+
+    .spec-card small {
+      color: var(--orange);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    .spec-card h3 {
+      margin-top: 12px;
+      color: var(--white);
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+
+    .spec-card p {
+      margin-top: 12px;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.95rem;
+    }
+
+    .rates-box {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+      padding: 42px;
+      border-radius: 34px;
+      background:
+        linear-gradient(135deg, rgba(255, 118, 41, 0.16), rgba(33, 212, 243, 0.08)),
+        rgba(7, 23, 37, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: var(--shadow);
+    }
+
+    .rates-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .rates-list li {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.055);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .rates-list strong {
+      color: var(--white);
+    }
+
+    .faq-preview {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .faq-item {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+    }
+
+    .faq-item h3 {
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .faq-item p {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .booking-cta {
+      text-align: center;
+      padding: 76px 34px;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255, 118, 41, 0.22), transparent 36%),
+        linear-gradient(180deg, rgba(7, 23, 37, 0.88), rgba(3, 16, 27, 0.92));
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: var(--shadow);
+    }
+
+    .booking-cta h2 {
+      margin: 16px auto 0;
+      max-width: 760px;
+      font-size: clamp(2.2rem, 5vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      font-weight: 900;
+    }
+
+    .booking-cta p {
+      margin: 22px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .footer {
+      padding: 38px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      background: rgba(3, 16, 27, 0.78);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      color: var(--soft);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: var(--white);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-weight: 800;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    @media (max-width: 1120px) {
+      .sessions-grid,
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      }
+
+      .intro-grid,
+      .fleet-layout,
+      .faq-preview,
+      .rates-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .container {
+        width: min(100% - 32px, var(--max-width));
+      }
+
+      .nav {
+        height: 78px;
+      }
+
+      .nav-links,
+      .nav .btn {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobile-menu.open {
+        display: block;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 78px;
+        background:
+          linear-gradient(180deg, rgba(3, 16, 27, 0.82) 0%, rgba(3, 16, 27, 0.96) 100%),
+          url("Images/hero-boat.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .hero-content {
+        padding: 86px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.1rem, 16vw, 5.2rem);
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-stat {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .hero-stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-strip {
+        margin-top: 0;
+        padding-top: 24px;
+      }
+
+      .feature-cards,
+      .sessions-grid,
+      .grounds-grid,
+      .spec-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .ground-card,
+      .fleet-photo {
+        min-height: 460px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand-name {
+        font-size: 0.95rem;
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stat {
+        border-right: 0;
+      }
+
+      .rates-box,
+      .booking-cta {
+        padding: 28px;
+      }
     }
   </style>
 </head>
 
-<body class="text-slate-100">
-  <!-- Header -->
-  <header class="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-abyss/85 backdrop-blur-md">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-400/10 text-cyan-300 glow-ring">
-          ✦
-        </div>
-        <div>
-          <span class="block text-lg font-extrabold tracking-wide text-white">
-            Mesopelagic Anglers
-          </span>
-          <span class="hidden text-xs font-semibold uppercase tracking-[0.25em] text-cyan-300 sm:block">
-            Fishing Charters
-          </span>
-        </div>
-      </a>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="brand" aria-label="Mesopelagic Anglers home">
+          <img src="Images/logo.png" alt="Mesopelagic Anglers logo" class="brand-logo">
+          <span class="brand-name">Mesopelagic Anglers</span>
+        </a>
 
-      <div class="hidden items-center gap-7 text-sm font-semibold md:flex">
-        <a href="index.html" class="nav-link text-cyan-300">Home</a>
-        <a href="charters.html" class="nav-link">Charters</a>
-        <a href="fleet.html" class="nav-link">Fleet & Gear</a>
-        <a href="inclusions.html" class="nav-link">Inclusions</a>
-        <a href="faq.html" class="nav-link">FAQ</a>
-      </div>
+        <div class="nav-links">
+          <a href="#fleet">Fleet</a>
+          <a href="#sessions">Sessions</a>
+          <a href="#grounds">Fishing Grounds</a>
+          <a href="#rates">Rates</a>
+          <a href="#faq">FAQ</a>
+        </div>
 
-      <a
-        href="contact.html"
-        class="hidden rounded-full bg-cyan-300 px-5 py-2 text-sm font-extrabold text-slate-950 transition hover:bg-cyan-200 md:inline-flex"
-      >
-        Check Availability
-      </a>
-    </nav>
+        <a href="contact.html" class="btn btn-primary">Book</a>
+
+        <button class="mobile-toggle" type="button" aria-label="Open mobile menu" onclick="toggleMenu()">
+          ☰
+        </button>
+      </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#fleet" onclick="toggleMenu()">Fleet</a>
+      <a href="#sessions" onclick="toggleMenu()">Sessions</a>
+      <a href="#grounds" onclick="toggleMenu()">Fishing Grounds</a>
+      <a href="#rates" onclick="toggleMenu()">Rates</a>
+      <a href="#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="contact.html" onclick="toggleMenu()">Book</a>
+    </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="grid-bg relative min-h-screen overflow-hidden px-6 pt-28">
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-abyss/40 to-abyss"></div>
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">Private sportfishing charters from Mactan, Cebu</span>
 
-      <div class="relative mx-auto grid max-w-7xl items-center gap-12 py-20 lg:grid-cols-[1.05fr_0.95fr]">
+          <h1>Mesopelagic Anglers Fishing Charters</h1>
+
+          <p>
+            Run offshore from Hadsan Beach Park aboard a New Zealand-built
+            Extreme 5.7M Game King, targeting Danajon Bank, Caubian Islands,
+            and deep blue Visayan Sea channels with premium sonar, lights,
+            tackle, and crew.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#rates" class="btn btn-primary">View Packages</a>
+            <a href="#grounds" class="btn btn-outline">Explore Fishing Grounds</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Charter highlights">
+            <div class="hero-stat">
+              <strong>4</strong>
+              <span>Angler private cap</span>
+            </div>
+
+            <div class="hero-stat">
+              <strong>1,800 ft</strong>
+              <span>Garmin sonar depth</span>
+            </div>
+
+            <div class="hero-stat">
+              <strong>400W</strong>
+              <span>Blue night lights</span>
+            </div>
+
+            <div class="hero-stat">
+              <strong>14 hr</strong>
+              <span>Full-day expedition</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <strong>Hadsan Beach Park</strong>
+            <span>Launch point</span>
+          </div>
+
+          <div class="trust-item">
+            <strong>Extreme 5.7M</strong>
+            <span>Game King hull</span>
+          </div>
+
+          <div class="trust-item">
+            <strong>Yamaha F150</strong>
+            <span>Four-stroke power</span>
+          </div>
+
+          <div class="trust-item">
+            <strong>Garmin UHD2</strong>
+            <span>Sonar system</span>
+          </div>
+
+          <div class="trust-item">
+            <strong>Premium Tackle</strong>
+            <span>Included</span>
+          </div>
+
+          <div class="trust-item">
+            <strong>Captain + Deckhand</strong>
+            <span>Crew included</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="intro">
+      <div class="container intro-grid">
         <div>
-          <p class="section-label">
-            Private offshore sportfishing from Mactan, Cebu
+          <span class="section-label">The Charter Advantage</span>
+          <h2 class="section-title">Not a casual boat ride. A serious offshore fishing deployment.</h2>
+          <p class="section-copy">
+            Mesopelagic Anglers is built for fishing hobbyists, enthusiasts,
+            and serious anglers who want a private offshore run with a real
+            fishing platform, modern electronics, prepared tackle, and crew-led
+            target planning.
           </p>
-
-          <h1 class="mt-6 max-w-5xl text-5xl font-extrabold leading-tight tracking-tight text-white md:text-7xl">
-            Fish the deep channels from Mactan to Danajon Bank.
-          </h1>
-
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Launch from Hadsan Beach Park and chase GT, Tanguigue, Tuna,
-            Barracuda, Grouper, Snapper, and deep-water predators with a premium
-            offshore platform, sonar-guided structure hunting, and serious tackle
-            already prepared.
-          </p>
-
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="contact.html"
-              class="rounded-full bg-cyan-300 px-7 py-3 text-center font-extrabold text-slate-950 transition hover:bg-cyan-200"
-            >
-              Check Availability
-            </a>
-            <a
-              href="charters.html"
-              class="rounded-full border border-white/15 px-7 py-3 text-center font-extrabold text-white transition hover:border-cyan-300/60 hover:text-cyan-200"
-            >
-              View Charter Options
-            </a>
-          </div>
-
-          <div class="mt-10 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-            <div class="glass rounded-2xl p-4">
-              <p class="text-2xl font-extrabold text-cyan-200">4</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Max anglers</p>
-            </div>
-
-            <div class="glass rounded-2xl p-4">
-              <p class="text-2xl font-extrabold text-cyan-200">400W</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Night lights</p>
-            </div>
-
-            <div class="glass rounded-2xl p-4">
-              <p class="text-2xl font-extrabold text-cyan-200">F150</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Yamaha power</p>
-            </div>
-
-            <div class="glass rounded-2xl p-4">
-              <p class="text-2xl font-extrabold text-cyan-200">UHD</p>
-              <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Garmin sonar</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass glow-ring relative overflow-hidden rounded-[2rem] p-4">
-          <div class="absolute -right-10 -top-10 h-36 w-36 rounded-full bg-cyan-300/20 blur-3xl"></div>
-          <div class="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-teal-400/20 blur-3xl"></div>
-
-          <div class="hero-boat relative min-h-[520px] overflow-hidden rounded-[1.5rem] border border-cyan-300/20">
-            <div class="absolute inset-x-0 bottom-0 p-6">
-              <div class="glass-strong rounded-3xl p-6">
-                <div class="mb-5 flex items-center justify-between gap-4">
-                  <span class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-                    Charter Scan
-                  </span>
-                  <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-200">
-                    Open for inquiry
-                  </span>
-                </div>
-
-                <div class="space-y-4">
-                  <div>
-                    <div class="mb-2 flex justify-between text-sm text-slate-300">
-                      <span>Offshore capability</span>
-                      <span>High</span>
-                    </div>
-                    <div class="h-3 overflow-hidden rounded-full bg-slate-800">
-                      <div class="h-full w-[90%] rounded-full bg-cyan-300"></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="mb-2 flex justify-between text-sm text-slate-300">
-                      <span>Premium tackle</span>
-                      <span>Included</span>
-                    </div>
-                    <div class="h-3 overflow-hidden rounded-full bg-slate-800">
-                      <div class="h-full w-[85%] rounded-full bg-teal-300"></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="mb-2 flex justify-between text-sm text-slate-300">
-                      <span>Night fishing potential</span>
-                      <span>Blue light array</span>
-                    </div>
-                    <div class="h-3 overflow-hidden rounded-full bg-slate-800">
-                      <div class="h-full w-[78%] rounded-full bg-cyan-200"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <p class="mt-5 text-sm leading-7 text-slate-300">
-                  <span class="font-bold text-cyan-200">Base:</span>
-                  Hadsan Beach Park, Lapu-Lapu City, Mactan, Cebu.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust Strip -->
-    <section class="border-y border-white/10 bg-slate-950/50 px-6 py-8">
-      <div class="mx-auto grid max-w-7xl gap-3 sm:grid-cols-2 lg:grid-cols-7">
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">Max 4 Anglers</div>
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">Hadsan Launch</div>
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">Extreme 5.7M Hull</div>
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">Yamaha F150</div>
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">Garmin UHD Sonar</div>
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">400W Night Lights</div>
-        <div class="glass rounded-2xl p-4 text-center text-sm font-bold text-slate-200">Tackle Included</div>
-      </div>
-    </section>
-
-    <!-- Overview -->
-    <section class="px-6 py-24">
-      <div class="mx-auto max-w-7xl">
-        <div class="max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-            The Charter Advantage
-          </p>
-          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-            Not a casual boat ride. A serious offshore fishing deployment.
-          </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-300">
-            Mesopelagic Anglers is built for private groups who want guided
-            access to deep channels, current breaks, seamounts, and predator
-            zones around the Danajon Bank system.
+          <p class="section-copy">
+            The public site should convince visitors first. The actual inquiry,
+            date checking, and Monday lead processing happen after the visitor
+            sends their booking details.
           </p>
         </div>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-3">
-          <article class="glass rounded-3xl p-6 transition hover:-translate-y-1 hover:border-cyan-300/40">
-            <p class="mb-5 inline-flex rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-cyan-200">
-              Hobbyists
-            </p>
-            <h3 class="text-xl font-bold text-white">Guided offshore access</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              Step into offshore fishing with the boat, crew, gear, and fishing
-              systems already prepared.
-            </p>
+        <div class="feature-cards">
+          <article class="feature-card">
+            <span class="number">01</span>
+            <h3>Private Group Setup</h3>
+            <p>Strictly capped at 4 anglers for deck space, comfort, and a premium offshore experience.</p>
           </article>
 
-          <article class="glass rounded-3xl p-6 transition hover:-translate-y-1 hover:border-cyan-300/40">
-            <p class="mb-5 inline-flex rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-cyan-200">
-              Enthusiasts
-            </p>
-            <h3 class="text-xl font-bold text-white">Session-based targeting</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              Choose sunrise, sunset, night, or full-day sessions based on your
-              preferred species and fishing goals.
-            </p>
+          <article class="feature-card">
+            <span class="number">02</span>
+            <h3>Deep Channel Access</h3>
+            <p>Run toward Danajon Bank, Middle Pass, Caubian Islands, and offshore structure zones.</p>
           </article>
 
-          <article class="glass rounded-3xl p-6 transition hover:-translate-y-1 hover:border-cyan-300/40">
-            <p class="mb-5 inline-flex rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-cyan-200">
-              Serious anglers
-            </p>
-            <h3 class="text-xl font-bold text-white">Premium tackle and electronics</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              Fish with sonar-guided structure reading, heavy tackle, electric
-              reel support, and offshore-capable systems.
-            </p>
+          <article class="feature-card">
+            <span class="number">03</span>
+            <h3>Premium Electronics</h3>
+            <p>Garmin UHD sonar and transducer setup for reading structure, drop-offs, and fish-holding zones.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="number">04</span>
+            <h3>Gear Included</h3>
+            <p>Rods, reels, jigs, lures, downrigger support, cooler, fuel, and crew are included.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Charter Sessions Preview -->
-    <section class="border-y border-white/10 bg-slate-950/50 px-6 py-24">
-      <div class="mx-auto max-w-7xl">
-        <div class="text-center">
-          <p class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-            Charter Sessions
-          </p>
-          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-            Choose your fishing window.
-          </h2>
-          <p class="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-            Each session is built around tide movement, light conditions, and
-            feeding windows across Cebu’s offshore fishing grounds.
-          </p>
-        </div>
-
-        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <article class="glass rounded-3xl p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Morning</p>
-            <h3 class="mt-4 text-2xl font-extrabold text-white">Golden Hour</h3>
-            <p class="mt-2 font-bold text-cyan-200">5:00 AM – 11:00 AM</p>
-            <p class="mt-4 leading-7 text-slate-300">
-              Built for sunrise bite windows and surface-feeding pelagics.
-            </p>
-          </article>
-
-          <article class="glass rounded-3xl p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Afternoon</p>
-            <h3 class="mt-4 text-2xl font-extrabold text-white">Sunset Drift</h3>
-            <p class="mt-2 font-bold text-cyan-200">1:00 PM – 7:00 PM</p>
-            <p class="mt-4 leading-7 text-slate-300">
-              Late-afternoon fishing with a luxury sunset run home.
-            </p>
-          </article>
-
-          <article class="glass glow-ring rounded-3xl border-cyan-300/30 p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Night Ops</p>
-            <h3 class="mt-4 text-2xl font-extrabold text-white">Nocturnal Deep-Sea</h3>
-            <p class="mt-2 font-bold text-cyan-200">5:00 PM – 5:00 AM</p>
-            <p class="mt-4 leading-7 text-slate-300">
-              A 12-hour night deployment powered by underwater blue lights.
-            </p>
-          </article>
-
-          <article class="glass rounded-3xl border-warning/30 p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-warning">Full-Day</p>
-            <h3 class="mt-4 text-2xl font-extrabold text-white">Ultimate Expedition</h3>
-            <p class="mt-2 font-bold text-cyan-200">5:00 AM – 7:00 PM</p>
-            <p class="mt-4 leading-7 text-slate-300">
-              A 14-hour marathon spanning morning and afternoon windows.
-            </p>
-          </article>
-        </div>
-
-        <div class="mt-10 text-center">
-          <a
-            href="charters.html"
-            class="inline-flex rounded-full bg-cyan-300 px-7 py-3 font-extrabold text-slate-950 transition hover:bg-cyan-200"
-          >
-            Compare All Sessions
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Expedition Tiers -->
-    <section class="px-6 py-24">
-      <div class="mx-auto max-w-7xl">
-        <div class="mb-12 max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-            Fishing Grounds
-          </p>
-          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-            Two expedition tiers. One private offshore platform.
-          </h2>
-        </div>
-
-        <div class="grid gap-6 lg:grid-cols-2">
-          <article class="danajon-photo overflow-hidden rounded-[2rem] border border-white/10">
-            <div class="flex min-h-[520px] items-end p-6">
-              <div class="glass-strong rounded-3xl p-6">
-                <p class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-                  Tier 1
-                </p>
-                <h3 class="mt-3 text-3xl font-extrabold text-white">
-                  The Middle Pass & Caubian Islands
-                </h3>
-                <p class="mt-4 leading-8 text-slate-300">
-                  Premium current breaks, deep drop-offs, and structure-based
-                  grounds targeting GT, Tanguigue, Barracuda, Grouper, Snapper,
-                  and schooling jacks.
-                </p>
-
-                <div class="mt-6 flex flex-wrap gap-2">
-                  <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-sm font-bold text-cyan-200">GT</span>
-                  <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-sm font-bold text-cyan-200">Tanguigue</span>
-                  <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-sm font-bold text-cyan-200">Barracuda</span>
-                  <span class="rounded-full bg-cyan-300/10 px-3 py-1 text-sm font-bold text-cyan-200">Grouper</span>
-                </div>
-
-                <a href="contact.html" class="mt-7 inline-flex rounded-full bg-cyan-300 px-6 py-3 font-extrabold text-slate-950 transition hover:bg-cyan-200">
-                  Ask About Tier 1
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="hero-boat overflow-hidden rounded-[2rem] border border-cyan-300/20">
-            <div class="flex min-h-[520px] items-end p-6">
-              <div class="glass-strong rounded-3xl p-6">
-                <p class="text-sm font-bold uppercase tracking-[0.30em] text-warning">
-                  Tier 2
-                </p>
-                <h3 class="mt-3 text-3xl font-extrabold text-white">
-                  The Deep Blue Danajon Banks
-                </h3>
-                <p class="mt-4 leading-8 text-slate-300">
-                  Ultra-premium long-range offshore run for experienced anglers
-                  and sportfishing teams targeting Tuna, Amberjack, Ruby Snapper,
-                  Barracuda, and deep-water reef predators.
-                </p>
-
-                <div class="mt-6 flex flex-wrap gap-2">
-                  <span class="rounded-full bg-warning/10 px-3 py-1 text-sm font-bold text-amber-200">Yellowfin</span>
-                  <span class="rounded-full bg-warning/10 px-3 py-1 text-sm font-bold text-amber-200">Dogtooth Tuna</span>
-                  <span class="rounded-full bg-warning/10 px-3 py-1 text-sm font-bold text-amber-200">Amberjack</span>
-                  <span class="rounded-full bg-warning/10 px-3 py-1 text-sm font-bold text-amber-200">Ruby Snapper</span>
-                </div>
-
-                <a href="contact.html" class="mt-7 inline-flex rounded-full bg-warning px-6 py-3 font-extrabold text-slate-950 transition hover:bg-amber-300">
-                  Ask About Tier 2
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fleet Preview -->
-    <section class="border-y border-white/10 bg-slate-950/50 px-6 py-24">
-      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-            Fleet & Electronics
-          </p>
-          <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white md:text-5xl">
-            Built around safety, structure reading, and offshore capability.
-          </h2>
-          <p class="mt-6 text-lg leading-8 text-slate-300">
-            The platform combines an Extreme Boats 5.7M Game King hull, Yamaha
-            F150 power, Garmin UHD sonar, and a 400W underwater blue light system
-            for night fishing operations.
-          </p>
-
-          <a
-            href="fleet.html"
-            class="mt-8 inline-flex rounded-full border border-white/15 px-7 py-3 font-extrabold text-white transition hover:border-cyan-300/60 hover:text-cyan-200"
-          >
-            View Fleet & Gear
-          </a>
-        </div>
-
-        <div class="grid gap-6 sm:grid-cols-2">
-          <article class="glass rounded-3xl p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Hull</p>
-            <h3 class="mt-4 text-xl font-extrabold text-white">Extreme 5.7M Game King</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              Heavy-duty aluminum hardtop boat for a stable, dry offshore ride.
-            </p>
-          </article>
-
-          <article class="glass rounded-3xl p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Power</p>
-            <h3 class="mt-4 text-xl font-extrabold text-white">Yamaha F150FETX</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              High-torque four-stroke power with battery and solar support.
-            </p>
-          </article>
-
-          <article class="glass rounded-3xl p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Sonar</p>
-            <h3 class="mt-4 text-xl font-extrabold text-white">Garmin UHD2 92cv</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              Sonar and transducer setup for locating structure and fishing zones.
-            </p>
-          </article>
-
-          <article class="glass rounded-3xl p-6">
-            <p class="text-sm font-bold uppercase tracking-[0.25em] text-cyan-300">Night</p>
-            <h3 class="mt-4 text-xl font-extrabold text-white">400W Blue Lights</h3>
-            <p class="mt-3 leading-7 text-slate-300">
-              Built for nocturnal bait attraction and predator activity.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="px-6 py-24">
-      <div class="mx-auto max-w-4xl rounded-[2rem] border border-cyan-300/20 bg-cyan-300/10 p-8 text-center glow-ring md:p-12">
-        <p class="text-sm font-bold uppercase tracking-[0.30em] text-cyan-300">
-          Plan Your Charter
-        </p>
-        <h2 class="mt-4 text-4xl font-extrabold tracking-tight text-white">
-          Ready to fish the deep?
-        </h2>
-        <p class="mx-auto mt-4 max-w-2xl leading-8 text-slate-300">
-          Send your preferred date, session, group size, and target species.
-          The team will review availability and reply with current charter details.
+    <section class="section dark-panel" id="sessions">
+      <div class="container">
+        <span class="section-label">Charter Sessions</span>
+        <h2 class="section-title">Choose your fishing window.</h2>
+        <p class="section-copy">
+          Sessions are built around departure timing, tidal movement, daylight
+          conditions, and the type of fishing experience your group wants.
         </p>
 
-        <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="contact.html"
-            class="rounded-full bg-cyan-300 px-7 py-3 font-extrabold text-slate-950 transition hover:bg-cyan-200"
-          >
-            Send Booking Inquiry
-          </a>
-          <a
-            href="faq.html"
-            class="rounded-full border border-white/15 px-7 py-3 font-extrabold text-white transition hover:border-cyan-300/60 hover:text-cyan-200"
-          >
-            Read FAQ
-          </a>
+        <div class="sessions-grid">
+          <article class="session-card">
+            <span class="session-tag">Morning</span>
+            <h3>Golden Hour Session</h3>
+            <div class="session-time">5:00 AM – 11:00 AM</div>
+            <p>Targets sunrise feeding windows and aggressive surface-feeding pelagics.</p>
+          </article>
+
+          <article class="session-card">
+            <span class="session-tag">Afternoon</span>
+            <h3>Sunset Drift Session</h3>
+            <div class="session-time">1:00 PM – 7:00 PM</div>
+            <p>Built around late-afternoon bite activity with a sunset run back to Hadsan.</p>
+          </article>
+
+          <article class="session-card featured">
+            <span class="session-tag">Night Ops</span>
+            <h3>Nocturnal Deep-Sea Session</h3>
+            <div class="session-time">5:00 PM – 5:00 AM</div>
+            <p>A 12-hour night deployment using the underwater blue light system.</p>
+          </article>
+
+          <article class="session-card featured">
+            <span class="session-tag">Full-Day</span>
+            <h3>Ultimate Expedition</h3>
+            <div class="session-time">5:00 AM – 7:00 PM</div>
+            <p>A 14-hour marathon spanning morning and afternoon fishing windows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="grounds">
+      <div class="container">
+        <span class="section-label">Fishing Grounds</span>
+        <h2 class="section-title">Two expedition tiers. One serious offshore platform.</h2>
+        <p class="section-copy">
+          Select between the premium Middle Pass and Caubian Islands run, or the
+          ultra-premium Deep Blue Danajon Banks expedition for heavier offshore targets.
+        </p>
+
+        <div class="grounds-grid">
+          <article class="ground-card tier-one">
+            <div class="ground-content">
+              <span class="section-label">Tier 1</span>
+              <h3>Middle Pass & Caubian Islands</h3>
+              <p>
+                A premium journey toward current breaks, deep drop-offs,
+                seamounts, and structure zones around the Caubian side of the
+                Danajon Bank system.
+              </p>
+
+              <div class="fish-tags">
+                <span>GT / Mamsa</span>
+                <span>Tanguigue</span>
+                <span>Barracuda</span>
+                <span>Grouper</span>
+                <span>Snapper</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="ground-card tier-two">
+            <div class="ground-content">
+              <span class="section-label">Tier 2</span>
+              <h3>Deep Blue Danajon Banks</h3>
+              <p>
+                An ultra-premium offshore run for experienced anglers and
+                sportfishing teams targeting heavier pelagics and deep-water
+                reef predators.
+              </p>
+
+              <div class="fish-tags">
+                <span>Yellowfin Tuna</span>
+                <span>Dogtooth Tuna</span>
+                <span>Amberjack</span>
+                <span>Ruby Snapper</span>
+                <span>Barracuda</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-panel" id="fleet">
+      <div class="container fleet-layout">
+        <div class="fleet-photo" aria-label="Mesopelagic Anglers boat"></div>
+
+        <div>
+          <span class="section-label">Fleet & Electronics</span>
+          <h2 class="section-title">Built for safety, structure reading, and offshore capability.</h2>
+          <p class="section-copy">
+            The platform combines a New Zealand-built Extreme Boats 5.7M Game
+            King hull, Yamaha F150 power, Garmin sonar, underwater lights, and
+            premium fishing systems.
+          </p>
+
+          <div class="spec-grid">
+            <article class="spec-card">
+              <small>Vessel</small>
+              <h3>Extreme 5.7M Game King</h3>
+              <p>Heavy-duty aluminum hardtop hull with deep-V stability and offshore protection.</p>
+            </article>
+
+            <article class="spec-card">
+              <small>Power</small>
+              <h3>Yamaha F150FETX</h3>
+              <p>Four-stroke offshore power with battery and solar support for equipment use.</p>
+            </article>
+
+            <article class="spec-card">
+              <small>Sonar</small>
+              <h3>Garmin UHD2 92cv</h3>
+              <p>Sonar and transducer setup for reading structure, channels, and fish zones.</p>
+            </article>
+
+            <article class="spec-card">
+              <small>Night Array</small>
+              <h3>400W Blue Lights</h3>
+              <p>Underwater blue light system for night sessions and bait attraction.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rates">
+      <div class="container">
+        <div class="rates-box">
+          <div>
+            <span class="section-label">Rates & Booking</span>
+            <h2 class="section-title">Send an inquiry before deposit or payment.</h2>
+            <p class="section-copy">
+              Public visitors should submit their preferred date, session,
+              fishing tier, number of anglers, and target species first. The team
+              will reply with availability, recommended package, current rates,
+              and next steps.
+            </p>
+
+            <div class="hero-actions">
+              <a href="contact.html" class="btn btn-primary">Send Booking Inquiry</a>
+              <a href="#faq" class="btn btn-outline">Read FAQ</a>
+            </div>
+          </div>
+
+          <ul class="rates-list">
+            <li><strong>Step 1:</strong> Choose preferred session and fishing tier.</li>
+            <li><strong>Step 2:</strong> Submit inquiry through the website form.</li>
+            <li><strong>Step 3:</strong> Team confirms availability and current package details.</li>
+            <li><strong>Step 4:</strong> Deposit instructions are sent only after confirmation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-panel" id="faq">
+      <div class="container faq-preview">
+        <div>
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Before you step on board.</h2>
+          <p class="section-copy">
+            Quick answers for common booking questions. Keep this section short
+            and direct; the detailed follow-up can happen through Monday after
+            inquiry submission.
+          </p>
+
+          <div class="hero-actions">
+            <a href="faq.html" class="btn btn-outline">View Full FAQ</a>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Do I need to bring my own rods and reels?</h3>
+            <p>No. Premium rods, reels, jigs, and trolling lures are included with the charter.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Can we bring more than 4 people?</h3>
+            <p>No. Capacity is strictly capped at 4 guests total for safety, comfort, and deck space.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Are food and drinks included?</h3>
+            <p>Food and drinks are Bring-Your-Own. Ice and cooler support are provided on board.</p>
+          </article>
+
+          <article class="faq-item">
+            <h3>What happens if weather is unsafe?</h3>
+            <p>The captain makes the safety decision. Guests may receive a priority reschedule or refund option.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-small">
+      <div class="container">
+        <div class="booking-cta">
+          <span class="section-label">Plan Your Charter</span>
+          <h2>Ready to fish the deep?</h2>
+          <p>
+            Send your preferred date, session, package interest, and group size.
+            Mesopelagic Anglers will review availability and reply with charter
+            recommendations and next steps.
+          </p>
+
+          <div class="hero-actions" style="justify-content: center;">
+            <a href="contact.html" class="btn btn-primary">Check Availability</a>
+            <a href="#top" class="btn btn-outline">Back to Top</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-white/10 px-6 py-8">
-    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-6 text-sm text-slate-400 md:flex-row">
+  <footer class="footer">
+    <div class="container footer-inner">
       <div>
-        <p class="font-bold text-white">Mesopelagic Anglers Fishing Charters</p>
-        <p class="mt-2">Base of Operations: Hadsan Beach Park, Lapu-Lapu City, Mactan, Cebu, Philippines</p>
+        <strong>Mesopelagic Anglers Fishing Charters</strong>
+        <p>Base of Operations: Hadsan Beach Park, Lapu-Lapu City, Mactan, Cebu, Philippines</p>
       </div>
 
-      <nav class="flex flex-wrap gap-4">
-        <a href="charters.html" class="transition hover:text-cyan-300">Charters</a>
-        <a href="fleet.html" class="transition hover:text-cyan-300">Fleet & Gear</a>
-        <a href="inclusions.html" class="transition hover:text-cyan-300">Inclusions</a>
-        <a href="faq.html" class="transition hover:text-cyan-300">FAQ</a>
-        <a href="contact.html" class="transition hover:text-cyan-300">Contact</a>
-      </nav>
+      <div class="footer-links">
+        <a href="#fleet">Fleet</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#grounds">Fishing Grounds</a>
+        <a href="#rates">Rates</a>
+        <a href="contact.html">Book</a>
+      </div>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>

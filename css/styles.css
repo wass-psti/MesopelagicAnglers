@@ -103,18 +103,18 @@ img {
   letter-spacing: -0.03em;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: 999px;
-  color: var(--cyan);
-  border: 2px solid rgba(34, 211, 238, 0.42);
-  background:
-    radial-gradient(circle at center, rgba(34, 211, 238, 0.24), transparent 60%),
-    #071725;
-  box-shadow: 0 0 22px rgba(34, 211, 238, 0.22);
+.brand-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 14px rgba(34, 211, 238, 0.22));
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.brand:hover .brand-logo {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.38));
 }
 
 .nav-links {
@@ -980,9 +980,9 @@ textarea:focus {
     font-size: 0.92rem;
   }
 
-  .brand-mark {
-    width: 38px;
-    height: 38px;
+  .brand-logo {
+    width: 44px;
+    height: 44px;
   }
 
   .hero-actions {

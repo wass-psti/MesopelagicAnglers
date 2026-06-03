@@ -1008,8 +1008,9 @@ textarea:focus {
   }
 
   .tags span {
-    white-space: normal;
+  white-space: normal;
   }
+}
 
   /* =========================================================
    UI REFINEMENT PATCH

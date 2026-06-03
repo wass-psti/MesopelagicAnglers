@@ -75,91 +75,150 @@
           This form sends your inquiry to the team email. Monday will handle the lead workflow after submission.
         </p>
 
-        <form class="form-card" action="https://formsubmit.co/info@plcsystems.com.ph" method="POST" style="margin-top: 36px;">
-          <input type="hidden" name="_subject" value="[Website Lead] Mesopelagic Anglers Booking Inquiry">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://wass-psti.github.io/MesopelagicAnglers/thank-you.html">
-          <input type="text" name="_honey" style="display:none">
-
-          <div class="form-grid">
-            <div>
-              <label for="full-name">Full Name</label>
-              <input type="text" id="full-name" name="Full Name" required>
-            </div>
-
-            <div>
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="Email Address" required>
-            </div>
-
-            <div>
-              <label for="phone">Phone / Messenger</label>
-              <input type="text" id="phone" name="Phone or Messenger" required>
-            </div>
-
-            <div>
-              <label for="preferred-date">Preferred Date</label>
-              <input type="date" id="preferred-date" name="Preferred Date">
-            </div>
-
-            <div>
-              <label for="preferred-session">Preferred Session</label>
-              <select id="preferred-session" name="Preferred Session" required>
-                <option value="">Select a session</option>
-                <option value="Morning Golden Hour Session">Morning Golden Hour, 5:00 AM - 11:00 AM</option>
-                <option value="Afternoon and Sunset Drift Session">Afternoon & Sunset Drift, 1:00 PM - 7:00 PM</option>
-                <option value="Nocturnal Deep-Sea Session">Nocturnal Deep-Sea, 5:00 PM - 5:00 AM</option>
-                <option value="Ultimate Full-Day Expedition">Ultimate Full-Day Expedition, 5:00 AM - 7:00 PM</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="package-interest">Package Interest</label>
-              <select id="package-interest" name="Package Interest" required>
-                <option value="">Select a package</option>
-                <option value="Tier 1 - Middle Pass and Caubian Islands">Tier 1 - Middle Pass & Caubian Islands</option>
-                <option value="Tier 2 - Deep Blue Danajon Banks">Tier 2 - Deep Blue Danajon Banks</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="angler-count">Number of Anglers</label>
-              <select id="angler-count" name="Number of Anglers" required>
-                <option value="">Select group size</option>
-                <option value="1">1 angler</option>
-                <option value="2">2 anglers</option>
-                <option value="3">3 anglers</option>
-                <option value="4">4 anglers</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="experience-level">Fishing Experience Level</label>
-              <select id="experience-level" name="Fishing Experience Level">
-                <option value="">Select experience level</option>
-                <option value="Beginner">Beginner</option>
-                <option value="Hobbyist">Hobbyist</option>
-                <option value="Enthusiast">Enthusiast</option>
-                <option value="Experienced Angler">Experienced Angler</option>
-                <option value="Professional / Sportfishing Team">Professional / Sportfishing Team</option>
-              </select>
-            </div>
-
-            <div class="form-full">
-              <label for="target-species">Target Species or Fishing Goal</label>
-              <input type="text" id="target-species" name="Target Species or Fishing Goal" placeholder="Example: GT, Tanguigue, Tuna, Grouper, Snapper">
-            </div>
-
-            <div class="form-full">
-              <label for="message">Message</label>
-              <textarea id="message" name="Message" rows="6" placeholder="Tell us your preferred schedule, group details, and fishing goals."></textarea>
-            </div>
+        <form
+        class="form-card"
+        action="https://formsubmit.co/info@plcsystems.com.ph"
+        method="POST"
+        style="margin-top: 36px;"
+                                  >
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="[Mesopelagic Anglers] New Booking Inquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://wass-psti.github.io/MesopelagicAnglers/thank-you.html">
+      
+        <!-- Honeypot anti-spam field -->
+        <input type="text" name="_honey" style="display:none">
+      
+        <div class="form-grid">
+          <div>
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="Full Name"
+              placeholder="Juan Dela Cruz"
+              required
+            >
           </div>
-
-          <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Send Booking Inquiry</button>
-        </form>
+      
+          <div>
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="Email Address"
+              placeholder="yourname@gmail.com"
+              required
+            >
+          </div>
+      
+          <div>
+            <label for="phone">Phone / Messenger</label>
+            <input
+              type="text"
+              id="phone"
+              name="Phone or Messenger"
+              placeholder="Mobile number or Messenger name"
+              required
+            >
+          </div>
+      
+          <div>
+            <label for="preferred-date">Preferred Date</label>
+            <input
+              type="date"
+              id="preferred-date"
+              name="Preferred Date"
+            >
+          </div>
+      
+          <div>
+            <label for="preferred-session">Preferred Session</label>
+            <select id="preferred-session" name="Preferred Session" required>
+              <option value="">Select a session</option>
+              <option value="Morning Golden Hour Session, 5:00 AM - 11:00 AM">
+                Morning Golden Hour, 5:00 AM - 11:00 AM
+              </option>
+              <option value="Afternoon and Sunset Drift Session, 1:00 PM - 7:00 PM">
+                Afternoon & Sunset Drift, 1:00 PM - 7:00 PM
+              </option>
+              <option value="Nocturnal Deep-Sea Session, 5:00 PM - 5:00 AM">
+                Nocturnal Deep-Sea, 5:00 PM - 5:00 AM
+              </option>
+              <option value="Ultimate Full-Day Expedition, 5:00 AM - 7:00 PM">
+                Ultimate Full-Day Expedition, 5:00 AM - 7:00 PM
+              </option>
+              <option value="Not sure yet">
+                Not sure yet
+              </option>
+            </select>
+          </div>
+      
+          <div>
+            <label for="package-interest">Package Interest</label>
+            <select id="package-interest" name="Package Interest" required>
+              <option value="">Select a package</option>
+              <option value="Tier 1 - Middle Pass and Caubian Islands">
+                Tier 1 - Middle Pass & Caubian Islands
+              </option>
+              <option value="Tier 2 - Deep Blue Danajon Banks">
+                Tier 2 - Deep Blue Danajon Banks
+              </option>
+              <option value="Not sure yet">
+                Not sure yet
+              </option>
+            </select>
+          </div>
+      
+          <div>
+            <label for="angler-count">Number of Anglers</label>
+            <select id="angler-count" name="Number of Anglers" required>
+              <option value="">Select group size</option>
+              <option value="1 angler">1 angler</option>
+              <option value="2 anglers">2 anglers</option>
+              <option value="3 anglers">3 anglers</option>
+              <option value="4 anglers">4 anglers</option>
+            </select>
+          </div>
+      
+          <div>
+            <label for="experience-level">Fishing Experience Level</label>
+            <select id="experience-level" name="Fishing Experience Level">
+              <option value="">Select experience level</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Hobbyist">Hobbyist</option>
+              <option value="Enthusiast">Enthusiast</option>
+              <option value="Experienced Angler">Experienced Angler</option>
+              <option value="Professional / Sportfishing Team">Professional / Sportfishing Team</option>
+            </select>
+          </div>
+      
+          <div class="form-full">
+            <label for="target-species">Target Species or Fishing Goal</label>
+            <input
+              type="text"
+              id="target-species"
+              name="Target Species or Fishing Goal"
+              placeholder="Example: GT, Tanguigue, Tuna, Grouper, Snapper"
+            >
+          </div>
+      
+          <div class="form-full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="Message"
+              rows="6"
+              placeholder="Tell us your preferred schedule, group details, fishing goals, or special requests."
+            ></textarea>
+          </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary" style="margin-top: 24px;">
+          Send Booking Inquiry
+        </button>
+      </form>
       </div>
     </section>
 

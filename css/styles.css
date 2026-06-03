@@ -235,7 +235,7 @@ textarea {
   transform: translateY(-2px);
 }
 
-/* CTA button consistency */
+/* CTA BUTTON CONSISTENCY */
 
 .cta-box .btn-outline,
 .cta-box .btn-dark {
@@ -341,7 +341,7 @@ p {
   line-height: 1.85;
 }
 
-/* HERO */
+/* HERO BASE */
 
 .hero,
 .page-hero {
@@ -441,47 +441,66 @@ p {
 .hero-home {
   min-height: 92vh;
   align-items: flex-end;
-  padding: 126px 0 128px;
+  padding: 126px 0 118px;
   background:
-    linear-gradient(90deg, rgba(3, 16, 27, 0.88) 0%, rgba(3, 16, 27, 0.62) 42%, rgba(3, 16, 27, 0.18) 100%),
-    linear-gradient(180deg, rgba(3, 16, 27, 0.06) 0%, rgba(3, 16, 27, 0.76) 100%),
+    linear-gradient(90deg, rgba(3, 16, 27, 0.84) 0%, rgba(3, 16, 27, 0.58) 45%, rgba(3, 16, 27, 0.22) 100%),
+    linear-gradient(180deg, rgba(3, 16, 27, 0.08) 0%, rgba(3, 16, 27, 0.78) 100%),
     url("../images/hero-boat2.png");
-  background-position: center 42%;
+  background-position: center 40%;
   background-size: cover;
 }
 
 .hero-home .container {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .hero-home .hero-content {
-  display: block;
   width: min(900px, 100%);
   max-width: 900px;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .hero-home .eyebrow {
   justify-content: center;
+  max-width: 760px;
+  margin-inline: auto;
 }
 
 .hero-home h1 {
-  max-width: 920px;
-  margin-inline: auto;
+  max-width: 900px;
+  margin: 24px auto 0;
+  text-align: center;
 }
 
 .hero-home .hero-copy {
   max-width: 760px;
-  margin-inline: auto;
+  margin: 22px auto 0;
   color: rgba(226, 237, 247, 0.94);
   font-weight: 500;
   line-height: 1.8;
+  text-align: center;
 }
 
 .hero-home .hero-actions {
+  width: auto;
+  margin-top: 32px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-home .hero-actions .btn {
+  width: auto;
+  min-width: 190px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .hero-home .hero-stats {
@@ -1506,12 +1525,13 @@ textarea:focus {
   }
 
   .hero-home .container {
-    justify-content: flex-start;
+    display: block;
   }
 
   .hero-home .hero-content {
-    text-align: left;
     max-width: 720px;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .hero-home .eyebrow,
@@ -1521,6 +1541,7 @@ textarea:focus {
 
   .hero-home .hero-copy {
     margin-inline: 0;
+    text-align: left;
   }
 
   .hero-info {
@@ -1632,6 +1653,10 @@ textarea:focus {
   }
 
   .btn {
+    width: 100%;
+  }
+
+  .hero-home .hero-actions .btn {
     width: 100%;
   }
 

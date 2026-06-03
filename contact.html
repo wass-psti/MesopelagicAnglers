@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Check Availability | Mesopelagic Anglers</title>
+  <meta name="description" content="Send a booking inquiry to Mesopelagic Anglers for private offshore sportfishing charters in Mactan, Cebu.">
+
+</head>
+<body>
+  <header>
+    <a href="index.html">Mesopelagic Anglers</a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="charters.html">Charters</a>
+      <a href="fleet.html">Fleet & Gear</a>
+      <a href="inclusions.html">Inclusions</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Check Availability</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="page-intro">
+      <p>Booking Inquiry</p>
+      <h1>Plan your private fishing charter.</h1>
+      <p>
+        Send your preferred date, session, package interest, and group details.
+        Our team will review availability and reply with charter options, rates,
+        and next steps.
+      </p>
+    </section>
+
+    <section id="inquiry-form-section" aria-labelledby="form-heading">
+      <h2 id="form-heading">Send Booking Inquiry</h2>
+
+      <form action="https://formsubmit.co/info@plcsystems.com.ph" method="POST">
+        <input type="hidden" name="_subject" value="[Website Lead] Mesopelagic Anglers Booking Inquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://wass-psti.github.io/MesopelagicAnglers/thank-you.html">
+        <input type="text" name="_honey" style="display:none">
+
+        <div>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="Full Name" required>
+        </div>
+
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="Email Address" required>
+        </div>
+
+        <div>
+          <label for="phone">Phone / Messenger</label>
+          <input type="text" id="phone" name="Phone or Messenger" required>
+        </div>
+
+        <div>
+          <label for="preferred-date">Preferred Date</label>
+          <input type="date" id="preferred-date" name="Preferred Date">
+        </div>
+
+        <div>
+          <label for="preferred-session">Preferred Session</label>
+          <select id="preferred-session" name="Preferred Session" required>
+            <option value="">Select a session</option>
+            <option value="Morning Golden Hour Session">Morning Golden Hour Session, 5:00 AM - 11:00 AM</option>
+            <option value="Afternoon and Sunset Drift Session">Afternoon & Sunset Drift Session, 1:00 PM - 7:00 PM</option>
+            <option value="Nocturnal Deep-Sea Session">Nocturnal Deep-Sea Session, 5:00 PM - 5:00 AM</option>
+            <option value="Ultimate Full-Day Expedition">Ultimate Full-Day Expedition, 5:00 AM - 7:00 PM</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="package-interest">Package Interest</label>
+          <select id="package-interest" name="Package Interest" required>
+            <option value="">Select a package</option>
+            <option value="Tier 1 - Middle Pass and Caubian Islands">Tier 1 - Middle Pass & Caubian Islands</option>
+            <option value="Tier 2 - Deep Blue Danajon Banks">Tier 2 - Deep Blue Danajon Banks</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="angler-count">Number of Anglers</label>
+          <select id="angler-count" name="Number of Anglers" required>
+            <option value="">Select group size</option>
+            <option value="1">1 angler</option>
+            <option value="2">2 anglers</option>
+            <option value="3">3 anglers</option>
+            <option value="4">4 anglers</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="experience-level">Fishing Experience Level</label>
+          <select id="experience-level" name="Fishing Experience Level">
+            <option value="">Select experience level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Hobbyist">Hobbyist</option>
+            <option value="Enthusiast">Enthusiast</option>
+            <option value="Experienced Angler">Experienced Angler</option>
+            <option value="Professional / Sportfishing Team">Professional / Sportfishing Team</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="target-species">Target Species or Fishing Goal</label>
+          <input type="text" id="target-species" name="Target Species or Fishing Goal" placeholder="Example: GT, Tanguigue, Tuna, Grouper, Snapper">
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="6" placeholder="Tell us your preferred schedule, group details, and fishing goals."></textarea>
+        </div>
+
+        <button type="submit">Send Booking Inquiry</button>
+      </form>
+    </section>
+
+    <section id="contact-note">
+      <h2>What happens next?</h2>
+
+      <ol>
+        <li>Your inquiry is sent to the Mesopelagic Anglers team.</li>
+        <li>The team reviews your preferred date, session, and group details.</li>
+        <li>You receive a reply with availability, recommended charter option, and next steps.</li>
+        <li>A reservation deposit is requested only after date and session confirmation.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mesopelagic Anglers Fishing Charters</p>
+    <p>Base of Operations: Hadsan Beach Park, Lapu-Lapu City, Mactan, Cebu, Philippines</p>
+  </footer>
+</body>
+</html>

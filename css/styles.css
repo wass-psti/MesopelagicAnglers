@@ -1099,3 +1099,31 @@ textarea:focus {
     white-space: normal;
   }
 }
+
+/* CTA button consistency fix */
+.cta-box .btn-outline,
+.cta-box .btn-dark {
+  color: #ffffff;
+  background: var(--navy);
+  border-color: var(--navy);
+  box-shadow: 0 14px 28px rgba(3, 16, 27, 0.18);
+}
+
+.cta-box .btn-outline:hover,
+.cta-box .btn-dark:hover {
+  color: #ffffff;
+  background: #0b2d44;
+  border-color: #0b2d44;
+  transform: translateY(-2px);
+}
+
+.cta-box .btn-primary {
+  color: #03101b;
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.cta-box .btn-primary:hover {
+  background: #67e8f9;
+  border-color: #67e8f9;
+}

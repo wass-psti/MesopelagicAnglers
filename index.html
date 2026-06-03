@@ -24,7 +24,6 @@
         </a>
 
         <div class="nav-links">
-          <a href="index.html" class="active">Home</a>
           <a href="charters.html">Charters</a>
           <a href="fleet.html">Fleet & Gear</a>
           <a href="inclusions.html">Inclusions</a>
@@ -38,7 +37,6 @@
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
       <a href="charters.html">Charters</a>
       <a href="fleet.html">Fleet & Gear</a>
       <a href="inclusions.html">Inclusions</a>
@@ -48,8 +46,8 @@
   </header>
 
   <main>
-    <section class="hero hero-home">
-      <div class="container">
+    <section class="hero">
+      <div class="container hero-grid">
         <div class="hero-content">
           <span class="eyebrow">Private sportfishing charters from Mactan, Cebu</span>
           <h1>Mesopelagic Anglers Fishing Charters</h1>
@@ -86,6 +84,12 @@
               <span>Full-day expedition</span>
             </div>
           </div>
+        </div>
+
+        <div class="popout-card">
+          <div class="popout-bg"></div>
+          <img src="images/hero-boat.png" alt="Mesopelagic Anglers boat on the water" class="popout-base">
+          <img src="images/hero-boat-popout.png" alt="" class="popout-subject">
         </div>
       </div>
     </section>
@@ -126,15 +130,15 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt">
       <div class="container grid-2">
         <div>
           <span class="section-label">The Charter Advantage</span>
           <h2 class="section-title">Not a casual boat ride. A serious offshore fishing deployment.</h2>
           <p class="section-copy">
-            Mesopelagic Anglers is built for fishing hobbyists, enthusiasts, and serious anglers who want
-            a private offshore run with a real fishing platform, modern electronics, prepared tackle, and
-            crew-led target planning.
+            Mesopelagic Anglers is built for hobbyists, enthusiasts, and serious anglers who want
+            a private offshore run with a real fishing platform, modern electronics, prepared tackle,
+            and crew-led target planning.
           </p>
         </div>
 
@@ -212,12 +216,24 @@
         <span class="section-label">Fishing Grounds</span>
         <h2 class="section-title">Two expedition tiers. One serious offshore platform.</h2>
 
-        <div class="grid-2" style="margin-top: 44px;">
-          <article class="image-card img-tier-1">
-            <div class="image-card-content">
-              <span class="section-label">Tier 1</span>
-              <h3>Middle Pass & Caubian Islands</h3>
+        <div class="tier-grid">
+          <article class="tier-card tier-one">
+            <div class="tier-media">
+              <img src="images/fishing-time.png" alt="Tier 1 fishing trip catch" class="tier-base">
+              <img src="images/fishing-time--popout.png" alt="" class="tier-popout">
+            </div>
+
+            <div class="tier-body">
+              <div class="tier-header">
+                <span class="tier-badge">T1</span>
+                <div>
+                  <span class="tier-eyebrow">Tier 1</span>
+                  <h3>Middle Pass & Caubian Islands</h3>
+                </div>
+              </div>
+
               <p>Premium current breaks, deep drop-offs, and structure zones around the Caubian side.</p>
+
               <div class="tags">
                 <span>GT / Mamsa</span>
                 <span>Tanguigue</span>
@@ -228,11 +244,23 @@
             </div>
           </article>
 
-          <article class="image-card img-tier-2">
-            <div class="image-card-content">
-              <span class="section-label">Tier 2</span>
-              <h3>Deep Blue Danajon Banks</h3>
+          <article class="tier-card tier-two">
+            <div class="tier-media">
+              <img src="images/hero-boat2.png" alt="Tier 2 offshore boat route" class="tier-base">
+              <img src="images/hero-boat2-popout.png" alt="" class="tier-popout">
+            </div>
+
+            <div class="tier-body">
+              <div class="tier-header">
+                <span class="tier-badge">T2</span>
+                <div>
+                  <span class="tier-eyebrow">Tier 2</span>
+                  <h3>Deep Blue Danajon Banks</h3>
+                </div>
+              </div>
+
               <p>Ultra-premium offshore run for experienced anglers targeting heavier pelagics and reef predators.</p>
+
               <div class="tags">
                 <span>Yellowfin Tuna</span>
                 <span>Dogtooth Tuna</span>
@@ -249,10 +277,8 @@
     <section class="section section-dark">
       <div class="container grid-2 fleet-intro-grid">
         <article class="showcase-card">
-          <img src="images/game-king-boat.png" alt="Mesopelagic Anglers Game King boat and console" class="showcase-base">
-          <!-- Later transparent popout layer:
-          <img src="images/game-king-boat-popout.png" alt="" class="showcase-popout">
-          -->
+          <div class="showcase-bg"></div>
+          <img src="images/game-king-boat.png" alt="Mesopelagic Anglers Game King boat console" class="showcase-base">
         </article>
 
         <div>
@@ -303,7 +329,7 @@
 
         <div class="hero-actions" style="justify-content: center;">
           <a href="contact.html" class="btn btn-primary">Check Availability</a>
-          <a href="faq.html" class="btn btn-outline">Read FAQ</a>
+          <a href="faq.html" class="btn btn-dark">Read FAQ</a>
         </div>
       </div>
     </section>

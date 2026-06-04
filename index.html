@@ -18,6 +18,7 @@
  <header class="site-header">
   <div class="container">
     <nav class="navbar">
+      <!-- Logo / Home -->
       <a href="index.html" class="brand" aria-label="Mesopelagic Anglers home">
         <img
           src="images/msa-logo-outlined-white.png"
@@ -27,15 +28,47 @@
         <span>Mesopelagic Anglers</span>
       </a>
 
+      <!-- Desktop Menu -->
       <div class="nav-links">
-        <a href="fleet.html">Fleet &amp; Electronics</a>
-        <a href="charter.html">Charter Session Timings</a>
         <a href="tiers.html">Tiers</a>
-        <a href="fishing-spots.html">Fishing Spots</a>
-        <a href="armory.html">Elite Tackle Armory</a>
-        <a href="inclusions.html">Charter Inclusions &amp; Policies</a>
+
+        <div class="nav-group">
+          <button class="nav-group-toggle" type="button">
+            Fleets &amp; Gears
+            <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="nav-dropdown">
+            <a href="fleet.html">Fleet &amp; Electronics</a>
+            <a href="armory.html">Elite Tackle Armory</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-group-toggle" type="button">
+            Navigation
+            <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="nav-dropdown">
+            <a href="charter.html">Charter Session Timings</a>
+            <a href="fishing-spots.html">Fishing Spots</a>
+          </div>
+        </div>
+
+        <div class="nav-group">
+          <button class="nav-group-toggle" type="button">
+            Guides &amp; Policies
+            <span aria-hidden="true">▾</span>
+          </button>
+
+          <div class="nav-dropdown">
+            <a href="inclusions.html">Charter Inclusions &amp; Policies</a>
+            <a href="travel-guide.html">Travel &amp; Stay Guide</a>
+          </div>
+        </div>
+
         <a href="faq.html">FAQ</a>
-        <a href="travel-guide.html">Travel &amp; Stay Guide</a>
       </div>
 
       <a href="contact.html" class="btn btn-primary nav-book-btn">Book Now</a>
@@ -46,16 +79,24 @@
     </nav>
   </div>
 
+  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="fleet.html">Fleet &amp; Electronics</a>
-    <a href="charter.html">Charter Session Timings</a>
     <a href="tiers.html">Tiers</a>
-    <a href="fishing-spots.html">Fishing Spots</a>
+
+    <p class="mobile-menu-title">Fleets &amp; Gears</p>
+    <a href="fleet.html">Fleet &amp; Electronics</a>
     <a href="armory.html">Elite Tackle Armory</a>
+
+    <p class="mobile-menu-title">Navigation</p>
+    <a href="charter.html">Charter Session Timings</a>
+    <a href="fishing-spots.html">Fishing Spots</a>
+
+    <p class="mobile-menu-title">Guides &amp; Policies</p>
     <a href="inclusions.html">Charter Inclusions &amp; Policies</a>
-    <a href="faq.html">FAQ</a>
     <a href="travel-guide.html">Travel &amp; Stay Guide</a>
-    <a href="contact.html">Book Now</a>
+
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html" class="mobile-book-link">Book Now</a>
   </div>
 </header>
 

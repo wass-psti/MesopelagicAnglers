@@ -2440,3 +2440,292 @@ textarea:focus {
     0 8px 20px rgba(168, 85, 247, 0.24),
     inset 0 0 14px rgba(255, 255, 255, 0.14);
 }
+
+/* ================================
+   Tier 1 Color Override
+   Replace salmon red with premium amber/gold
+   ================================ */
+
+.tiers-overview-section .tier-plan-one {
+  border-color: rgba(245, 158, 11, 0.48);
+}
+
+.tiers-overview-section .tier-plan-one::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.24), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.10), transparent 44%);
+}
+
+.tiers-overview-section .tier-plan-one:hover {
+  border-color: rgba(251, 191, 36, 0.82);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.34),
+    0 0 58px rgba(245, 158, 11, 0.18);
+}
+
+.tiers-overview-section .tier-plan-one .tier-plan-title {
+  color: #fbbf24;
+  text-shadow: 0 0 30px rgba(245, 158, 11, 0.22);
+}
+
+/* Premium badge = gold pill */
+.tiers-overview-section .premium-tier-badge {
+  color: #1f1300;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  border: 1px solid rgba(251, 191, 36, 0.88);
+  box-shadow:
+    0 8px 20px rgba(245, 158, 11, 0.24),
+    inset 0 0 14px rgba(255, 255, 255, 0.18);
+}
+
+/* Tier 1 checklist icons */
+.tiers-overview-section .tier-plan-one .tier-plan-list li::before {
+  color: #1f1300;
+  background: #fbbf24;
+}
+
+/* Tier 1 button = gold */
+.tiers-overview-section .tier-plan-one .tier-plan-btn {
+  color: #1f1300;
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+  border-color: rgba(251, 191, 36, 0.90);
+  box-shadow: 0 14px 30px rgba(245, 158, 11, 0.24);
+}
+
+.tiers-overview-section .tier-plan-one .tier-plan-btn:hover {
+  color: #1f1300;
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+  border-color: rgba(253, 224, 71, 0.95);
+  box-shadow: 0 18px 40px rgba(245, 158, 11, 0.34);
+}
+
+/* ================================
+   Fish Targets Checklist
+   Cleaner replacement for fish pills
+   ================================ */
+
+.tiers-overview-section .fish-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  list-style: none;
+}
+
+.tiers-overview-section .fish-checklist li {
+  position: relative;
+  padding-left: 24px;
+  color: rgba(226, 237, 247, 0.90);
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.tiers-overview-section .fish-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(226, 237, 247, 0.70);
+  box-shadow: 0 0 12px rgba(226, 237, 247, 0.18);
+}
+
+/* Tier-specific checklist accent */
+.tiers-overview-section .tier-plan-one .fish-checklist li::before {
+  background: #fbbf24;
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.28);
+}
+
+.tiers-overview-section .tier-plan-two .fish-checklist li::before {
+  background: #a855f7;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.30);
+}
+
+@media (max-width: 620px) {
+  .tiers-overview-section .fish-checklist {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   Tier 1 Color Override
+   Premium Green Theme
+   ================================ */
+
+.tiers-overview-section .tier-plan-one {
+  border-color: rgba(34, 197, 94, 0.48);
+}
+
+.tiers-overview-section .tier-plan-one::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.24), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(20, 184, 166, 0.10), transparent 44%);
+}
+
+.tiers-overview-section .tier-plan-one:hover {
+  border-color: rgba(74, 222, 128, 0.82);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.34),
+    0 0 58px rgba(34, 197, 94, 0.18);
+}
+
+.tiers-overview-section .tier-plan-one .tier-plan-title {
+  color: #4ade80;
+  text-shadow: 0 0 30px rgba(34, 197, 94, 0.22);
+}
+
+/* Premium badge = green pill */
+.tiers-overview-section .premium-tier-badge {
+  color: #02140a;
+  background: linear-gradient(135deg, #4ade80, #14b8a6);
+  border: 1px solid rgba(74, 222, 128, 0.88);
+  box-shadow:
+    0 8px 20px rgba(34, 197, 94, 0.24),
+    inset 0 0 14px rgba(255, 255, 255, 0.18);
+}
+
+/* Tier 1 checklist icons */
+.tiers-overview-section .tier-plan-one .tier-plan-list li::before {
+  color: #02140a;
+  background: #4ade80;
+}
+
+/* Tier 1 fish checklist dots */
+.tiers-overview-section .tier-plan-one .fish-checklist li::before {
+  background: #4ade80;
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.30);
+}
+
+/* Tier 1 button = green */
+.tiers-overview-section .tier-plan-one .tier-plan-btn {
+  color: #02140a;
+  background: linear-gradient(135deg, #4ade80, #14b8a6);
+  border-color: rgba(74, 222, 128, 0.90);
+  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.24);
+}
+
+.tiers-overview-section .tier-plan-one .tier-plan-btn:hover {
+  color: #02140a;
+  background: linear-gradient(135deg, #86efac, #2dd4bf);
+  border-color: rgba(134, 239, 172, 0.95);
+  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.34);
+}
+
+/* ================================
+   FISHING MAP OVERVIEW
+   ================================ */
+
+.fishing-map-section {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(34, 211, 238, 0.08), transparent 28%),
+    var(--fresh);
+}
+
+.fishing-map-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.fishing-map-content {
+  min-width: 0;
+}
+
+.fishing-map-points {
+  margin-top: 34px;
+}
+
+.map-showcase-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  border-radius: 34px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.map-showcase-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.04) contrast(1.02);
+  transition:
+    transform 260ms ease,
+    filter 260ms ease;
+}
+
+.map-showcase-card:hover img {
+  transform: scale(1.035);
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.map-caption {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(3, 16, 27, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.map-caption strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.2;
+}
+
+.map-caption span {
+  display: block;
+  margin-top: 6px;
+  color: #d7e6ee;
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+/* Responsive fishing map section */
+
+@media (max-width: 1120px) {
+  .fishing-map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-showcase-card {
+    min-height: 440px;
+  }
+
+  .map-showcase-card img {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 520px) {
+  .map-showcase-card {
+    min-height: 360px;
+    border-radius: 24px;
+  }
+
+  .map-showcase-card img {
+    min-height: 360px;
+  }
+
+  .map-caption {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+}

@@ -1393,16 +1393,16 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 9px;
+  margin-bottom: 12px;
 }
 
 .tier-plan-title {
   color: #ffffff;
-  font-size: clamp(1.9rem, 3vw, 3.1rem);
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
   font-weight: 950;
-  line-height: 0.95;
-  letter-spacing: -0.065em;
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .tier-plan-one .tier-plan-title {
@@ -1416,18 +1416,18 @@ p {
 }
 
 .tier-badge {
+  width: fit-content;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 28px;
-  padding: 7px 11px;
-  border-radius: 9px;
+  padding: 6px 12px;
+  border-radius: 999px;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  font-size: 0.64rem;
+  font-size: 0.66rem;
   font-weight: 950;
   line-height: 1;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.075em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -1449,10 +1449,10 @@ p {
 .tier-plan-card h3 {
   max-width: 560px;
   color: rgba(255, 255, 255, 0.96);
-  font-size: clamp(1.35rem, 1.9vw, 2rem);
-  line-height: 1.14;
-  font-weight: 900;
-  letter-spacing: -0.055em;
+  font-size: clamp(1.75rem, 2.6vw, 2.7rem);
+  line-height: 1.08;
+  font-weight: 950;
+  letter-spacing: -0.06em;
 }
 
 .tier-plan-summary {
@@ -2393,4 +2393,50 @@ textarea:focus {
   .tags span {
     white-space: normal;
   }
+}
+/* Fix Premium / Deluxe tier badges into text-sized pills */
+.tiers-overview-section .tier-badge,
+.tiers-overview-section .premium-badge,
+.tiers-overview-section .premium-tier-badge,
+.tiers-overview-section .deluxe-tier-badge {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.42rem 0.72rem;
+  border-radius: 999px;
+
+  font-size: 0.62rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Premium = salmon pill */
+.tiers-overview-section .premium-tier-badge,
+.tiers-overview-section .premium-badge {
+  color: #2b0805;
+  background: #fa8072;
+  border: 1px solid rgba(250, 128, 114, 0.85);
+  box-shadow:
+    0 8px 20px rgba(250, 128, 114, 0.20),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
+}
+
+/* Deluxe = purple pill */
+.tiers-overview-section .deluxe-tier-badge {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  border: 1px solid rgba(196, 181, 253, 0.72);
+  box-shadow:
+    0 8px 20px rgba(168, 85, 247, 0.24),
+    inset 0 0 14px rgba(255, 255, 255, 0.14);
 }

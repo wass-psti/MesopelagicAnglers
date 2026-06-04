@@ -1685,3 +1685,140 @@ textarea:focus {
     white-space: normal;
   }
 }
+
+/* ================================
+   Figma-style Header / Navigation
+   ================================ */
+
+.site-header {
+  background: rgba(5, 18, 34, 0.98);
+  border-bottom: 1px solid rgba(120, 160, 200, 0.16);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .nav-container {
+  max-width: 1540px;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.brand span {
+  color: #f4f8ff;
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 1.4vw, 28px);
+  flex: 1;
+}
+
+.nav-links a {
+  color: #8fa2ba;
+  font-size: 0.89rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1f9bff;
+}
+
+.nav-book-btn {
+  min-width: 132px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Keep desktop menu clean on medium screens */
+@media (max-width: 1320px) {
+  .navbar {
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  .brand span {
+    font-size: 0.98rem;
+  }
+
+  .nav-book-btn {
+    min-width: 116px;
+    padding: 0 18px;
+  }
+}
+
+/* Mobile/tablet: use hamburger */
+@media (max-width: 1180px) {
+  .nav-links,
+  .nav-book-btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    background: rgba(5, 18, 34, 0.98);
+    border-top: 1px solid rgba(120, 160, 200, 0.16);
+  }
+
+  .mobile-menu a {
+    color: #d8e8f7;
+    font-weight: 800;
+  }
+
+  .mobile-menu a.active,
+  .mobile-menu a:hover {
+    color: #1f9bff;
+  }
+}

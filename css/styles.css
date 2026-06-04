@@ -86,7 +86,7 @@ textarea {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 9999;
-  background: rgba(3, 16, 27, 0.94);
+  background: rgba(3, 16, 27, 0.92);
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -96,22 +96,18 @@ textarea {
   min-height: 76px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 28px;
 }
 
-/* LOGO / HOME */
-
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
-  flex-shrink: 0;
   color: var(--white);
   font-size: 1rem;
   font-weight: 900;
-  letter-spacing: -0.035em;
-  text-decoration: none;
-  white-space: nowrap;
+  letter-spacing: -0.03em;
 }
 
 .brand-logo {
@@ -119,17 +115,7 @@ textarea {
   height: 54px;
   object-fit: contain;
   filter: drop-shadow(0 0 14px rgba(34, 211, 238, 0.26));
-  transition:
-    transform 180ms ease,
-    filter 180ms ease;
-}
-
-.brand span {
-  transition: color 180ms ease;
-}
-
-.brand:hover span {
-  color: var(--cyan);
+  transition: transform 180ms ease, filter 180ms ease;
 }
 
 .brand:hover .brand-logo {
@@ -137,137 +123,23 @@ textarea {
   filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.45));
 }
 
-/* DESKTOP NAV */
-
 .nav-links {
-  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: clamp(18px, 2vw, 34px);
+  gap: 26px;
 }
 
-.nav-links > a,
-.nav-group-toggle {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0;
+.nav-links a {
   color: #d7e6ee;
-  background: transparent;
-  border: 0;
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 900;
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
   transition: color 180ms ease;
 }
 
-.nav-links > a:hover,
-.nav-links > a.active,
-.nav-group:hover .nav-group-toggle,
-.nav-group:focus-within .nav-group-toggle {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--cyan);
 }
-
-/* DROPDOWN GROUP */
-
-.nav-group {
-  position: relative;
-}
-
-/* Hover bridge so dropdown does not disappear */
-.nav-group::after {
-  content: "";
-  position: absolute;
-  left: -14px;
-  right: -14px;
-  top: 100%;
-  height: 18px;
-}
-
-.nav-group-toggle span {
-  display: inline-block;
-  font-size: 0.68rem;
-  line-height: 1;
-  transform: translateY(1px);
-  transition: transform 180ms ease;
-}
-
-.nav-group:hover .nav-group-toggle span,
-.nav-group:focus-within .nav-group-toggle span {
-  transform: translateY(1px) rotate(180deg);
-}
-
-.nav-dropdown {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 0;
-  min-width: 260px;
-  padding: 8px;
-  border-radius: 14px;
-  background: rgba(3, 16, 27, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.34),
-    0 0 36px rgba(34, 211, 238, 0.08);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(6px);
-  transition:
-    opacity 160ms ease,
-    visibility 160ms ease,
-    transform 160ms ease;
-}
-
-.nav-group:hover .nav-dropdown,
-.nav-group:focus-within .nav-dropdown {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.nav-dropdown a {
-  min-height: 42px;
-  display: flex;
-  align-items: center;
-  padding: 0 14px;
-  border-radius: 10px;
-  color: #d7e6ee;
-  font-size: 0.86rem;
-  font-weight: 850;
-  line-height: 1.2;
-  white-space: nowrap;
-  transition:
-    color 160ms ease,
-    background 160ms ease;
-}
-
-.nav-dropdown a:hover {
-  color: var(--cyan);
-  background: rgba(34, 211, 238, 0.08);
-}
-
-/* BOOK BUTTON */
-
-.nav-book-btn {
-  min-width: 124px;
-  min-height: 48px;
-  padding: 0 24px;
-  flex-shrink: 0;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-
-/* MOBILE */
 
 .mobile-toggle {
   display: none;
@@ -292,15 +164,6 @@ textarea {
   display: block;
 }
 
-.mobile-menu-title {
-  padding: 18px 0 8px;
-  color: var(--cyan);
-  font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .mobile-menu a {
   display: block;
   padding: 14px 0;
@@ -311,46 +174,6 @@ textarea {
 
 .mobile-menu a:hover {
   color: var(--cyan);
-}
-
-.mobile-book-link {
-  margin-top: 16px;
-  padding: 14px 18px !important;
-  text-align: center;
-  border-radius: 999px;
-  color: #03101b !important;
-  background: var(--cyan);
-  border-bottom: 0 !important;
-  font-weight: 900;
-}
-
-/* HEADER RESPONSIVE */
-
-@media (max-width: 1120px) {
-  .nav-links,
-  .navbar > .btn {
-    display: none;
-  }
-
-  .mobile-toggle {
-    display: inline-grid;
-    place-items: center;
-  }
-
-  .navbar {
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 520px) {
-  .brand {
-    font-size: 0.92rem;
-  }
-
-  .brand-logo {
-    width: 44px;
-    height: 44px;
-  }
 }
 
 /* BUTTONS */
@@ -1090,158 +913,7 @@ p {
     0 0 0 1px rgba(34, 197, 94, 0.14) inset;
 }
 
-/* TIER CARDS */
-
-.tier-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  margin-top: 44px;
-}
-
-.tier-card {
-  overflow: hidden;
-  border-radius: 34px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition:
-    transform 240ms ease,
-    border-color 240ms ease,
-    box-shadow 240ms ease;
-}
-
-.tier-card:hover {
-  transform: translateY(-8px);
-}
-
-.tier-media {
-  min-height: 350px;
-  overflow: hidden;
-  background: #e7f5f8;
-}
-
-.tier-base {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  transition: transform 260ms ease, filter 260ms ease;
-}
-
-.tier-one .tier-base {
-  object-position: center 36%;
-}
-
-.tier-two .tier-base {
-  object-position: center 43%;
-}
-
-.tier-card:hover .tier-base {
-  transform: scale(1.04);
-  filter: saturate(1.06) contrast(1.03);
-}
-
-.tier-body {
-  padding: 30px;
-  min-height: 300px;
-}
-
-.tier-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-
-.tier-badge {
-  width: 68px;
-  height: 68px;
-  display: inline-grid;
-  place-items: center;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  font-size: 0.82rem;
-  font-weight: 950;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.tier-one .tier-badge {
-  color: #7c2d12;
-  background: var(--tier-one-soft);
-  border: 2px solid rgba(249, 115, 22, 0.32);
-  box-shadow: 0 14px 34px rgba(249, 115, 22, 0.16);
-}
-
-.tier-two .tier-badge {
-  color: #4c1d95;
-  background: var(--tier-two-soft);
-  border: 2px solid rgba(167, 139, 250, 0.38);
-  box-shadow: 0 14px 34px rgba(167, 139, 250, 0.20);
-}
-
-.tier-eyebrow {
-  font-size: 0.72rem;
-  font-weight: 950;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.tier-one .tier-eyebrow {
-  color: var(--tier-one);
-}
-
-.tier-two .tier-eyebrow {
-  color: #8b5cf6;
-}
-
-.tier-body h3 {
-  margin-top: 4px;
-  font-size: clamp(1.55rem, 2.2vw, 2.1rem);
-}
-
-.tier-body p {
-  margin-top: 12px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  min-height: 88px;
-  margin-top: 24px;
-  align-content: flex-start;
-}
-
-.tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 850;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.tier-one .tags span {
-  color: #7c2d12;
-  background: rgba(249, 115, 22, 0.10);
-  border: 1px solid rgba(249, 115, 22, 0.24);
-}
-
-.tier-two .tags span {
-  color: #5b21b6;
-  background: rgba(167, 139, 250, 0.14);
-  border: 1px solid rgba(167, 139, 250, 0.28);
-}
-
-/* ================================
-   HOMEPAGE TIER OVERVIEW
-   Premium comparison cards
-   ================================ */
+/* TIER OVERVIEW - COMPARISON CARDS */
 
 .tiers-overview-section {
   position: relative;
@@ -1252,53 +924,13 @@ p {
     linear-gradient(180deg, #071725 0%, #03101b 100%);
 }
 
-/* Hover background image layer */
-.tiers-overview-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -3;
-  opacity: 0;
-  background-position: center;
-  background-size: cover;
-  transform: scale(1.04);
-  filter: saturate(1.08) contrast(1.05);
-  transition:
-    opacity 260ms ease,
-    background-image 260ms ease,
-    transform 400ms ease;
-}
-
-/* Dark overlay for readability */
-.tiers-overview-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background:
-    linear-gradient(90deg, rgba(3, 16, 27, 0.90), rgba(3, 16, 27, 0.74)),
-    linear-gradient(180deg, rgba(3, 16, 27, 0.72), rgba(3, 16, 27, 0.95));
-  pointer-events: none;
-}
-
-.tiers-overview-section:has(.tier-plan-one:hover)::before {
-  opacity: 0.42;
-  background-image: url("../images/fishing-time.png");
-  transform: scale(1);
-}
-
-.tiers-overview-section:has(.tier-plan-two:hover)::before {
-  opacity: 0.46;
-  background-image: url("../images/fishing-time-2.png");
-  transform: scale(1);
-}
-
 .tiers-overview-section > .container {
   position: relative;
   z-index: 1;
 }
 
 .tier-plan-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
@@ -1307,11 +939,12 @@ p {
 
 .tier-plan-card {
   position: relative;
-  overflow: hidden;
+  z-index: 2;
   min-height: 620px;
   display: flex;
   flex-direction: column;
   padding: 36px;
+  overflow: hidden;
   border-radius: 30px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.030)),
@@ -1323,6 +956,8 @@ p {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   transition:
+    opacity 220ms ease,
+    visibility 220ms ease,
     transform 220ms ease,
     border-color 220ms ease,
     box-shadow 220ms ease;
@@ -1345,44 +980,44 @@ p {
   transform: translateY(-7px);
 }
 
-/* Tier 1 = Salmon Red Premium */
+/* Tier 1 = Premium green */
 .tier-plan-one {
-  border-color: rgba(250, 128, 114, 0.44);
+  border-color: rgba(34, 197, 94, 0.48);
 }
 
 .tier-plan-one::before {
   background:
-    radial-gradient(circle at 0% 0%, rgba(250, 128, 114, 0.24), transparent 34%),
-    radial-gradient(circle at 50% 100%, rgba(250, 128, 114, 0.10), transparent 44%);
+    radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.24), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(20, 184, 166, 0.10), transparent 44%);
 }
 
 .tier-plan-one:hover {
-  border-color: rgba(250, 128, 114, 0.78);
+  border-color: rgba(74, 222, 128, 0.82);
   box-shadow:
     0 30px 90px rgba(0, 0, 0, 0.34),
-    0 0 58px rgba(250, 128, 114, 0.16);
+    0 0 58px rgba(34, 197, 94, 0.18);
 }
 
-/* Tier 2 = Deluxe */
+/* Tier 2 = Deluxe blue */
 .tier-plan-two {
-  border-color: rgba(167, 139, 250, 0.54);
+  border-color: rgba(33, 150, 243, 0.52);
   box-shadow:
     0 26px 80px rgba(0, 0, 0, 0.28),
-    0 0 54px rgba(167, 139, 250, 0.10),
-    inset 0 0 0 1px rgba(167, 139, 250, 0.12);
+    0 0 54px rgba(33, 150, 243, 0.10),
+    inset 0 0 0 1px rgba(33, 150, 243, 0.12);
 }
 
 .tier-plan-two::before {
   background:
-    radial-gradient(circle at 0% 0%, rgba(167, 139, 250, 0.24), transparent 34%),
-    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.11), transparent 40%);
+    radial-gradient(circle at 0% 0%, rgba(33, 150, 243, 0.26), transparent 34%),
+    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.12), transparent 40%);
 }
 
 .tier-plan-two:hover {
-  border-color: rgba(167, 139, 250, 0.82);
+  border-color: rgba(77, 178, 255, 0.88);
   box-shadow:
     0 30px 90px rgba(0, 0, 0, 0.36),
-    0 0 70px rgba(167, 139, 250, 0.18);
+    0 0 70px rgba(33, 150, 243, 0.22);
 }
 
 .tier-plan-header {
@@ -1406,25 +1041,28 @@ p {
 }
 
 .tier-plan-one .tier-plan-title {
-  color: #fa8072;
-  text-shadow: 0 0 30px rgba(250, 128, 114, 0.20);
+  color: #4ade80;
+  text-shadow: 0 0 30px rgba(34, 197, 94, 0.22);
 }
 
 .tier-plan-two .tier-plan-title {
-  color: #ffffff;
-  text-shadow: 0 0 34px rgba(167, 139, 250, 0.22);
+  color: #4db2ff;
+  text-shadow: 0 0 34px rgba(33, 150, 243, 0.28);
 }
 
 .tier-badge {
-  width: fit-content;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 12px;
+  padding: 0.42rem 0.72rem;
   border-radius: 999px;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  font-size: 0.66rem;
+  font-size: 0.62rem;
   font-weight: 950;
   line-height: 1;
   letter-spacing: 0.075em;
@@ -1433,17 +1071,21 @@ p {
 }
 
 .premium-tier-badge {
-  background: linear-gradient(135deg, #fa8072, #fb7185);
+  color: #02140a;
+  background: linear-gradient(135deg, #4ade80, #14b8a6);
+  border-color: rgba(74, 222, 128, 0.88);
   box-shadow:
-    0 12px 30px rgba(250, 128, 114, 0.24),
-    inset 0 0 18px rgba(255, 255, 255, 0.10);
+    0 8px 20px rgba(34, 197, 94, 0.24),
+    inset 0 0 14px rgba(255, 255, 255, 0.18);
 }
 
 .deluxe-tier-badge {
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  color: #ffffff;
+  background: linear-gradient(135deg, #2196f3, #22d3ee);
+  border-color: rgba(77, 178, 255, 0.88);
   box-shadow:
-    0 12px 30px rgba(168, 85, 247, 0.26),
-    inset 0 0 18px rgba(255, 255, 255, 0.10);
+    0 8px 20px rgba(33, 150, 243, 0.28),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
 }
 
 .tier-plan-card h3 {
@@ -1493,13 +1135,13 @@ p {
 }
 
 .tier-plan-one .tier-plan-list li::before {
-  color: #2b0805;
-  background: #fa8072;
+  color: #02140a;
+  background: #4ade80;
 }
 
 .tier-plan-two .tier-plan-list li::before {
-  color: #ffffff;
-  background: #8b5cf6;
+  color: #03101b;
+  background: #4db2ff;
 }
 
 .tier-plan-list strong {
@@ -1522,75 +1164,42 @@ p {
   text-transform: uppercase;
 }
 
-.fish-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.fish-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  list-style: none;
 }
 
-.fish-tag {
-  display: inline-flex;
-  align-items: center;
-  min-height: 36px;
-  padding: 8px 13px;
+.fish-checklist li {
+  position: relative;
+  padding-left: 24px;
+  color: rgba(226, 237, 247, 0.90);
+  font-size: 0.92rem;
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.fish-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
   border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 950;
-  line-height: 1;
-  border: 1px solid currentColor;
-  background: rgba(255, 255, 255, 0.055);
-  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.025);
+  background: rgba(226, 237, 247, 0.70);
+  box-shadow: 0 0 12px rgba(226, 237, 247, 0.18);
 }
 
-/* Fish target emphasis */
-.fish-gt {
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.10);
+.tier-plan-one .fish-checklist li::before {
+  background: #4ade80;
+  box-shadow: 0 0 12px rgba(74, 222, 128, 0.30);
 }
 
-.fish-tanguigue {
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.10);
-}
-
-.fish-barracuda {
-  color: #a7f3d0;
-  background: rgba(167, 243, 208, 0.09);
-}
-
-.fish-grouper {
-  color: #fb923c;
-  background: rgba(251, 146, 60, 0.10);
-}
-
-.fish-red-snapper {
-  color: #fa8072;
-  background: rgba(250, 128, 114, 0.12);
-}
-
-.fish-ruby-snapper {
-  color: #fb7185;
-  background: rgba(251, 113, 133, 0.12);
-}
-
-.fish-yellowfin {
-  color: #fde047;
-  background: rgba(253, 224, 71, 0.10);
-}
-
-.fish-dogtooth {
-  color: #e5e7eb;
-  background: rgba(229, 231, 235, 0.10);
-}
-
-.fish-amberjack {
-  color: #f59e0b;
-  background: rgba(245, 158, 11, 0.10);
-}
-
-.fish-emperor {
-  color: #c084fc;
-  background: rgba(192, 132, 252, 0.11);
+.tier-plan-two .fish-checklist li::before {
+  background: #4db2ff;
+  box-shadow: 0 0 12px rgba(33, 150, 243, 0.34);
 }
 
 .tier-plan-btn {
@@ -1598,36 +1207,137 @@ p {
   margin-top: 30px;
 }
 
-/* Tier-colored buttons */
 .tier-plan-one .tier-plan-btn {
-  color: #2b0805;
-  background: #fa8072;
-  border-color: #fa8072;
-  box-shadow: 0 14px 30px rgba(250, 128, 114, 0.22);
+  color: #02140a;
+  background: linear-gradient(135deg, #4ade80, #14b8a6);
+  border-color: rgba(74, 222, 128, 0.90);
+  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.24);
 }
 
 .tier-plan-one .tier-plan-btn:hover {
-  color: #2b0805;
-  background: #ff9b90;
-  border-color: #ff9b90;
-  box-shadow: 0 18px 38px rgba(250, 128, 114, 0.30);
+  color: #02140a;
+  background: linear-gradient(135deg, #86efac, #2dd4bf);
+  border-color: rgba(134, 239, 172, 0.95);
+  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.34);
 }
 
 .tier-plan-two .tier-plan-btn {
   color: #ffffff;
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
-  border-color: rgba(167, 139, 250, 0.72);
-  box-shadow: 0 14px 30px rgba(168, 85, 247, 0.25);
+  background: linear-gradient(135deg, #2196f3, #22d3ee);
+  border-color: rgba(77, 178, 255, 0.90);
+  box-shadow: 0 14px 30px rgba(33, 150, 243, 0.28);
 }
 
 .tier-plan-two .tier-plan-btn:hover {
   color: #ffffff;
-  background: linear-gradient(135deg, #7c3aed, #9333ea);
-  border-color: rgba(196, 181, 253, 0.90);
-  box-shadow: 0 18px 42px rgba(168, 85, 247, 0.34);
+  background: linear-gradient(135deg, #4db2ff, #67e8f9);
+  border-color: rgba(103, 232, 249, 0.95);
+  box-shadow: 0 18px 42px rgba(33, 150, 243, 0.38);
 }
 
-/* Responsive tier overview */
+/* Opposite-side image preview */
+.tier-side-preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: calc(50% - 14px);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 4;
+  background: rgba(3, 16, 27, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.34),
+    0 0 42px rgba(34, 211, 238, 0.12);
+  transform: scale(0.975);
+  transition:
+    opacity 220ms ease,
+    visibility 220ms ease,
+    transform 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.tier-side-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  padding: 18px;
+  background: rgba(3, 16, 27, 0.96);
+  filter: saturate(1.12) contrast(1.06) brightness(1.04);
+  transition:
+    transform 320ms ease,
+    filter 260ms ease;
+}
+
+.tier-side-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(3, 16, 27, 0.02), rgba(3, 16, 27, 0.16));
+  pointer-events: none;
+}
+
+.tier-one-side-preview {
+  right: 0;
+}
+
+.tier-two-side-preview {
+  left: 0;
+}
+
+/* Hover Tier 1: keep Tier 1 left, show fishing-time.png on the right */
+.tier-plan-grid:has(.tier-plan-one:hover) .tier-plan-two {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(18px) scale(0.98);
+  pointer-events: none;
+}
+
+.tier-plan-grid:has(.tier-plan-one:hover) .tier-one-side-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 48px rgba(34, 197, 94, 0.18);
+}
+
+.tier-plan-grid:has(.tier-plan-one:hover) .tier-one-side-preview img {
+  transform: scale(1.015);
+}
+
+/* Hover Tier 2: keep Tier 2 right, show fishing-time-2.png on the left */
+.tier-plan-grid:has(.tier-plan-two:hover) .tier-plan-one {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-18px) scale(0.98);
+  pointer-events: none;
+}
+
+.tier-plan-grid:has(.tier-plan-two:hover) .tier-two-side-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 48px rgba(33, 150, 243, 0.20);
+}
+
+.tier-plan-grid:has(.tier-plan-two:hover) .tier-two-side-preview img {
+  transform: scale(1.015);
+}
+
+.tier-plan-grid:has(.tier-plan-one:hover) .tier-plan-one,
+.tier-plan-grid:has(.tier-plan-two:hover) .tier-plan-two {
+  z-index: 5;
+}
 
 @media (max-width: 960px) {
   .tier-plan-grid {
@@ -1637,16 +1347,30 @@ p {
   .tier-plan-card {
     min-height: auto;
   }
+
+  .tier-side-preview {
+    display: none;
+  }
+
+  .tier-plan-grid:has(.tier-plan-one:hover) .tier-plan-two,
+  .tier-plan-grid:has(.tier-plan-two:hover) .tier-plan-one {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .fish-checklist {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 520px) {
   .tier-plan-card {
     padding: 26px;
     border-radius: 24px;
-  }
-
-  .tier-plan-title {
-    font-size: clamp(2.2rem, 16vw, 3.4rem);
   }
 
   .tier-title-row {
@@ -1658,6 +1382,7 @@ p {
     width: fit-content;
   }
 }
+
 
 /* IMAGE CARDS */
 
@@ -2038,112 +1763,33 @@ textarea:focus {
 /* FOOTER */
 
 .site-footer {
-  padding: 70px 0 34px;
+  padding: 38px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.10);
-  background:
-    radial-gradient(circle at 15% 0%, rgba(34, 211, 238, 0.10), transparent 30%),
-    linear-gradient(180deg, #071725 0%, #03101b 100%);
+  background: rgba(3, 16, 27, 0.96);
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 0.7fr 1fr 1fr 1.1fr;
-  gap: 42px;
-  align-items: start;
-}
-
-.footer-brand {
-  max-width: 420px;
-}
-
-.footer-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--white);
-  text-decoration: none;
-}
-
-.footer-logo-img {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 14px rgba(34, 211, 238, 0.26));
-}
-
-.footer-logo span {
-  color: var(--white);
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: -0.035em;
-  white-space: nowrap;
-  transition: color 180ms ease;
-}
-
-.footer-logo:hover span {
-  color: var(--cyan);
-}
-
-.footer-brand p {
-  margin-top: 18px;
-  color: var(--soft);
-  font-size: 0.94rem;
-  line-height: 1.75;
-}
-
-.footer-book-btn {
-  width: fit-content;
-  margin-top: 24px;
-}
-
-.footer-column {
+.footer-inner {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-column h3 {
-  margin-bottom: 6px;
-  color: var(--white);
-  font-size: 0.78rem;
-  font-weight: 950;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.footer-column a {
+  justify-content: space-between;
+  gap: 28px;
   color: var(--soft);
   font-size: 0.9rem;
-  font-weight: 750;
-  line-height: 1.45;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
-}
-
-.footer-column a:hover {
-  color: var(--cyan);
-  transform: translateX(3px);
-}
-
-.footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  margin-top: 54px;
-  padding-top: 26px;
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-.footer-bottom p {
-  color: var(--soft);
-  font-size: 0.86rem;
   line-height: 1.6;
 }
 
-.footer-bottom strong {
+.footer-inner strong {
   color: var(--white);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-weight: 800;
+}
+
+.footer-links a:hover {
+  color: var(--cyan);
 }
 
 /* RESPONSIVE */
@@ -2167,27 +1813,9 @@ textarea:focus {
   .trust-item:nth-child(2n) {
     border-right: 0;
   }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .footer-brand {
-    max-width: none;
-  }
 }
 
 @media (max-width: 860px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .footer-bottom {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
   .container {
     width: min(100% - 32px, var(--max-width));
   }
@@ -2326,20 +1954,6 @@ textarea:focus {
 }
 
 @media (max-width: 520px) {
-
-  .footer-logo-img {
-    width: 44px;
-    height: 44px;
-  }
-
-  .footer-logo span {
-    font-size: 0.92rem;
-  }
-
-  .footer-book-btn {
-    width: 100%;
-  }
-
   h1 {
     font-size: clamp(2.55rem, 12vw, 4rem);
   }
@@ -2394,228 +2008,146 @@ textarea:focus {
     white-space: normal;
   }
 }
-/* Fix Premium / Deluxe tier badges into text-sized pills */
-.tiers-overview-section .tier-badge,
-.tiers-overview-section .premium-badge,
-.tiers-overview-section .premium-tier-badge,
-.tiers-overview-section .deluxe-tier-badge {
-  width: auto !important;
-  height: auto !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
-  aspect-ratio: auto !important;
 
-  display: inline-flex;
+/* ================================
+   Figma-style Header / Navigation
+   ================================ */
+
+.site-header {
+  background: rgba(5, 18, 34, 0.98);
+  border-bottom: 1px solid rgba(120, 160, 200, 0.16);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .nav-container {
+  max-width: 1540px;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 22px;
+}
 
-  padding: 0.42rem 0.72rem;
-  border-radius: 999px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
 
-  font-size: 0.62rem;
-  font-weight: 950;
-  line-height: 1;
-  letter-spacing: 0.075em;
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.brand span {
+  color: #f4f8ff;
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-/* Premium = salmon pill */
-.tiers-overview-section .premium-tier-badge,
-.tiers-overview-section .premium-badge {
-  color: #2b0805;
-  background: #fa8072;
-  border: 1px solid rgba(250, 128, 114, 0.85);
-  box-shadow:
-    0 8px 20px rgba(250, 128, 114, 0.20),
-    inset 0 0 14px rgba(255, 255, 255, 0.16);
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 1.4vw, 28px);
+  flex: 1;
 }
 
-/* Deluxe = purple pill */
-.tiers-overview-section .deluxe-tier-badge {
-  color: #ffffff;
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
-  border: 1px solid rgba(196, 181, 253, 0.72);
-  box-shadow:
-    0 8px 20px rgba(168, 85, 247, 0.24),
-    inset 0 0 14px rgba(255, 255, 255, 0.14);
+.nav-links a {
+  color: #8fa2ba;
+  font-size: 0.89rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
 }
 
-/* ================================
-   Tier 1 Color Override
-   Replace salmon red with premium amber/gold
-   ================================ */
-
-.tiers-overview-section .tier-plan-one {
-  border-color: rgba(245, 158, 11, 0.48);
+.nav-links a:hover,
+.nav-links a.active {
+  color: #1f9bff;
 }
 
-.tiers-overview-section .tier-plan-one::before {
-  background:
-    radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.24), transparent 34%),
-    radial-gradient(circle at 50% 100%, rgba(251, 191, 36, 0.10), transparent 44%);
+.nav-book-btn {
+  min-width: 132px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.tiers-overview-section .tier-plan-one:hover {
-  border-color: rgba(251, 191, 36, 0.82);
-  box-shadow:
-    0 30px 90px rgba(0, 0, 0, 0.34),
-    0 0 58px rgba(245, 158, 11, 0.18);
-}
+/* Keep desktop menu clean on medium screens */
+@media (max-width: 1320px) {
+  .navbar {
+    gap: 16px;
+  }
 
-.tiers-overview-section .tier-plan-one .tier-plan-title {
-  color: #fbbf24;
-  text-shadow: 0 0 30px rgba(245, 158, 11, 0.22);
-}
+  .nav-links {
+    gap: 14px;
+  }
 
-/* Premium badge = gold pill */
-.tiers-overview-section .premium-tier-badge {
-  color: #1f1300;
-  background: linear-gradient(135deg, #facc15, #f59e0b);
-  border: 1px solid rgba(251, 191, 36, 0.88);
-  box-shadow:
-    0 8px 20px rgba(245, 158, 11, 0.24),
-    inset 0 0 14px rgba(255, 255, 255, 0.18);
-}
+  .nav-links a {
+    font-size: 0.82rem;
+  }
 
-/* Tier 1 checklist icons */
-.tiers-overview-section .tier-plan-one .tier-plan-list li::before {
-  color: #1f1300;
-  background: #fbbf24;
-}
+  .brand span {
+    font-size: 0.98rem;
+  }
 
-/* Tier 1 button = gold */
-.tiers-overview-section .tier-plan-one .tier-plan-btn {
-  color: #1f1300;
-  background: linear-gradient(135deg, #facc15, #f59e0b);
-  border-color: rgba(251, 191, 36, 0.90);
-  box-shadow: 0 14px 30px rgba(245, 158, 11, 0.24);
-}
-
-.tiers-overview-section .tier-plan-one .tier-plan-btn:hover {
-  color: #1f1300;
-  background: linear-gradient(135deg, #fde047, #f59e0b);
-  border-color: rgba(253, 224, 71, 0.95);
-  box-shadow: 0 18px 40px rgba(245, 158, 11, 0.34);
-}
-
-/* ================================
-   Fish Targets Checklist
-   Cleaner replacement for fish pills
-   ================================ */
-
-.tiers-overview-section .fish-checklist {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 18px;
-  list-style: none;
-}
-
-.tiers-overview-section .fish-checklist li {
-  position: relative;
-  padding-left: 24px;
-  color: rgba(226, 237, 247, 0.90);
-  font-size: 0.92rem;
-  font-weight: 750;
-  line-height: 1.45;
-}
-
-.tiers-overview-section .fish-checklist li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(226, 237, 247, 0.70);
-  box-shadow: 0 0 12px rgba(226, 237, 247, 0.18);
-}
-
-/* Tier-specific checklist accent */
-.tiers-overview-section .tier-plan-one .fish-checklist li::before {
-  background: #fbbf24;
-  box-shadow: 0 0 12px rgba(251, 191, 36, 0.28);
-}
-
-.tiers-overview-section .tier-plan-two .fish-checklist li::before {
-  background: #a855f7;
-  box-shadow: 0 0 12px rgba(168, 85, 247, 0.30);
-}
-
-@media (max-width: 620px) {
-  .tiers-overview-section .fish-checklist {
-    grid-template-columns: 1fr;
+  .nav-book-btn {
+    min-width: 116px;
+    padding: 0 18px;
   }
 }
 
-/* ================================
-   Tier 1 Color Override
-   Premium Green Theme
-   ================================ */
+/* Mobile/tablet: use hamburger */
+@media (max-width: 1180px) {
+  .nav-links,
+  .nav-book-btn {
+    display: none;
+  }
 
-.tiers-overview-section .tier-plan-one {
-  border-color: rgba(34, 197, 94, 0.48);
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    background: rgba(5, 18, 34, 0.98);
+    border-top: 1px solid rgba(120, 160, 200, 0.16);
+  }
+
+  .mobile-menu a {
+    color: #d8e8f7;
+    font-weight: 800;
+  }
+
+  .mobile-menu a.active,
+  .mobile-menu a:hover {
+    color: #1f9bff;
+  }
 }
 
-.tiers-overview-section .tier-plan-one::before {
-  background:
-    radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.24), transparent 34%),
-    radial-gradient(circle at 50% 100%, rgba(20, 184, 166, 0.10), transparent 44%);
-}
 
-.tiers-overview-section .tier-plan-one:hover {
-  border-color: rgba(74, 222, 128, 0.82);
-  box-shadow:
-    0 30px 90px rgba(0, 0, 0, 0.34),
-    0 0 58px rgba(34, 197, 94, 0.18);
-}
-
-.tiers-overview-section .tier-plan-one .tier-plan-title {
-  color: #4ade80;
-  text-shadow: 0 0 30px rgba(34, 197, 94, 0.22);
-}
-
-/* Premium badge = green pill */
-.tiers-overview-section .premium-tier-badge {
-  color: #02140a;
-  background: linear-gradient(135deg, #4ade80, #14b8a6);
-  border: 1px solid rgba(74, 222, 128, 0.88);
-  box-shadow:
-    0 8px 20px rgba(34, 197, 94, 0.24),
-    inset 0 0 14px rgba(255, 255, 255, 0.18);
-}
-
-/* Tier 1 checklist icons */
-.tiers-overview-section .tier-plan-one .tier-plan-list li::before {
-  color: #02140a;
-  background: #4ade80;
-}
-
-/* Tier 1 fish checklist dots */
-.tiers-overview-section .tier-plan-one .fish-checklist li::before {
-  background: #4ade80;
-  box-shadow: 0 0 12px rgba(74, 222, 128, 0.30);
-}
-
-/* Tier 1 button = green */
-.tiers-overview-section .tier-plan-one .tier-plan-btn {
-  color: #02140a;
-  background: linear-gradient(135deg, #4ade80, #14b8a6);
-  border-color: rgba(74, 222, 128, 0.90);
-  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.24);
-}
-
-.tiers-overview-section .tier-plan-one .tier-plan-btn:hover {
-  color: #02140a;
-  background: linear-gradient(135deg, #86efac, #2dd4bf);
-  border-color: rgba(134, 239, 172, 0.95);
-  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.34);
-}
-
-/* ================================
-   FISHING MAP OVERVIEW
-   ================================ */
+/* FISHING MAP OVERVIEW */
 
 .fishing-map-section {
   background:
@@ -2625,8 +2157,8 @@ textarea:focus {
 
 .fishing-map-layout {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 42px;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 52px;
   align-items: center;
 }
 
@@ -2634,8 +2166,61 @@ textarea:focus {
   min-width: 0;
 }
 
+.fishing-map-content .section-title {
+  max-width: 620px;
+}
+
+.fishing-map-content .section-copy {
+  max-width: 640px;
+}
+
 .fishing-map-points {
+  display: grid;
+  gap: 14px;
   margin-top: 34px;
+  max-width: 620px;
+}
+
+.map-point {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
+}
+
+.map-point > span {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 999px;
+  color: #03101b;
+  background: var(--cyan);
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.map-point h3 {
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 950;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.map-point p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.55;
 }
 
 .map-showcase-card {
@@ -2652,8 +2237,10 @@ textarea:focus {
   width: 100%;
   height: 100%;
   min-height: 520px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+  background: #ffffff;
+  padding: 18px;
   filter: saturate(1.04) contrast(1.02);
   transition:
     transform 260ms ease,
@@ -2661,7 +2248,7 @@ textarea:focus {
 }
 
 .map-showcase-card:hover img {
-  transform: scale(1.035);
+  transform: scale(1.01);
   filter: saturate(1.08) contrast(1.04);
 }
 
@@ -2695,30 +2282,30 @@ textarea:focus {
   line-height: 1.4;
 }
 
-/* Responsive fishing map section */
-
 @media (max-width: 1120px) {
   .fishing-map-layout {
     grid-template-columns: 1fr;
   }
 
-  .map-showcase-card {
-    min-height: 440px;
-  }
-
+  .map-showcase-card,
   .map-showcase-card img {
     min-height: 440px;
   }
 }
 
 @media (max-width: 520px) {
-  .map-showcase-card {
-    min-height: 360px;
-    border-radius: 24px;
+  .map-point {
+    padding: 16px;
+    border-radius: 18px;
   }
 
+  .map-showcase-card,
   .map-showcase-card img {
     min-height: 360px;
+  }
+
+  .map-showcase-card {
+    border-radius: 24px;
   }
 
   .map-caption {
@@ -2729,3 +2316,4 @@ textarea:focus {
     border-radius: 16px;
   }
 }
+

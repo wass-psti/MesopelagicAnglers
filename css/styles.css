@@ -125,6 +125,14 @@ textarea {
 }
 
 .brand span {
+  color: var(--white);
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+  text-transform: none;
   transition: color 180ms ease;
 }
 
@@ -356,6 +364,21 @@ textarea {
     width: 44px;
     height: 44px;
   }
+}
+
+/* Section CTA buttons */
+
+.section-link-btn {
+  min-width: 190px;
+  padding-inline: 26px;
+}
+
+.section .hero-actions {
+  align-items: center;
+}
+
+.section .hero-actions .btn {
+  white-space: nowrap;
 }
 
 /* BUTTONS */
@@ -2233,8 +2256,8 @@ textarea:focus {
   color: #f4f8ff;
   font-size: 1.08rem;
   font-weight: 900;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  text-transform: none;
   white-space: nowrap;
 }
 

@@ -131,14 +131,17 @@
           method="POST"
           style="margin-top: 36px;"
         >
-          <!-- FormSubmit settings -->
           <input type="hidden" name="_subject" value="[Mesopelagic Anglers] New Booking Inquiry">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://wass-psti.github.io/MesopelagicAnglers/thank-you.html">
 
-          <!-- Anti-spam honeypot -->
-          <input type="text" name="_honey" style="display:none">
+          <input
+            type="text"
+            name="_honey"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          >
       
         <div class="form-grid">
           <div>

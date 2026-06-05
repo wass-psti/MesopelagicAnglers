@@ -1466,13 +1466,17 @@ p {
     box-shadow 260ms ease;
 }
 
+.tier-side-preview {
+  padding: 18px;
+}
+
 .tier-side-preview img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  padding: 18px;
+  border-radius: 22px;
   background: rgba(3, 16, 27, 0.96);
   filter: saturate(1.12) contrast(1.06) brightness(1.04);
   transition:

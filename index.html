@@ -301,6 +301,7 @@
             <p class="tier-plan-summary">
               A refined Danajon Bank route through rare double-barrier reef waters,
               current breaks, deep drop-offs, and productive Caubian-side structure.
+
             </p>
 
             <div class="tier-session-prices tier-session-prices-premium">
@@ -433,7 +434,7 @@
 
           <figure class="tier-side-preview tier-two-side-preview">
             <img
-              src="images/fishing-time-2.png"
+              src="images/deep-blue.jpg"
               alt="Tier 2 Deep Blue Danajon Banks fishing trip"
             >
           </figure>
@@ -640,7 +641,23 @@
       <p>© 2026 Mesopelagic Anglers. All rights reserved.</p>
     </div>
   </footer>
+    <script>
+      const tiersSection = document.querySelector(".tiers-overview-section");
+      const tierOneCard = document.querySelector(".tier-plan-one");
+      const tierTwoCard = document.querySelector(".tier-plan-two");
 
+      if (tiersSection && tierOneCard && tierTwoCard) {
+        tierOneCard.addEventListener("click", function () {
+          tiersSection.classList.add("is-tier-one-selected");
+          tiersSection.classList.remove("is-tier-two-selected");
+        });
+
+        tierTwoCard.addEventListener("click", function () {
+          tiersSection.classList.add("is-tier-two-selected");
+          tiersSection.classList.remove("is-tier-one-selected");
+        });
+      }
+    </script>
   <script src="js/main.js"></script>
 </body>
 </html>

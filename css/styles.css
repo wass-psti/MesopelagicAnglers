@@ -3499,3 +3499,587 @@ textarea:focus {
    Append to bottom of css/styles.css
    ========================================================= */
 .subpage{background:radial-gradient(circle at 88% 0%,rgba(34,211,238,.10),transparent 30%),linear-gradient(180deg,#03101b 0%,#071725 100%)}.subpage-hero{padding:136px 0 92px;color:#fff;background:linear-gradient(90deg,rgba(3,16,27,.94),rgba(3,16,27,.72)),url("../images/hero-boat2.png");background-size:cover;background-position:center}.hero-armory-page{background-image:linear-gradient(90deg,rgba(3,16,27,.94),rgba(3,16,27,.72)),url("../images/fishing-rods.png")}.hero-charter-page{background-image:linear-gradient(90deg,rgba(3,16,27,.94),rgba(3,16,27,.72)),url("../images/fishing-time.png")}.hero-spots-page{background-image:linear-gradient(90deg,rgba(3,16,27,.94),rgba(3,16,27,.72)),url("../images/maps-1.png")}.hero-inclusions-page{background-image:linear-gradient(90deg,rgba(3,16,27,.94),rgba(3,16,27,.72)),url("../images/hero-boat.png")}.hero-travel-page{background-image:linear-gradient(90deg,rgba(3,16,27,.94),rgba(3,16,27,.72)),url("../images/sunset-1.png")}.subpage-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:46px;align-items:center}.subpage-hero h1{max-width:860px;margin:18px 0 22px;color:#fff;font-size:clamp(2.6rem,5.2vw,5.3rem);line-height:.96;font-weight:950;letter-spacing:-.06em}.subpage-hero .hero-copy{max-width:720px;color:rgba(226,237,247,.86);font-size:1.05rem;line-height:1.85}.subpage-hero-card{overflow:hidden;border-radius:32px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 90px rgba(0,0,0,.36),0 0 42px rgba(34,211,238,.10);background:rgba(3,16,27,.82)}.subpage-hero-card img{width:100%;min-height:420px;object-fit:cover}.map-hero-card img{object-fit:contain;padding:18px;background:#fff}.feature-card-grid,.policy-grid,.travel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:38px}.policy-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.feature-card,.policy-card,.travel-card{overflow:hidden;padding:26px;border-radius:28px;background:#fff;border:1px solid rgba(15,23,42,.10);box-shadow:0 18px 48px rgba(15,23,42,.08)}.feature-card{padding:0}.feature-card img{width:100%;height:245px;object-fit:cover}.feature-card>div{padding:26px}.policy-card h3,.travel-card h3,.feature-card h3{margin-bottom:12px}.alternating-stack{display:grid;gap:34px;margin-top:46px}.alternating-row{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:34px;align-items:center;padding:34px;border-radius:32px;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025)),rgba(7,23,37,.88);border:1px solid rgba(180,210,240,.16);box-shadow:0 24px 70px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.04)}.alternating-row.reverse .alternating-copy{order:2}.alternating-row.reverse .alternating-media{order:1}.alternating-copy h3{max-width:720px;margin-bottom:18px;color:#fff;font-size:clamp(1.75rem,2.7vw,3rem);line-height:1.05;font-weight:950;letter-spacing:-.055em}.alternating-copy p{max-width:720px;color:rgba(226,237,247,.78);font-size:1rem;line-height:1.85}.alternating-media,.placeholder-panel{min-height:360px;overflow:hidden;border-radius:28px;border:1px solid rgba(180,210,240,.18);box-shadow:0 20px 54px rgba(0,0,0,.20)}.alternating-media img{width:100%;height:100%;min-height:360px;object-fit:cover}.placeholder-panel{display:grid;place-items:center;background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(20,184,166,.06)),linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018)),rgba(3,16,27,.72);border-style:dashed}.placeholder-panel span{color:rgba(226,237,247,.62);font-size:.82rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;text-align:center}.number-pill{width:42px;height:42px;display:inline-grid;place-items:center;margin-bottom:16px;border-radius:999px;color:#03101b;background:var(--cyan);font-size:.78rem;font-weight:950;box-shadow:0 12px 28px rgba(34,211,238,.20)}.map-detail-section{background:#f7fbfd}.wide-map-card{margin-top:38px;overflow:hidden;border-radius:32px;background:#fff;border:1px solid rgba(15,23,42,.10);box-shadow:0 24px 70px rgba(15,23,42,.12)}.wide-map-card img{width:100%;max-height:640px;object-fit:contain;padding:20px;background:#fff}.faq-accordion{display:grid;gap:16px;margin-top:34px}.faq-accordion-item{overflow:hidden;border-radius:24px;background:linear-gradient(180deg,#fff 0%,#f8fdff 100%);border:1.5px solid rgba(8,145,178,.22);box-shadow:0 12px 32px rgba(15,23,42,.08),0 0 0 1px rgba(255,255,255,.9) inset;transition:border-color .18s ease,box-shadow .18s ease}.faq-accordion-item:hover,.faq-accordion-item.is-open{border-color:rgba(34,211,238,.70);box-shadow:0 20px 54px rgba(8,145,178,.16),0 0 0 1px rgba(34,211,238,.16) inset}.faq-accordion-trigger{width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:24px 28px;border:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer}.faq-accordion-trigger>span:nth-child(2){font-size:clamp(1.05rem,1.4vw,1.35rem);font-weight:950;line-height:1.25;letter-spacing:-.035em}.faq-toggle-icon{width:38px;height:38px;display:inline-grid;place-items:center;border-radius:999px;color:#03101b;background:var(--cyan);font-size:1.4rem;font-weight:900;line-height:1;transition:transform .18s ease}.faq-accordion-item.is-open .faq-toggle-icon{transform:rotate(45deg)}.faq-accordion-panel{max-height:0;overflow:hidden;transition:max-height .24s ease}.faq-accordion-panel p{margin:0;padding:0 28px 26px 86px;color:var(--ink-soft);font-size:.98rem;line-height:1.82}.faq-accordion-item.is-open .faq-accordion-panel{max-height:420px}@media(max-width:1120px){.subpage-hero-grid,.alternating-row,.policy-grid{grid-template-columns:1fr}.alternating-row.reverse .alternating-copy,.alternating-row.reverse .alternating-media{order:initial}.feature-card-grid,.travel-grid{grid-template-columns:1fr 1fr}}@media(max-width:720px){.subpage-hero{padding:118px 0 76px}.subpage-hero-card img{min-height:280px}.feature-card-grid,.travel-grid{grid-template-columns:1fr}.alternating-row{padding:24px;border-radius:24px}.alternating-media,.placeholder-panel,.alternating-media img{min-height:250px}.faq-accordion-trigger{padding:20px;gap:12px}.faq-accordion-panel p{padding:0 20px 22px}.faq-toggle-icon{width:34px;height:34px}}
+
+/* =========================================================
+   Tier 2 Ultra-Premium Purple Override
+   ========================================================= */
+
+/* Homepage Tier 2 card */
+.tier-plan-two {
+  border-color: rgba(168, 85, 247, 0.58);
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.30),
+    0 0 64px rgba(168, 85, 247, 0.14),
+    inset 0 0 0 1px rgba(196, 181, 253, 0.14);
+}
+
+.tier-plan-two::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(168, 85, 247, 0.28), transparent 34%),
+    radial-gradient(circle at 100% 100%, rgba(124, 58, 237, 0.16), transparent 42%);
+}
+
+.tier-plan-two:hover {
+  border-color: rgba(216, 180, 254, 0.88);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38),
+    0 0 76px rgba(168, 85, 247, 0.26);
+}
+
+.tier-plan-two .tier-plan-title {
+  color: #c084fc;
+  text-shadow: 0 0 34px rgba(168, 85, 247, 0.34);
+}
+
+/* Ultra-Premium badge */
+.deluxe-tier-badge {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #c084fc);
+  border-color: rgba(216, 180, 254, 0.88);
+  box-shadow:
+    0 8px 22px rgba(168, 85, 247, 0.34),
+    inset 0 0 14px rgba(255, 255, 255, 0.18);
+}
+
+/* Tier 2 checklist icons */
+.tier-plan-two .tier-plan-list li::before {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+/* Tier 2 fish checklist dots */
+.tier-plan-two .fish-checklist li::before {
+  background: #c084fc;
+  box-shadow: 0 0 14px rgba(192, 132, 252, 0.40);
+}
+
+/* Tier 2 button */
+.tier-plan-two .tier-plan-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #c084fc);
+  border-color: rgba(216, 180, 254, 0.90);
+  box-shadow:
+    0 14px 34px rgba(168, 85, 247, 0.32),
+    0 0 30px rgba(168, 85, 247, 0.14);
+}
+
+.tier-plan-two .tier-plan-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #c084fc, #e9d5ff);
+  border-color: rgba(233, 213, 255, 0.95);
+  box-shadow:
+    0 18px 46px rgba(168, 85, 247, 0.42),
+    0 0 38px rgba(192, 132, 252, 0.24);
+}
+
+/* Opposite-side hover preview glow */
+.tier-plan-grid:has(.tier-plan-two:hover) .tier-two-side-preview {
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 54px rgba(168, 85, 247, 0.26);
+}
+
+/* Tiers page comparison badge */
+.tiers-badge.deluxe {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #c084fc);
+  box-shadow:
+    0 8px 22px rgba(168, 85, 247, 0.30),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
+}
+
+/* Tiers page Tier 2 button */
+.tiers-deluxe-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #a855f7, #c084fc);
+  border-color: rgba(216, 180, 254, 0.90);
+  box-shadow:
+    0 14px 34px rgba(168, 85, 247, 0.30),
+    0 0 30px rgba(168, 85, 247, 0.14);
+}
+
+.tiers-deluxe-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #c084fc, #e9d5ff);
+  border-color: rgba(233, 213, 255, 0.95);
+}
+
+/* Tiers page Tier 2 detail accents */
+#tier-two-details .tier-detail-panel,
+#tier-two-details .fishing-ground-card {
+  border-color: rgba(168, 85, 247, 0.24);
+}
+
+#tier-two-details .fishing-ground-card > span,
+#tier-two-details .tiers-info-list li::before,
+#tier-two-details .tiers-fish-list li::before {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+/* =========================================================
+   Tier Description Visibility Fix - Index Page
+   ========================================================= */
+
+.tiers-overview-section .tier-plan-summary {
+  color: rgba(235, 245, 255, 0.92);
+  font-weight: 650;
+  line-height: 1.78;
+}
+
+/* If some tier descriptions are plain <p> without the class */
+.tiers-overview-section .tier-plan-card > p,
+.tiers-overview-section .tier-plan-header + p {
+  color: rgba(235, 245, 255, 0.92);
+  font-weight: 650;
+  line-height: 1.78;
+}
+
+/* Make checklist text slightly clearer too */
+.tiers-overview-section .tier-plan-list li {
+  color: rgba(235, 245, 255, 0.94);
+}
+
+/* Make fish target list readable but not too loud */
+.tiers-overview-section .fish-checklist li {
+  color: rgba(235, 245, 255, 0.90);
+}
+
+
+/* =========================================================
+   Tier 1 Premium Dark Red-Orange Override
+   ========================================================= */
+
+/* Homepage Tier 1 card */
+.tier-plan-one {
+  border-color: rgba(234, 88, 12, 0.58);
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.32),
+    0 0 64px rgba(194, 65, 12, 0.16),
+    inset 0 0 0 1px rgba(251, 146, 60, 0.12);
+}
+
+.tier-plan-one::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(194, 65, 12, 0.30), transparent 34%),
+    radial-gradient(circle at 100% 100%, rgba(127, 29, 29, 0.20), transparent 42%);
+}
+
+.tier-plan-one:hover {
+  border-color: rgba(251, 146, 60, 0.88);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38),
+    0 0 76px rgba(234, 88, 12, 0.26);
+}
+
+.tier-plan-one .tier-plan-title {
+  color: #fb923c;
+  text-shadow: 0 0 34px rgba(234, 88, 12, 0.36);
+}
+
+/* Premium badge = dark red-orange pill */
+.premium-tier-badge {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  border-color: rgba(251, 146, 60, 0.88);
+  box-shadow:
+    0 8px 22px rgba(194, 65, 12, 0.34),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
+}
+
+/* Tier 1 checklist icons */
+.tier-plan-one .tier-plan-list li::before {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c);
+}
+
+/* Tier 1 fish checklist dots */
+.tier-plan-one .fish-checklist li::before {
+  background: #fb923c;
+  box-shadow: 0 0 14px rgba(251, 146, 60, 0.40);
+}
+
+/* Tier 1 button */
+.tier-plan-one .tier-plan-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  border-color: rgba(251, 146, 60, 0.90);
+  box-shadow:
+    0 14px 34px rgba(194, 65, 12, 0.32),
+    0 0 30px rgba(234, 88, 12, 0.14);
+}
+
+.tier-plan-one .tier-plan-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #991b1b, #ea580c, #fb923c);
+  border-color: rgba(253, 186, 116, 0.95);
+  box-shadow:
+    0 18px 46px rgba(234, 88, 12, 0.42),
+    0 0 38px rgba(251, 146, 60, 0.24);
+}
+
+/* Opposite-side hover preview glow */
+.tier-plan-grid:has(.tier-plan-one:hover) .tier-one-side-preview {
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 54px rgba(234, 88, 12, 0.26);
+}
+
+/* Tiers page badge */
+.tiers-badge.premium {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  box-shadow:
+    0 8px 22px rgba(194, 65, 12, 0.30),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
+}
+
+/* Tiers page Tier 1 button */
+.tiers-premium-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  border-color: rgba(251, 146, 60, 0.90);
+  box-shadow:
+    0 14px 34px rgba(194, 65, 12, 0.30),
+    0 0 30px rgba(234, 88, 12, 0.14);
+}
+
+.tiers-premium-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #991b1b, #ea580c, #fb923c);
+  border-color: rgba(253, 186, 116, 0.95);
+}
+
+/* Tiers page Tier 1 detail accents */
+#tier-one-details .tier-detail-panel,
+#tier-one-details .fishing-ground-card {
+  border-color: rgba(251, 146, 60, 0.24);
+}
+
+#tier-one-details .fishing-ground-card > span,
+#tier-one-details .tiers-info-list li::before,
+#tier-one-details .tiers-fish-list li::before {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c);
+}
+
+/* =========================================================
+   Tier Color Final Direction
+   Tier 1 = Premium Teal/Green
+   Tier 2 = Ultra-Premium Dark Red-Orange
+   ========================================================= */
+
+/* =========================
+   TIER 1 PREMIUM - TEAL/GREEN
+   ========================= */
+
+.tier-plan-one {
+  border-color: rgba(20, 184, 166, 0.52);
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.30),
+    0 0 58px rgba(20, 184, 166, 0.13),
+    inset 0 0 0 1px rgba(45, 212, 191, 0.12);
+}
+
+.tier-plan-one::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(20, 184, 166, 0.26), transparent 34%),
+    radial-gradient(circle at 100% 100%, rgba(34, 197, 94, 0.12), transparent 42%);
+}
+
+.tier-plan-one:hover {
+  border-color: rgba(45, 212, 191, 0.86);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 66px rgba(20, 184, 166, 0.22);
+}
+
+.tier-plan-one .tier-plan-title {
+  color: #2dd4bf;
+  text-shadow: 0 0 32px rgba(20, 184, 166, 0.34);
+}
+
+.premium-tier-badge {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf, #5eead4);
+  border-color: rgba(94, 234, 212, 0.86);
+  box-shadow:
+    0 8px 22px rgba(20, 184, 166, 0.28),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
+}
+
+.tier-plan-one .tier-plan-list li::before {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+}
+
+.tier-plan-one .fish-checklist li::before {
+  background: #2dd4bf;
+  box-shadow: 0 0 14px rgba(45, 212, 191, 0.34);
+}
+
+.tier-plan-one .tier-plan-btn {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf, #5eead4);
+  border-color: rgba(94, 234, 212, 0.88);
+  box-shadow:
+    0 14px 34px rgba(20, 184, 166, 0.28),
+    0 0 28px rgba(20, 184, 166, 0.12);
+}
+
+.tier-plan-one .tier-plan-btn:hover {
+  color: #02140f;
+  background: linear-gradient(135deg, #0f766e, #2dd4bf, #99f6e4);
+  border-color: rgba(153, 246, 228, 0.95);
+  box-shadow:
+    0 18px 42px rgba(20, 184, 166, 0.36),
+    0 0 34px rgba(45, 212, 191, 0.20);
+}
+
+.tier-plan-grid:has(.tier-plan-one:hover) .tier-one-side-preview {
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 54px rgba(20, 184, 166, 0.24);
+}
+
+/* Tiers page Tier 1 */
+.tiers-badge.premium {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf, #5eead4);
+  box-shadow:
+    0 8px 22px rgba(20, 184, 166, 0.26),
+    inset 0 0 14px rgba(255, 255, 255, 0.16);
+}
+
+.tiers-premium-btn {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf, #5eead4);
+  border-color: rgba(94, 234, 212, 0.88);
+  box-shadow:
+    0 14px 34px rgba(20, 184, 166, 0.26),
+    0 0 28px rgba(20, 184, 166, 0.12);
+}
+
+.tiers-premium-btn:hover {
+  color: #02140f;
+  background: linear-gradient(135deg, #0f766e, #2dd4bf, #99f6e4);
+  border-color: rgba(153, 246, 228, 0.95);
+}
+
+#tier-one-details .tier-detail-panel,
+#tier-one-details .fishing-ground-card {
+  border-color: rgba(45, 212, 191, 0.22);
+}
+
+#tier-one-details .fishing-ground-card > span,
+#tier-one-details .tiers-info-list li::before,
+#tier-one-details .tiers-fish-list li::before {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+}
+
+/* =========================
+   TIER 2 ULTRA-PREMIUM - DARK RED-ORANGE
+   ========================= */
+
+.tier-plan-two {
+  border-color: rgba(234, 88, 12, 0.62);
+  box-shadow:
+    0 26px 80px rgba(0, 0, 0, 0.34),
+    0 0 72px rgba(194, 65, 12, 0.20),
+    inset 0 0 0 1px rgba(251, 146, 60, 0.14);
+}
+
+.tier-plan-two::before {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(194, 65, 12, 0.34), transparent 34%),
+    radial-gradient(circle at 100% 100%, rgba(127, 29, 29, 0.24), transparent 42%);
+}
+
+.tier-plan-two:hover {
+  border-color: rgba(251, 146, 60, 0.92);
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.40),
+    0 0 82px rgba(234, 88, 12, 0.32);
+}
+
+.tier-plan-two .tier-plan-title {
+  color: #fb923c;
+  text-shadow: 0 0 36px rgba(234, 88, 12, 0.40);
+}
+
+/* Ultra-Premium badge */
+.deluxe-tier-badge {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  border-color: rgba(251, 146, 60, 0.90);
+  box-shadow:
+    0 8px 24px rgba(194, 65, 12, 0.38),
+    inset 0 0 14px rgba(255, 255, 255, 0.18);
+}
+
+.tier-plan-two .tier-plan-list li::before {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c);
+}
+
+.tier-plan-two .fish-checklist li::before {
+  background: #fb923c;
+  box-shadow: 0 0 14px rgba(251, 146, 60, 0.42);
+}
+
+.tier-plan-two .tier-plan-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  border-color: rgba(251, 146, 60, 0.92);
+  box-shadow:
+    0 14px 36px rgba(194, 65, 12, 0.36),
+    0 0 34px rgba(234, 88, 12, 0.16);
+}
+
+.tier-plan-two .tier-plan-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #991b1b, #ea580c, #fb923c);
+  border-color: rgba(253, 186, 116, 0.96);
+  box-shadow:
+    0 18px 48px rgba(234, 88, 12, 0.46),
+    0 0 42px rgba(251, 146, 60, 0.26);
+}
+
+.tier-plan-grid:has(.tier-plan-two:hover) .tier-two-side-preview {
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38),
+    0 0 58px rgba(234, 88, 12, 0.30);
+}
+
+/* Tiers page Tier 2 */
+.tiers-badge.deluxe {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  box-shadow:
+    0 8px 24px rgba(194, 65, 12, 0.34),
+    inset 0 0 14px rgba(255, 255, 255, 0.18);
+}
+
+.tiers-deluxe-btn {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c, #f97316);
+  border-color: rgba(251, 146, 60, 0.92);
+  box-shadow:
+    0 14px 36px rgba(194, 65, 12, 0.34),
+    0 0 34px rgba(234, 88, 12, 0.16);
+}
+
+.tiers-deluxe-btn:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #991b1b, #ea580c, #fb923c);
+  border-color: rgba(253, 186, 116, 0.96);
+}
+
+#tier-two-details .tier-detail-panel,
+#tier-two-details .fishing-ground-card {
+  border-color: rgba(251, 146, 60, 0.26);
+}
+
+#tier-two-details .fishing-ground-card > span,
+#tier-two-details .tiers-info-list li::before,
+#tier-two-details .tiers-fish-list li::before {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7f1d1d, #c2410c);
+}
+
+/* =========================================================
+   Tier Session Prices - Homepage Cards
+   Displays full private charter price per session
+   ========================================================= */
+
+.tier-session-prices {
+  margin: 24px 0 26px;
+  padding: 18px;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.070), rgba(255, 255, 255, 0.024)),
+    rgba(3, 16, 27, 0.44);
+  border: 1px solid rgba(226, 237, 247, 0.12);
+}
+
+.tier-price-label {
+  display: block;
+  margin-bottom: 14px;
+  color: rgba(226, 237, 247, 0.68);
+  font-size: 0.72rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.tier-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 0;
+  border-top: 1px solid rgba(226, 237, 247, 0.10);
+}
+
+.tier-price-row:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.tier-price-row:last-child {
+  padding-bottom: 0;
+}
+
+.tier-price-row strong {
+  display: block;
+  color: rgba(245, 250, 255, 0.96);
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.tier-price-row small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(226, 237, 247, 0.62);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.tier-price-row b {
+  flex-shrink: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 950;
+  letter-spacing: -0.035em;
+  white-space: nowrap;
+}
+
+/* Tier-specific accents */
+
+.tier-session-prices-premium {
+  border-color: rgba(45, 212, 191, 0.24);
+  box-shadow: inset 0 0 28px rgba(20, 184, 166, 0.06);
+}
+
+.tier-session-prices-premium .tier-price-row b {
+  color: #5eead4;
+}
+
+.tier-session-prices-ultra {
+  border-color: rgba(251, 146, 60, 0.28);
+  box-shadow: inset 0 0 28px rgba(234, 88, 12, 0.08);
+}
+
+.tier-session-prices-ultra .tier-price-row b {
+  color: #fb923c;
+}
+
+@media (max-width: 520px) {
+  .tier-price-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

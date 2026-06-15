@@ -156,89 +156,161 @@
     </section>
 
     <!-- BOOKING FORM -->
-    <section class="section section-dark" id="booking-form">
-      <div class="container">
-        <span class="section-label">Booking Request Form</span>
-        <h2 class="section-title">Submit your charter request.</h2>
+    <section class="section" id="form">
+        <div class="container">
+            <span class="section-label">Booking Inquiry Access</span>
 
-        <p class="section-copy">
-          This form sends your booking request to the assigned booking email. Submission does not guarantee
-          automatic confirmation. The team will review your request and contact you after checking availability.
-        </p>
+            <h2 class="section-title">Submit your Gmail to receive inquiry access.</h2>
 
-        <form action="https://formsubmit.co/info@plcsystems.com.ph" method="POST" class="booking-form">
-          <input type="hidden" name="_subject" value="New Charter Booking Request - Mesopelagic Anglers">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_next" value="https://wass-psti.github.io/MesopelagicAnglers/thank-you.html">
-          <input type="text" name="_honey" style="display:none">
+            <p class="section-copy">
+                This form sends your preliminary booking inquiry to the team email. Please use an active Gmail address,
+                because the next inquiry instructions and Monday booking page access details will be sent there.
+                This first form does not automatically confirm your booking; it starts the inquiry process.
+            </p>
 
-          <div class="form-grid">
-            <label>
-              Full Name
-              <input type="text" name="Full Name" required>
-            </label>
+            <form class="form-card"
+                action="https://formsubmit.co/info@plcsystems.com.ph"
+                method="POST"
+                style="margin-top: 36px;">
+                <input type="hidden" name="_subject" value="[Mesopelagic Anglers] New Booking Inquiry Access Request">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://wass-psti.github.io/MesopelagicAnglers/thank-you.html">
+                <input type="text" name="_honey" style="display:none">
 
-            <label>
-              Gmail / Email Address
-              <input type="email" name="Email Address" required>
-            </label>
+                <div class="form-grid">
+                    <div>
+                        <label for="full-name">Full Name</label>
+                        <input type="text"
+                            id="full-name"
+                            name="full_name"
+                            placeholder="Juan Dela Cruz"
+                            required>
+                    </div>
 
-            <label>
-              Phone / Messenger Contact
-              <input type="text" name="Phone or Messenger" required>
-            </label>
+                    <div>
+                        <label for="email">Gmail Address for Inquiry Access</label>
+                        <input type="email"
+                            id="email"
+                            name="email"
+                            placeholder="yourname@gmail.com"
+                            pattern="^[a-zA-Z0-9._%+\-]+@gmail\.com$"
+                            title="Please use a Gmail address ending in @gmail.com"
+                            required>
+                    </div>
 
-            <label>
-              Preferred Charter Date
-              <input type="date" name="Preferred Charter Date" required>
-            </label>
+                    <div>
+                        <label for="phone">Phone / Messenger</label>
+                        <input type="text"
+                            id="phone"
+                            name="phone_or_messenger"
+                            placeholder="Mobile number or Messenger name"
+                            required>
+                    </div>
 
-            <label>
-              Preferred Session
-              <select name="Preferred Session" required>
-                <option value="">Select session</option>
-                <option value="Morning Golden Hour - 5:00 AM to 11:00 AM">Morning Golden Hour - 5:00 AM to 11:00 AM</option>
-                <option value="Afternoon Sunset Drift - 1:00 PM to 7:00 PM">Afternoon Sunset Drift - 1:00 PM to 7:00 PM</option>
-                <option value="Nocturnal Deep-Sea - 5:00 PM to 5:00 AM">Nocturnal Deep-Sea - 5:00 PM to 5:00 AM</option>
-                <option value="Ultimate Full-Day Expedition - 5:00 AM to 7:00 PM">Ultimate Full-Day Expedition - 5:00 AM to 7:00 PM</option>
-              </select>
-            </label>
+                    <div>
+                        <label for="preferred-date">Preferred Date</label>
+                        <input type="date"
+                            id="preferred-date"
+                            name="preferred_date">
+                    </div>
 
-            <label>
-              Preferred Tier
-              <select name="Preferred Tier" required>
-                <option value="">Select tier</option>
-                <option value="Tier 1 - Premium">Tier 1 - Premium</option>
-                <option value="Tier 2 - Ultra-Premium">Tier 2 - Ultra-Premium</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </label>
+                    <div>
+                        <label for="preferred-session">Preferred Session</label>
+                        <select id="preferred-session" name="preferred_session" required>
+                            <option value="">Select a session</option>
+                            <option value="Morning Golden Hour Session, 5:00 AM - 11:00 AM">
+                                Morning Golden Hour, 5:00 AM - 11:00 AM
+                            </option>
+                            <option value="Afternoon and Sunset Drift Session, 1:00 PM - 7:00 PM">
+                                Afternoon &amp; Sunset Drift, 1:00 PM - 7:00 PM
+                            </option>
+                            <option value="Nocturnal Deep-Sea Session, 5:00 PM - 5:00 AM">
+                                Nocturnal Deep-Sea, 5:00 PM - 5:00 AM
+                            </option>
+                            <option value="Ultimate Full-Day Expedition, 5:00 AM - 7:00 PM">
+                                Ultimate Full-Day Expedition, 5:00 AM - 7:00 PM
+                            </option>
+                            <option value="Not sure yet">
+                                Not sure yet
+                            </option>
+                        </select>
+                    </div>
 
-            <label>
-              Group Size
-              <input type="number" name="Group Size" min="1" max="4" required>
-            </label>
+                    <div>
+                        <label for="package-interest">Package Interest</label>
+                        <select id="package-interest" name="package_interest" required>
+                            <option value="">Select a package</option>
+                            <option value="Tier 1 - Middle Pass and Caubian Islands">
+                                Tier 1 - Middle Pass &amp; Caubian Islands
+                            </option>
+                            <option value="Tier 2 - Deep Blue Danajon Banks">
+                                Tier 2 - Deep Blue Danajon Banks
+                            </option>
+                            <option value="Not sure yet">
+                                Not sure yet
+                            </option>
+                        </select>
+                    </div>
 
-            <label>
-              Fishing Experience Level
-              <select name="Fishing Experience Level" required>
-                <option value="">Select experience level</option>
-                <option value="Beginner">Beginner</option>
-                <option value="Casual hobbyist">Casual hobbyist</option>
-                <option value="Experienced angler">Experienced angler</option>
-                <option value="Sportfishing team">Sportfishing team</option>
-              </select>
-            </label>
-          </div>
+                    <div>
+                        <label for="group-size">Group Size</label>
+                        <select id="group-size" name="group_size" required>
+                            <option value="">Select group size</option>
+                            <option value="1">1 angler</option>
+                            <option value="2">2 anglers</option>
+                            <option value="3">3 anglers</option>
+                            <option value="4">4 anglers</option>
+                        </select>
+                    </div>
 
-          <label class="full-field">
-            Target Species / Trip Notes
-            <textarea name="Target Species or Trip Notes" rows="6" placeholder="Tell us your preferred target species, backup date, special requests, or questions."></textarea>
-          </label>
+                    <div>
+                        <label for="experience-level">Fishing Experience Level</label>
+                        <select id="experience-level" name="fishing_experience_level">
+                            <option value="">Select experience level</option>
+                            <option value="Beginner">Beginner</option>
+                            <option value="Hobbyist">Hobbyist</option>
+                            <option value="Enthusiast">Enthusiast</option>
+                            <option value="Experienced Angler">Experienced Angler</option>
+                            <option value="Professional / Sportfishing Team">Professional / Sportfishing Team</option>
+                        </select>
+                    </div>
 
-          <button type="submit" class="btn btn-primary">Send Booking Request</button>
-        </form>
-      </div>
+                    <div class="form-full">
+                        <label for="target-species">Target Species or Fishing Goal</label>
+                        <input type="text"
+                            id="target-species"
+                            name="target_species_or_goal"
+                            placeholder="Example: GT, Tanguigue, Tuna, Grouper, Snapper">
+                    </div>
+
+                    <div class="form-full">
+                        <label for="message">Message</label>
+                        <textarea id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Tell us your preferred schedule, group details, fishing goals, backup date, or special requests."></textarea>
+                    </div>
+
+                    <div class="form-full">
+                        <label style="display: flex; gap: 12px; align-items: flex-start; line-height: 1.6;">
+                            <input type="checkbox"
+                                name="gmail_monday_access_acknowledgement"
+                                value="Acknowledged"
+                                required
+                                style="width: auto; margin-top: 6px;">
+                            <span>
+                                I understand that the Gmail address I submitted will be used to send the next inquiry
+                                instructions and access details for the official Monday booking inquiry page.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 24px;">
+                    Request Inquiry Access
+                </button>
+            </form>
+        </div>
     </section>
 
     <!-- AFTER SUBMISSION -->

@@ -15,149 +15,70 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="navbar">
-        <a href="index.html" class="brand" aria-label="Mesopelagic Anglers home">
-          <img
-            src="images/msa-logo-outlined-white.png"
-            alt="Mesopelagic Anglers logo"
-            class="brand-logo"
-          >
-          <span>Mesopelagic Anglers</span>
-        </a>
+    <div data-include="header"></div>
 
-        <div class="nav-links">
-          <a href="tiers.html">Tiers</a>
+    <main>
+        <section class="page-hero hero-thankyou">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow">Inquiry Sent</span>
+                    <h1>Your charter inquiry has been received.</h1>
 
-          <div class="nav-group">
-            <button class="nav-group-toggle" type="button">
-              Fleets &amp; Gears
-              <span aria-hidden="true">▾</span>
-            </button>
+                    <p class="hero-copy">
+                        Thank you for reaching out to Mesopelagic Anglers. The team will review your preferred
+                        date, session, group size, and fishing goals, then reply with availability and next steps.
+                    </p>
 
-            <div class="nav-dropdown">
-              <a href="fleet.html">Fleet &amp; Electronics</a>
-              <a href="armory.html">Elite Tackle Armory</a>
+                    <div class="hero-actions">
+                        <a href="index.html" class="btn btn-primary">Return Home</a>
+                        <a href="charters.html" class="btn btn-dark">Review Charters</a>
+                    </div>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div class="nav-group">
-            <button class="nav-group-toggle" type="button">
-              Navigation
-              <span aria-hidden="true">▾</span>
-            </button>
+        <section class="section">
+            <div class="container grid-3">
+                <article class="card">
+                    <span class="card-tag">Next</span>
+                    <h3>Availability Review</h3>
+                    <p>The team checks your requested date, session, and charter tier.</p>
+                </article>
 
-            <div class="nav-dropdown">
-              <a href="charter.html">Charter Session Timings</a>
-              <a href="fishing-spots.html">Fishing Spots</a>
+                <article class="card">
+                    <span class="card-tag">Then</span>
+                    <h3>Trip Recommendation</h3>
+                    <p>You receive the recommended package, timing, and preparation notes.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-tag">After</span>
+                    <h3>Booking Confirmation</h3>
+                    <p>Deposit instructions are only sent once your date and session are confirmed.</p>
+                </article>
             </div>
-          </div>
+        </section>
+    </main>
 
-          <div class="nav-group">
-            <button class="nav-group-toggle" type="button">
-              Guides &amp; Policies
-              <span aria-hidden="true">▾</span>
-            </button>
-
-            <div class="nav-dropdown">
-              <a href="inclusions.html">Charter Inclusions &amp; Policies</a>
-              <a href="travel-guide.html">Travel &amp; Stay Guide</a>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Mesopelagic Anglers Fishing Charters</strong>
+                <p>Base of Operations: Hadsan Beach Park, Lapu-Lapu City, Mactan, Cebu, Philippines</p>
             </div>
-          </div>
 
-          <a href="faq.html">FAQ</a>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="charters.html">Charters</a>
+                <a href="fleet.html">Fleet & Gear</a>
+                <a href="inclusions.html">Inclusions</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Book</a>
+            </div>
         </div>
+    </footer>
 
-        <a href="contact.html" class="btn btn-primary nav-book-btn">Book Now</a>
-
-        <button class="mobile-toggle" type="button" onclick="toggleMenu()" aria-label="Open navigation menu">
-          ☰
-        </button>
-      </nav>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="tiers.html">Tiers</a>
-
-      <p class="mobile-menu-title">Fleets &amp; Gears</p>
-      <a href="fleet.html">Fleet &amp; Electronics</a>
-      <a href="armory.html">Elite Tackle Armory</a>
-
-      <p class="mobile-menu-title">Navigation</p>
-      <a href="charter.html">Charter Session Timings</a>
-      <a href="fishing-spots.html">Fishing Spots</a>
-
-      <p class="mobile-menu-title">Guides &amp; Policies</p>
-      <a href="inclusions.html">Charter Inclusions &amp; Policies</a>
-      <a href="travel-guide.html">Travel &amp; Stay Guide</a>
-
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html" class="mobile-book-link">Book Now</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero hero-thankyou">
-      <div class="container">
-        <div class="hero-content">
-          <span class="eyebrow">Inquiry Sent</span>
-          <h1>Your charter inquiry has been received.</h1>
-
-          <p class="hero-copy">
-            Thank you for reaching out to Mesopelagic Anglers. The team will review your preferred
-            date, session, group size, and fishing goals, then reply with availability and next steps.
-          </p>
-
-          <div class="hero-actions">
-            <a href="index.html" class="btn btn-primary">Return Home</a>
-            <a href="charters.html" class="btn btn-dark">Review Charters</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-3">
-        <article class="card">
-          <span class="card-tag">Next</span>
-          <h3>Availability Review</h3>
-          <p>The team checks your requested date, session, and charter tier.</p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">Then</span>
-          <h3>Trip Recommendation</h3>
-          <p>You receive the recommended package, timing, and preparation notes.</p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">After</span>
-          <h3>Booking Confirmation</h3>
-          <p>Deposit instructions are only sent once your date and session are confirmed.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Mesopelagic Anglers Fishing Charters</strong>
-        <p>Base of Operations: Hadsan Beach Park, Lapu-Lapu City, Mactan, Cebu, Philippines</p>
-      </div>
-
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="charters.html">Charters</a>
-        <a href="fleet.html">Fleet & Gear</a>
-        <a href="inclusions.html">Inclusions</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Book</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/includes.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

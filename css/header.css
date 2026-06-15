@@ -1,1 +1,338 @@
+/* ================================
+   MESOPELAGIC ANGLERS HEADER
+   Clean blue/white UI theme
+================================ */
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(17, 16, 95, 0.10);
+  box-shadow: 0 10px 30px rgba(17, 16, 95, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* Logo / brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #11105f;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-text {
+  display: grid;
+  line-height: 1.05;
+}
+
+.brand-text strong {
+  font-size: 1.18rem;
+  font-weight: 950;
+  letter-spacing: -0.045em;
+  color: #11105f;
+}
+
+.brand-text small {
+  font-size: 0.86rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #0093d8;
+}
+
+/* Desktop nav */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.nav-links > a,
+.nav-group-toggle {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #142033;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.nav-links > a:hover,
+.nav-group-toggle:hover,
+.nav-links > a.active,
+.nav-group:hover .nav-group-toggle,
+.nav-group:focus-within .nav-group-toggle {
+  color: #0093d8;
+  background: rgba(0, 147, 216, 0.08);
+}
+
+/* Dropdown wrapper */
+
+.nav-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Invisible hover bridge.
+   This prevents the dropdown from disappearing when the cursor moves downward. */
+.nav-group::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: 100%;
+  height: 18px;
+  background: transparent;
+}
+
+/* Dropdown menu */
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 50;
+  min-width: 260px;
+  padding: 10px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 16, 95, 0.10);
+  box-shadow: 0 22px 50px rgba(17, 16, 95, 0.16);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
+}
+
+.nav-group:hover .nav-dropdown,
+.nav-group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #142033;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.nav-dropdown a:hover,
+.nav-dropdown a.active {
+  color: #0093d8;
+  background: rgba(0, 147, 216, 0.08);
+}
+
+/* Header CTA */
+
+.nav-book-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: #f97316;
+  border: 1px solid #f97316;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.24);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
+}
+
+.nav-book-btn:hover {
+  background: #ea650c;
+  border-color: #ea650c;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(249, 115, 22, 0.30);
+}
+
+/* Mobile toggle */
+
+.mobile-toggle {
+  width: 46px;
+  height: 46px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  border: 1px solid rgba(17, 16, 95, 0.14);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.mobile-toggle:hover {
+  border-color: rgba(0, 147, 216, 0.36);
+  background: rgba(0, 147, 216, 0.06);
+}
+
+.mobile-toggle span {
+  width: 19px;
+  height: 2px;
+  border-radius: 4px;
+  background: #11105f;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    background 180ms ease;
+}
+
+.mobile-toggle:hover span {
+  background: #0093d8;
+}
+
+/* Mobile menu */
+
+.mobile-menu {
+  display: none;
+  padding: 18px 20px 24px;
+  background: #ffffff;
+  border-top: 1px solid rgba(17, 16, 95, 0.10);
+  box-shadow: 0 18px 36px rgba(17, 16, 95, 0.10);
+}
+
+.mobile-menu.active {
+  display: grid;
+  gap: 8px;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 12px;
+  color: #142033;
+  font-weight: 850;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  color: #0093d8;
+  background: rgba(0, 147, 216, 0.08);
+}
+
+.mobile-menu-title {
+  margin: 16px 0 4px;
+  padding: 0 14px;
+  color: #0093d8;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mobile-book-link {
+  margin-top: 10px;
+  border-radius: 12px;
+  background: #f97316;
+  color: #ffffff !important;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(249, 115, 22, 0.22);
+}
+
+.mobile-book-link:hover {
+  background: #ea650c !important;
+  color: #ffffff !important;
+}
+
+/* Responsive */
+
+@media (max-width: 1080px) {
+  .nav-links,
+  .nav-book-btn {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+  }
+
+  .navbar {
+    min-height: 74px;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text strong {
+  font-size: 1rem;
+  }
+
+  .brand-text small {
+  font-size: 0.72rem;
+  }
+
+  .navbar {
+    gap: 16px;
+  }
+}

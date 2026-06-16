@@ -1,50 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-    loadHTML("[data-include='header']", "components/header.html")
-        .then(() => {
-            setActiveNavLink();
-            initMobileMenu();
-        });
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const includes = document.querySelectorAll("[data-include]");
 
-async function loadHTML(selector, filePath) {
-    const targetElement = document.querySelector(selector);
-
-    if (!targetElement) return;
+  includes.forEach(async function (element) {
+    const name = element.getAttribute("data-include");
 
     try {
-        const response = await fetch(filePath);
+      const response = await fetch(`components/${name}.html`);
 
-        if (!response.ok) {
-            throw new Error(`Failed to load ${filePath}`);
-        }
+      if (!response.ok) {
+        throw new Error(`Could not load ${name}.html`);
+      }
 
-        const html = await response.text();
-        targetElement.innerHTML = html;
+      const html = await response.text();
+      element.innerHTML = html;
     } catch (error) {
-        console.error("Header loading error:", error);
+      console.error(error);
     }
-}
-
-function setActiveNavLink() {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
-    const navLinks = document.querySelectorAll(".site-header a[href]");
-
-    navLinks.forEach((link) => {
-        const linkPage = link.getAttribute("href").split("/").pop();
-
-        if (linkPage === currentPage) {
-            link.classList.add("active");
-        }
-    });
-}
-
-function initMobileMenu() {
-    const toggleButton = document.querySelector(".mobile-toggle");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (!toggleButton || !mobileMenu) return;
-
-    toggleButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
-    });
-}
+  });
+});

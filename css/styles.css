@@ -5675,3 +5675,1795 @@ textarea:focus {
     padding: 12px;
   }
 }
+
+/* ================================
+   Premium Packages Preview
+================================ */
+
+.package-preview-section {
+  background:
+    radial-gradient(circle at 88% 10%, rgba(0, 147, 216, 0.16), transparent 32%),
+    linear-gradient(180deg, #071346 0%, #050e35 100%);
+  color: #ffffff;
+}
+
+.package-preview-header {
+  max-width: 820px;
+}
+
+.package-preview-section .section-label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.package-preview-section .section-title {
+  max-width: 820px;
+  color: #ffffff;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.package-preview-section .section-copy {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.84);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.package-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 44px;
+}
+
+.package-card {
+  padding: 34px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.34);
+  box-shadow:
+    0 30px 76px rgba(0, 0, 0, 0.30),
+    0 0 38px rgba(0, 147, 216, 0.12);
+}
+
+.package-card-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.package-tier {
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.package-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.package-premium .package-badge {
+  color: #02140f;
+  background: linear-gradient(135deg, #14b8a6, #2dd4bf);
+}
+
+.package-ultra .package-badge {
+  color: #ffffff;
+  background: linear-gradient(135deg, #3e54b4, #0093d8);
+}
+
+.package-card h3 {
+  max-width: 620px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  font-size: clamp(1.8rem, 2.7vw, 3rem);
+  font-weight: 950;
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+
+.package-card p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.78;
+}
+
+.package-rate-list {
+  display: grid;
+  gap: 0;
+  margin-top: 28px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.package-rate-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.package-rate-list div:last-child {
+  border-bottom: 0;
+}
+
+.package-rate-list span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.package-rate-list strong {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.package-highlights {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+  list-style: none;
+}
+
+.package-highlights li {
+  position: relative;
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.package-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #0093d8;
+}
+
+.package-premium .package-highlights li::before {
+  background: #2dd4bf;
+}
+
+.package-ultra .package-highlights li::before {
+  background: #0093d8;
+}
+
+.package-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  color: #ffffff;
+  font-size: 0.96rem;
+  font-weight: 950;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.package-link span {
+  transition: transform 180ms ease;
+}
+
+.package-link:hover {
+  color: #f97316;
+}
+
+.package-link:hover span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 980px) {
+  .package-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .package-card {
+    padding: 26px;
+    border-radius: 18px;
+  }
+
+  .package-rate-list div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+/* ================================
+   Elite Tackle Armory Preview
+================================ */
+
+.armory-preview-section {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.07), transparent 30%),
+    #ffffff;
+}
+
+.armory-preview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.armory-preview-copy .section-label {
+  color: #0093d8;
+}
+
+.armory-preview-copy .section-title {
+  max-width: 680px;
+  color: #0d0a3d;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.armory-preview-copy .section-copy {
+  max-width: 640px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.armory-simple-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+  max-width: 640px;
+}
+
+.armory-simple-list div {
+  padding-left: 18px;
+  border-left: 4px solid #0093d8;
+}
+
+.armory-simple-list strong {
+  display: block;
+  color: #0d0a3d;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.armory-simple-list span {
+  display: block;
+  margin-top: 5px;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.armory-preview-media {
+  overflow: hidden;
+  margin: 0;
+  border-radius: 18px;
+  background: #f7fbfd;
+  box-shadow:
+    0 24px 64px rgba(62, 84, 180, 0.13),
+    0 0 34px rgba(0, 147, 216, 0.10);
+}
+
+.armory-preview-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 980px) {
+  .armory-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+}
+
+@media (max-width: 520px) {
+  .armory-preview-media {
+    border-radius: 16px;
+  }
+
+  .armory-preview-media img {
+    aspect-ratio: 16 / 11;
+  }
+}
+
+/* ================================
+   Guides & Policies Preview
+================================ */
+
+.guides-preview-section {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.07), transparent 30%),
+    #ffffff;
+}
+
+.guides-preview-header {
+  max-width: 820px;
+}
+
+.guides-preview-section .section-label {
+  color: #0093d8;
+}
+
+.guides-preview-section .section-title {
+  max-width: 760px;
+  color: #0d0a3d;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.guides-preview-section .section-copy {
+  max-width: 680px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.guides-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 42px;
+}
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  padding: 28px;
+  border-radius: 20px;
+  background: #f7fbfd;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  background: #ffffff;
+  border-color: rgba(0, 147, 216, 0.30);
+  box-shadow:
+    0 24px 64px rgba(62, 84, 180, 0.13),
+    0 0 36px rgba(0, 147, 216, 0.10);
+}
+
+.guide-number {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #3e54b4;
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.guide-card h3 {
+  margin-bottom: 12px;
+  color: #0d0a3d;
+  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+  font-weight: 950;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.guide-card p {
+  color: #334155;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+.guide-card strong {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #3e54b4;
+  font-size: 0.95rem;
+  font-weight: 950;
+}
+
+.guide-card strong span {
+  transition: transform 180ms ease;
+}
+
+.guide-card:hover strong {
+  color: #f97316;
+}
+
+.guide-card:hover strong span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 980px) {
+  .guides-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .guide-card {
+    padding: 24px;
+    border-radius: 18px;
+  }
+}
+
+/* ================================
+   FAQ Preview Section
+================================ */
+
+.faq-preview-section {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.07), transparent 30%),
+    #f7fbfd;
+}
+
+.faq-preview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.faq-preview-copy .section-label {
+  color: #0093d8;
+}
+
+.faq-preview-copy .section-title {
+  max-width: 680px;
+  color: #0d0a3d;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.faq-preview-copy .section-copy {
+  max-width: 620px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.faq-preview-list {
+  display: grid;
+  gap: 16px;
+}
+
+.faq-preview-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.faq-preview-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 147, 216, 0.30);
+  box-shadow:
+    0 24px 64px rgba(62, 84, 180, 0.13),
+    0 0 36px rgba(0, 147, 216, 0.10);
+}
+
+.faq-preview-card > span {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #3e54b4;
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.faq-preview-card h3 {
+  margin-bottom: 8px;
+  color: #0d0a3d;
+  font-size: 1.12rem;
+  font-weight: 950;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.faq-preview-card p {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .faq-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+}
+
+@media (max-width: 520px) {
+  .faq-preview-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .faq-preview-card > span {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+}
+
+/* ================================
+   Final CTA - Current Theme
+================================ */
+
+.final-cta-section {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 147, 216, 0.18), transparent 34%),
+    linear-gradient(180deg, #071346 0%, #050e35 100%);
+  color: #ffffff;
+}
+
+.final-cta-box {
+  max-width: 980px;
+  margin-inline: auto;
+  padding: 72px 34px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.final-cta-section .section-label {
+  color: #0093d8;
+}
+
+.final-cta-section .section-title {
+  max-width: 760px;
+  margin-inline: auto;
+  color: #ffffff;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.final-cta-section .section-copy {
+  max-width: 700px;
+  margin-inline: auto;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.final-cta-section .btn {
+  border-radius: 12px;
+}
+
+/* Main CTA button */
+.final-cta-section .btn-primary {
+  color: #ffffff;
+  background: #3e54b4;
+  border-color: #3e54b4;
+  box-shadow: 0 14px 28px rgba(62, 84, 180, 0.34);
+}
+
+.final-cta-section .btn-primary:hover {
+  background: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(249, 115, 22, 0.28);
+}
+
+/* Secondary button */
+.final-cta-section .btn-outline {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.34);
+  box-shadow: none;
+}
+
+.final-cta-section .btn-outline:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.62);
+}
+
+@media (max-width: 520px) {
+  .final-cta-box {
+    padding: 54px 24px;
+  }
+
+  .final-cta-section .hero-actions {
+    width: 100%;
+  }
+
+  .final-cta-section .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Make Final CTA section smaller */
+
+.final-cta-section {
+  padding: 56px 0;
+}
+
+.final-cta-box {
+  max-width: 820px;
+  padding: 48px 28px;
+  border-radius: 20px;
+}
+
+.final-cta-section .section-title {
+  max-width: 640px;
+  font-size: clamp(2rem, 3vw, 3.3rem);
+}
+
+.final-cta-section .section-copy {
+  max-width: 620px;
+  margin-top: 16px;
+}
+
+.final-cta-section .hero-actions {
+  margin-top: 24px;
+}
+
+/* ================================
+   MESOPELAGIC ANGLERS FOOTER
+   Current Theme
+================================ */
+
+.site-footer {
+  padding: 64px 0 30px;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(0, 147, 216, 0.14), transparent 30%),
+    linear-gradient(180deg, #071346 0%, #050e35 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Footer layout */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) repeat(4, minmax(145px, 1fr));
+  gap: 38px;
+  align-items: start;
+}
+
+/* Brand area */
+
+.footer-brand {
+  max-width: 420px;
+}
+
+.footer-logo {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-logo-img {
+  width: 52px !important;
+  height: 52px !important;
+  max-width: 52px !important;
+  max-height: 52px !important;
+  object-fit: contain;
+  flex: 0 0 52px;
+  filter: drop-shadow(0 0 14px rgba(0, 147, 216, 0.26));
+}
+
+.footer-logo span {
+  color: #ffffff;
+  font-size: 1.02rem;
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+.footer-logo:hover span {
+  color: #0093d8;
+}
+
+.footer-brand p {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+/* Footer Book Now button */
+
+.footer-book-btn {
+  width: fit-content;
+  min-height: 46px;
+  margin-top: 24px;
+  padding: 0 22px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #3e54b4;
+  border-color: #3e54b4;
+  box-shadow: 0 14px 28px rgba(62, 84, 180, 0.30);
+}
+
+.footer-book-btn:hover {
+  color: #ffffff;
+  background: #f97316;
+  border-color: #f97316;
+  box-shadow: 0 18px 34px rgba(249, 115, 22, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Footer columns */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.footer-column h3 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 950;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.45;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.footer-column a:hover {
+  color: #f97316;
+  transform: translateX(3px);
+}
+
+/* Bottom row */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 50px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.footer-bottom strong {
+  color: #ffffff;
+}
+
+/* Responsive */
+
+@media (max-width: 1120px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-brand {
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-footer {
+    padding: 54px 0 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-logo-img {
+    width: 44px !important;
+    height: 44px !important;
+    max-width: 44px !important;
+    max-height: 44px !important;
+    flex-basis: 44px;
+  }
+
+  .footer-logo span {
+    font-size: 0.94rem;
+  }
+
+  .footer-book-btn {
+    width: 100%;
+  }
+}
+
+/* ================================
+   Armory Page - Current Theme
+================================ */
+
+.armory-theme-page {
+  background: #f7fbfd;
+}
+
+/* Hero */
+
+.armory-theme-hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding: 96px 0 86px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 19, 70, 0.94) 0%,
+      rgba(7, 19, 70, 0.84) 36%,
+      rgba(7, 19, 70, 0.52) 58%,
+      rgba(7, 19, 70, 0.14) 78%,
+      rgba(7, 19, 70, 0.00) 100%
+    ),
+    url("../images/fishing-rods.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.armory-theme-hero-copy {
+  width: min(700px, 100%);
+  max-width: 700px;
+}
+
+.armory-theme-hero .eyebrow {
+  color: #ffffff;
+}
+
+.armory-theme-hero .eyebrow::before {
+  background: #f97316;
+  box-shadow: none;
+}
+
+.armory-theme-hero h1 {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: #ffffff;
+  font-size: clamp(3rem, 5.2vw, 5.6rem);
+  line-height: 0.95;
+  font-weight: 950;
+  letter-spacing: -0.065em;
+}
+
+.armory-theme-hero .hero-copy {
+  max-width: 660px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.armory-theme-hero .hero-actions .btn {
+  border-radius: 12px;
+}
+
+.armory-theme-hero .btn-primary {
+  color: #ffffff;
+  background: #3e54b4;
+  border-color: #3e54b4;
+  box-shadow: 0 14px 28px rgba(62, 84, 180, 0.34);
+}
+
+.armory-theme-hero .btn-primary:hover {
+  background: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+}
+
+.armory-theme-hero .btn-outline {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.armory-theme-hero .btn-outline:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+/* Shared section heading */
+
+.armory-section-header {
+  max-width: 820px;
+}
+
+.armory-category-section .section-label,
+.armory-cta-section .section-label {
+  color: #0093d8;
+}
+
+.armory-section-header .section-title,
+.armory-cta-section .section-title {
+  max-width: 780px;
+  color: #0d0a3d;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.armory-section-header .section-copy,
+.armory-cta-section .section-copy {
+  max-width: 720px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Gear cards */
+
+.armory-category-section {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.07), transparent 30%),
+    #ffffff;
+}
+
+.armory-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 42px;
+}
+
+.armory-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f7fbfd;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.armory-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 147, 216, 0.30);
+  box-shadow:
+    0 24px 64px rgba(62, 84, 180, 0.13),
+    0 0 36px rgba(0, 147, 216, 0.10);
+}
+
+.armory-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.armory-card div {
+  padding: 24px;
+}
+
+.armory-card .card-tag {
+  color: #0093d8;
+}
+
+.armory-card h3 {
+  margin-bottom: 10px;
+  color: #0d0a3d;
+  font-size: 1.25rem;
+  font-weight: 950;
+  line-height: 1.16;
+  letter-spacing: -0.04em;
+}
+
+.armory-card p {
+  color: #334155;
+  line-height: 1.7;
+}
+
+/* Method section */
+
+.armory-method-section {
+  background:
+    radial-gradient(circle at 88% 10%, rgba(0, 147, 216, 0.16), transparent 32%),
+    linear-gradient(180deg, #071346 0%, #050e35 100%);
+  color: #ffffff;
+}
+
+.armory-method-section .section-label {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.armory-method-section .section-title {
+  max-width: 780px;
+  color: #ffffff;
+  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.armory-method-section .section-copy {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.armory-method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 42px;
+}
+
+.armory-method-card {
+  min-height: 260px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.armory-method-card span {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #3e54b4;
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.armory-method-card h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 950;
+  letter-spacing: -0.045em;
+}
+
+.armory-method-card p {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.72;
+}
+
+/* CTA */
+
+.armory-cta-section {
+  background: #ffffff;
+}
+
+.armory-cta-box {
+  max-width: 820px;
+  margin-inline: auto;
+  padding: 48px 28px;
+  border-radius: 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 147, 216, 0.10), transparent 36%),
+    #f7fbfd;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+}
+
+.armory-cta-section .section-title,
+.armory-cta-section .section-copy {
+  margin-inline: auto;
+}
+
+.armory-cta-section .btn {
+  border-radius: 12px;
+}
+
+.armory-cta-section .btn-primary {
+  color: #ffffff;
+  background: #3e54b4;
+  border-color: #3e54b4;
+}
+
+.armory-cta-section .btn-primary:hover {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.armory-cta-section .btn-outline {
+  color: #0d0a3d;
+  background: #ffffff;
+  border-color: rgba(13, 10, 61, 0.16);
+}
+
+.armory-cta-section .btn-outline:hover {
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.45);
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .armory-card-grid,
+  .armory-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .armory-method-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .armory-theme-hero {
+    min-height: auto;
+    padding: 82px 0 72px;
+    background-position: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .armory-theme-hero h1 {
+    font-size: clamp(2.45rem, 12vw, 3.7rem);
+  }
+
+  .armory-theme-hero .hero-actions,
+  .armory-cta-section .hero-actions {
+    width: 100%;
+  }
+
+  .armory-theme-hero .hero-actions .btn,
+  .armory-cta-section .hero-actions .btn {
+    width: 100%;
+  }
+
+  .armory-card div {
+    padding: 22px;
+  }
+
+  .armory-cta-box {
+    padding: 40px 22px;
+  }
+}
+
+/* ================================
+   Informational Subpage Theme
+   For all pages except index.html
+================================ */
+
+.info-page {
+  background: #f7fbfd;
+}
+
+.info-hero {
+  padding: 92px 0 58px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.info-hero-content {
+  max-width: 860px;
+}
+
+.info-hero .section-label {
+  color: #0093d8;
+}
+
+.info-hero h1 {
+  max-width: 780px;
+  margin: 12px 0 0;
+  color: #0d0a3d;
+  font-size: clamp(1.85rem, 3vw, 2.8rem);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.info-hero .hero-copy {
+  max-width: 760px;
+  margin-top: 18px;
+  color: #334155;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.info-section {
+  background: #ffffff;
+}
+
+.info-section-alt {
+  background: #f7fbfd;
+}
+
+.info-section-dark {
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.12), transparent 30%),
+    linear-gradient(180deg, #071346 0%, #050e35 100%);
+  color: #ffffff;
+}
+
+.info-section-dark .section-label {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.info-section-dark .section-title,
+.info-section-dark h2,
+.info-section-dark h3 {
+  color: #ffffff;
+}
+
+.info-section-dark .section-copy,
+.info-section-dark p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.info-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.info-card {
+  padding: 26px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+}
+
+.info-card h3 {
+  color: #0d0a3d;
+  font-size: 1.25rem;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.info-card p {
+  margin-top: 10px;
+  color: #334155;
+  line-height: 1.72;
+}
+
+.info-section-dark .info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.info-section-dark .info-card h3 {
+  color: #ffffff;
+}
+
+.info-section-dark .info-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 980px) {
+  .info-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .info-hero {
+    padding: 78px 0 48px;
+  }
+
+  .info-hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.45rem);
+  }
+
+  .info-card {
+    padding: 22px;
+  }
+}
+
+/* ================================
+   Armory Page - Informational Style
+================================ */
+
+.armory-info-page {
+  background: #f7fbfd;
+}
+
+/* Hero */
+
+.armory-info-hero {
+  padding: 92px 0 28px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 147, 216, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.armory-info-hero-content {
+  max-width: 860px;
+}
+
+.armory-info-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  color: #0d0a3d;
+  font-size: clamp(1.85rem, 3vw, 2.8rem);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.armory-info-hero .hero-copy {
+  max-width: 760px;
+  margin-top: 16px;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Connect hero to content more smoothly */
+
+.armory-detail-section {
+  padding-top: 22px;
+  background: #f7fbfd;
+}
+
+.armory-intro {
+  max-width: 860px;
+  margin-bottom: 28px;
+}
+
+.armory-intro p {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.82;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Alternating items */
+
+.armory-item-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.armory-item-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+}
+
+.armory-item-row.reverse {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+}
+
+.armory-item-row.reverse .armory-item-media {
+  order: 2;
+}
+
+.armory-item-row.reverse .armory-item-copy {
+  order: 1;
+}
+
+.armory-item-media {
+  margin: 0;
+  overflow: hidden;
+  background: #eef5f8;
+}
+
+.armory-item-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.armory-item-copy {
+  padding: 34px 34px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.armory-item-number {
+  width: 40px;
+  height: 40px;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #3e54b4;
+  font-size: 0.78rem;
+  font-weight: 950;
+}
+
+.armory-item-copy h2 {
+  margin: 0;
+  color: #0d0a3d;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.armory-item-role {
+  margin: 8px 0 14px;
+  color: #0093d8;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.armory-item-copy p:last-child {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.82;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* CTA */
+
+.armory-cta-section {
+  background: #ffffff;
+}
+
+.armory-cta-box {
+  max-width: 820px;
+  margin-inline: auto;
+  padding: 44px 28px;
+  border-radius: 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 147, 216, 0.10), transparent 36%),
+    #f7fbfd;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.05);
+}
+
+.armory-cta-box .section-title {
+  max-width: 640px;
+  margin-inline: auto;
+  color: #0d0a3d;
+  font-size: clamp(1.9rem, 2.8vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.armory-cta-box .section-copy {
+  max-width: 620px;
+  margin-inline: auto;
+  color: #334155;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.armory-cta-section .btn {
+  border-radius: 12px;
+}
+
+.armory-cta-section .btn-primary {
+  color: #ffffff;
+  background: #3e54b4;
+  border-color: #3e54b4;
+}
+
+.armory-cta-section .btn-primary:hover {
+  color: #ffffff;
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.armory-cta-section .btn-outline {
+  color: #0d0a3d;
+  background: #ffffff;
+  border-color: rgba(13, 10, 61, 0.16);
+}
+
+.armory-cta-section .btn-outline:hover {
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.45);
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .armory-item-row,
+  .armory-item-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .armory-item-row.reverse .armory-item-media,
+  .armory-item-row.reverse .armory-item-copy {
+    order: initial;
+  }
+}
+
+@media (max-width: 520px) {
+  .armory-info-hero {
+    padding: 78px 0 22px;
+  }
+
+  .armory-info-hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.45rem);
+  }
+
+  .armory-item-copy {
+    padding: 24px 22px 24px;
+  }
+
+  .armory-item-media img {
+    min-height: 240px;
+  }
+
+  .armory-cta-box {
+    padding: 36px 22px;
+  }
+
+  .armory-cta-section .hero-actions {
+    width: 100%;
+  }
+
+  .armory-cta-section .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+/* Center and recolor Armory page H1 */
+
+.armory-info-hero-content {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.armory-info-hero h1 {
+  margin-inline: auto;
+  color: #3e54b4;
+  text-align: center;
+}
+
+.armory-info-hero .hero-copy {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Make gear names orange on Armory page */
+
+.armory-item-copy h2 {
+  color: #f97316;
+}
+
+/* Interactive glow effect for Armory gear containers */
+
+.armory-item-row {
+  position: relative;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.armory-item-row:hover {
+  transform: translateY(-6px);
+  border-color: rgba(249, 115, 22, 0.42);
+  box-shadow:
+    0 26px 70px rgba(62, 84, 180, 0.16),
+    0 0 42px rgba(249, 115, 22, 0.18),
+    0 0 26px rgba(0, 147, 216, 0.10);
+}
+
+.armory-item-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(249, 115, 22, 0.18), transparent 34%),
+    radial-gradient(circle at 86% 82%, rgba(0, 147, 216, 0.14), transparent 34%);
+  transition: opacity 220ms ease;
+}
+
+.armory-item-row:hover::after {
+  opacity: 1;
+}
+
+.armory-item-media img {
+  transition: transform 260ms ease;
+}
+
+.armory-item-row:hover .armory-item-media img {
+  transform: scale(1.04);
+}
+
+.armory-item-copy h2 {
+  transition: color 220ms ease;
+}
+
+.armory-item-row:hover .armory-item-copy h2 {
+  color: #f97316;
+}
+
+/* Armory hero video below H1 */
+
+.armory-hero-video-wrap {
+  max-width: 920px;
+  margin: 28px auto 0;
+  padding: 10px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow:
+    0 18px 48px rgba(15, 23, 42, 0.08),
+    0 0 34px rgba(0, 147, 216, 0.06);
+}
+
+.armory-hero-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+  background: #071346;
+}
+
+.armory-hero-video-wrap:hover {
+  box-shadow:
+    0 24px 64px rgba(62, 84, 180, 0.14),
+    0 0 38px rgba(249, 115, 22, 0.14),
+    0 0 30px rgba(0, 147, 216, 0.10);
+}
+
+.armory-info-hero .hero-copy {
+  margin-top: 26px;
+}
+
+@media (max-width: 520px) {
+  .armory-hero-video-wrap {
+    margin-top: 22px;
+    padding: 8px;
+    border-radius: 18px;
+  }
+
+  .armory-hero-video {
+    border-radius: 13px;
+  }
+}
+
+/* Move Armory H1 higher */
+
+.armory-info-hero {
+  padding-top: 68px;
+}
+
+/* Bold Armory hero description */
+
+.armory-info-hero .hero-copy {
+  font-weight: 800;
+}

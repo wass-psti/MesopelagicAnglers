@@ -1,0 +1,70 @@
+/* ================================
+   Global Sticky Facebook Button
+================================ */
+
+.facebook-sticky-btn {
+  position: fixed;
+  right: 26px;
+  bottom: 26px;
+  z-index: 99999;
+
+  width: 56px !important;
+  height: 56px !important;
+  min-width: 56px !important;
+  min-height: 56px !important;
+  max-width: 56px !important;
+  max-height: 56px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #1877f2;
+  border: 3px solid #ffffff;
+  box-shadow:
+    0 16px 34px rgba(24, 119, 242, 0.35),
+    0 0 24px rgba(0, 147, 216, 0.18);
+
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.facebook-sticky-btn span {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateY(2px);
+}
+
+.facebook-sticky-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  background: #0f66d9;
+  box-shadow:
+    0 20px 42px rgba(24, 119, 242, 0.42),
+    0 0 30px rgba(249, 115, 22, 0.18);
+}
+
+@media (max-width: 520px) {
+  .facebook-sticky-btn {
+    right: 18px;
+    bottom: 18px;
+
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+  }
+
+  .facebook-sticky-btn span {
+    font-size: 30px;
+  }
+}

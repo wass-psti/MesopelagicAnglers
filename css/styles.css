@@ -10811,3 +10811,21 @@ textarea:focus {
     width: 100%;
   }
 }
+
+/* Hero Book Now / Book An Expedition - orange */
+
+.hero-home .hero-actions .btn-primary,
+.hero-background .hero-actions .btn-primary {
+  color: #ffffff;
+  background: #f97316;
+  border-color: #f97316;
+  box-shadow: 0 14px 28px rgba(249, 115, 22, 0.30);
+}
+
+.hero-home .hero-actions .btn-primary:hover,
+.hero-background .hero-actions .btn-primary:hover {
+  color: #ffffff;
+  background: #ea580c;
+  border-color: #ea580c;
+  box-shadow: 0 18px 34px rgba(249, 115, 22, 0.34);
+}

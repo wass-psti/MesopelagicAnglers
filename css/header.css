@@ -336,3 +336,18 @@
     gap: 16px;
   }
 }
+
+/* Header Book An Expedition - blue */
+
+.site-header a[href*="monday.com"] {
+  color: #ffffff;
+  background: #3e54b4;
+  border-color: #3e54b4;
+  box-shadow: 0 14px 28px rgba(62, 84, 180, 0.30);
+}
+
+.site-header a[href*="monday.com"]:hover {
+  color: #ffffff;
+  background: #30439a;
+  border-color: #30439a;
+}

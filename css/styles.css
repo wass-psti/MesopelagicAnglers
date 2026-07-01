@@ -4602,159 +4602,193 @@ textarea:focus {
 }
 
 /* ================================
-   TheSecond Charter Session Preview
+   CHARTER SESSION TIMINGS
 ================================ */
 
 .session-preview-section {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
   background:
-    radial-gradient(circle at 88% 14%, rgba(0, 147, 216, 0.08), transparent 30%),
-    #f7fbfd;
+    radial-gradient(circle at 18% 20%, rgba(0, 147, 216, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 74%, rgba(0, 215, 190, 0.12), transparent 32%),
+    linear-gradient(135deg, #111f5f 0%, #0b1746 46%, #020a26 100%);
+}
+
+.session-preview-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035), transparent 28%, rgba(255, 255, 255, 0.025));
+  opacity: 0.8;
+}
+
+.session-preview-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .session-preview-header {
-  max-width: 820px;
+  max-width: 920px;
+  margin-bottom: 46px;
 }
 
 .session-preview-section .section-label {
-  color: #0093d8;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .session-preview-section .section-title {
-  max-width: 820px;
-  color: #0d0a3d;
-  font-size: clamp(2.3rem, 3.8vw, 4.2rem);
-  font-weight: 950;
-  letter-spacing: -0.06em;
-  line-height: 0.98;
+  color: #ffffff;
 }
 
 .session-preview-section .section-copy {
-  max-width: 760px;
-  text-align: justify;
-  text-justify: inter-word;
+  max-width: 820px;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .session-preview-grid {
-  margin-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 26px;
 }
 
-/* Clean white cards */
+.session-card {
+  --session-color: #00a8ff;
+  --session-rgb: 0, 168, 255;
 
-.session-preview-section .session-card {
-  min-height: auto;
+  position: relative;
   overflow: hidden;
-  padding: 28px;
-  border-radius: 26px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.10);
+  min-height: 300px;
+  padding: 34px;
+  border-radius: 28px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top right, rgba(var(--session-rgb), 0.13), transparent 38%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.055));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+/* Removes the old "top outline" look if your old CSS used it */
+.session-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(var(--session-rgb), 0.24), transparent 44%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(var(--session-rgb), 0.72);
   box-shadow:
-    0 18px 48px rgba(15, 23, 42, 0.08),
-    0 0 34px rgba(0, 147, 216, 0.06);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+    0 0 0 1px rgba(var(--session-rgb), 0.38),
+    0 0 34px rgba(var(--session-rgb), 0.42),
+    0 26px 70px rgba(0, 0, 0, 0.34);
 }
 
-.session-preview-section .session-card::before,
-.session-preview-section .session-card::after {
-  display: none;
+.session-card:hover::before {
+  opacity: 1;
 }
 
-.session-preview-section .session-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(0, 147, 216, 0.28);
-  box-shadow:
-    0 24px 64px rgba(62, 84, 180, 0.14),
-    0 0 38px rgba(0, 147, 216, 0.12);
+.session-card.morning {
+  --session-color: #ffd400;
+  --session-rgb: 255, 212, 0;
 }
 
-.session-preview-section .session-kicker {
+.session-card.afternoon {
+  --session-color: #ff7a00;
+  --session-rgb: 255, 122, 0;
+}
+
+.session-card.nocturnal {
+  --session-color: #a970ff;
+  --session-rgb: 169, 112, 255;
+}
+
+.session-card.fullday {
+  --session-color: #00c7b7;
+  --session-rgb: 0, 199, 183;
+}
+
+.session-kicker {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
-  width: fit-content;
-  margin-bottom: 18px;
-  padding: 7px 11px;
-  border-radius: 10px;
-  color: #0093d8;
-  background: rgba(0, 147, 216, 0.08);
-  font-size: 0.7rem;
-  font-weight: 950;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--session-color);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.76rem;
+  font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.session-preview-section .session-card h3 {
-  margin-bottom: 18px;
-  color: #0d0a3d;
-  font-size: clamp(1.18rem, 1.6vw, 1.55rem);
-  line-height: 1.12;
+.session-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 26px;
+  color: #ffffff;
+  font-size: 1.55rem;
   font-weight: 950;
   letter-spacing: -0.045em;
+  line-height: 1.08;
 }
 
 .session-meta {
-  display: grid;
-  gap: 5px;
-  margin-bottom: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(15, 23, 42, 0.10);
+  position: relative;
+  z-index: 1;
+  padding-top: 24px;
+  margin-bottom: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .session-meta strong {
-  color: #3e54b4;
+  display: block;
+  margin-bottom: 4px;
+  color: #ffffff;
   font-size: 1.45rem;
   font-weight: 950;
-  line-height: 1;
   letter-spacing: -0.04em;
 }
 
 .session-meta span {
-  color: #64748b;
-  font-size: 0.92rem;
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
   font-weight: 800;
 }
 
-.session-preview-section .session-card p {
-  color: #334155;
-  font-size: 0.95rem;
-  line-height: 1.72;
-}
-
-/* Subtle per-session accents */
-
-.session-preview-section .session-card.morning {
-  border-top: 4px solid #facc15;
-}
-
-.session-preview-section .session-card.afternoon {
-  border-top: 4px solid #f97316;
-}
-
-.session-preview-section .session-card.nocturnal {
-  border-top: 4px solid #8b5cf6;
-}
-
-.session-preview-section .session-card.fullday {
-  border-top: 4px solid #14b8a6;
+.session-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .session-learn-link {
-  margin-top: 32px;
+  margin-top: 34px;
+  color: #ffffff;
 }
 
-@media (max-width: 1120px) {
-  .session-preview-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 680px) {
-  .session-preview-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .session-preview-section .session-card {
-    padding: 24px;
-    border-radius: 22px;
-  }
+.session-learn-link:hover {
+  color: #00d7ff;
 }
 
 /* ================================
@@ -10830,3 +10864,365 @@ textarea:focus {
   box-shadow: 0 18px 34px rgba(249, 115, 22, 0.34);
 }
 
+/* =========================================================
+   FINAL FIX: Charter Session Cards Glow Hover
+   Removes top-outline style and keeps dark blue gradient
+   ========================================================= */
+
+.session-preview-section {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(0, 147, 216, 0.20), transparent 34%),
+    radial-gradient(circle at 82% 74%, rgba(20, 184, 166, 0.14), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(62, 84, 180, 0.22), transparent 42%),
+    linear-gradient(135deg, #111f5f 0%, #071346 48%, #020a26 100%) !important;
+}
+
+.session-preview-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035),
+      transparent 28%,
+      rgba(255, 255, 255, 0.025)
+    );
+  opacity: 0.75;
+}
+
+.session-preview-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.session-preview-section .section-label,
+.session-preview-section .section-title,
+.session-preview-section .section-copy {
+  color: #ffffff;
+}
+
+.session-preview-section .section-copy {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Card base */
+
+.session-preview-section .session-card {
+  --session-color: #00a8ff;
+  --session-rgb: 0, 168, 255;
+
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 34px;
+  border-radius: 28px;
+
+  /*
+    Important:
+    This removes the old top border style completely.
+  */
+  border-top: 0 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+
+  background:
+    radial-gradient(circle at top right, rgba(var(--session-rgb), 0.13), transparent 38%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.055)) !important;
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+/* Soft internal glow layer */
+
+.session-preview-section .session-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0.30;
+  background:
+    radial-gradient(circle at 50% 100%, rgba(var(--session-rgb), 0.22), transparent 48%),
+    radial-gradient(circle at 80% 0%, rgba(var(--session-rgb), 0.16), transparent 42%),
+    linear-gradient(180deg, transparent 42%, rgba(var(--session-rgb), 0.055));
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+/* Disable old bottom puddle glow */
+
+.session-preview-section .session-card::after {
+  display: none !important;
+}
+
+/* Keep text above glow */
+
+.session-preview-section .session-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual session colors */
+
+.session-preview-section .session-card.morning {
+  --session-color: #facc15;
+  --session-rgb: 250, 204, 21;
+}
+
+.session-preview-section .session-card.afternoon {
+  --session-color: #f97316;
+  --session-rgb: 249, 115, 22;
+}
+
+.session-preview-section .session-card.nocturnal {
+  --session-color: #c084fc;
+  --session-rgb: 192, 132, 252;
+}
+
+.session-preview-section .session-card.fullday {
+  --session-color: #14b8a6;
+  --session-rgb: 20, 184, 166;
+}
+
+/* Hover glow */
+
+.session-preview-section .session-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(var(--session-rgb), 0.58) !important;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.30),
+    0 0 0 1px rgba(var(--session-rgb), 0.22),
+    0 0 34px rgba(var(--session-rgb), 0.26),
+    inset 0 0 42px rgba(var(--session-rgb), 0.075);
+}
+
+.session-preview-section .session-card:hover::before {
+  opacity: 0.72;
+  transform: scale(1.02);
+}
+
+/* Text styling */
+
+.session-preview-section .session-kicker {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--session-color) !important;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.session-preview-section .session-card h3 {
+  margin: 0 0 26px;
+  color: #ffffff;
+  font-size: 1.55rem;
+  font-weight: 950;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.session-preview-section .session-meta {
+  padding-top: 24px;
+  margin-bottom: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.session-preview-section .session-meta strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #ffffff;
+  font-size: 1.45rem;
+  font-weight: 950;
+  letter-spacing: -0.04em;
+}
+
+.session-preview-section .session-meta span {
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.session-preview-section .session-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.session-preview-section .session-learn-link,
+.session-preview-section .text-link {
+  color: #ffffff;
+}
+
+.session-preview-section .session-learn-link:hover,
+.session-preview-section .text-link:hover {
+  color: #f97316;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .session-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .session-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .session-preview-section .session-card {
+    min-height: auto;
+    padding: 28px;
+  }
+}
+
+/* =========================================================
+   FINAL OVERRIDE: Session Cards - Active Card Glow Only
+   Fixes glow appearing inside other cards
+   ========================================================= */
+
+.session-preview-section .session-card {
+  --session-color: #00a8ff;
+  --session-rgb: 0, 168, 255;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  border-top: 0 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.16) !important;
+
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.105), rgba(255, 255, 255, 0.045)) !important;
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055) !important;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+/* Default state: no visible internal glow */
+.session-preview-section .session-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+
+  opacity: 0 !important;
+  transform: scale(0.98);
+
+  background:
+    radial-gradient(circle at 50% 50%, rgba(var(--session-rgb), 0.22), transparent 48%),
+    radial-gradient(circle at 80% 20%, rgba(var(--session-rgb), 0.16), transparent 40%),
+    linear-gradient(145deg, rgba(var(--session-rgb), 0.08), transparent 58%);
+
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+/* Disable old pseudo-element puddle/glow completely */
+.session-preview-section .session-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep text/content above the glow */
+.session-preview-section .session-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual colors */
+.session-preview-section .session-card.morning {
+  --session-color: #facc15;
+  --session-rgb: 250, 204, 21;
+}
+
+.session-preview-section .session-card.afternoon {
+  --session-color: #f97316;
+  --session-rgb: 249, 115, 22;
+}
+
+.session-preview-section .session-card.nocturnal {
+  --session-color: #c084fc;
+  --session-rgb: 192, 132, 252;
+}
+
+.session-preview-section .session-card.fullday {
+  --session-color: #14b8a6;
+  --session-rgb: 20, 184, 166;
+}
+
+/* Only the hovered card glows */
+.session-preview-section .session-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(var(--session-rgb), 0.58) !important;
+
+  background:
+    radial-gradient(circle at 80% 18%, rgba(var(--session-rgb), 0.12), transparent 42%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.055)) !important;
+
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.30),
+    0 0 0 1px rgba(var(--session-rgb), 0.22),
+    0 0 34px rgba(var(--session-rgb), 0.26),
+    inset 0 0 42px rgba(var(--session-rgb), 0.075) !important;
+}
+
+.session-preview-section .session-card:hover::before {
+  opacity: 1 !important;
+  transform: scale(1.04);
+}
+
+/* Kicker color follows each card */
+.session-preview-section .session-kicker {
+  color: var(--session-color) !important;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Remove any inherited colored top border from older CSS */
+.session-preview-section .session-card.morning,
+.session-preview-section .session-card.afternoon,
+.session-preview-section .session-card.nocturnal,
+.session-preview-section .session-card.fullday {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+}

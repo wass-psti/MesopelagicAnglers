@@ -11226,3 +11226,165 @@ textarea:focus {
   border-top-width: 1px !important;
   border-top-style: solid !important;
 }
+
+/* =========================================================
+   ABSOLUTE FINAL FIX: Session Cards - No Cross-Card Glow Bleed
+   Cause fixed: transparent cards + external glow bleeding behind neighbors
+   ========================================================= */
+
+.session-preview-section {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(0, 147, 216, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 70%, rgba(20, 184, 166, 0.12), transparent 34%),
+    linear-gradient(135deg, #111f5f 0%, #071346 48%, #020a26 100%) !important;
+}
+
+.session-preview-grid {
+  isolation: isolate;
+}
+
+/* Base card: opaque enough to block glow from other cards */
+.session-preview-section .session-card {
+  --session-color: #22d3ee;
+  --session-rgb: 34, 211, 238;
+
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+
+  min-height: 300px;
+  padding: 34px;
+  border-radius: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-top-width: 1px !important;
+
+  /*
+    Important:
+    This is mostly opaque. It prevents another card's glow
+    from showing through this card.
+  */
+  background:
+    linear-gradient(145deg, rgba(43, 61, 113, 0.98), rgba(25, 38, 82, 0.98)) !important;
+
+  box-shadow:
+    0 22px 55px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+/* Remove every old pseudo glow from all states */
+.session-preview-section .session-card::before,
+.session-preview-section .session-card::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+  opacity: 0 !important;
+  transform: none !important;
+  filter: none !important;
+  display: block !important;
+}
+
+/* Internal glow layer only */
+.session-preview-section .session-card::before {
+  z-index: 0 !important;
+  background:
+    radial-gradient(circle at 72% 18%, rgba(var(--session-rgb), 0.18), transparent 38%),
+    radial-gradient(circle at 50% 100%, rgba(var(--session-rgb), 0.16), transparent 46%),
+    linear-gradient(145deg, rgba(var(--session-rgb), 0.075), transparent 58%) !important;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+/* Kill old bottom puddle effect permanently */
+.session-preview-section .session-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Content always above internal glow */
+.session-preview-section .session-card > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Card-specific variables */
+.session-preview-section .session-card.morning {
+  --session-color: #facc15;
+  --session-rgb: 250, 204, 21;
+}
+
+.session-preview-section .session-card.afternoon {
+  --session-color: #f97316;
+  --session-rgb: 249, 115, 22;
+}
+
+.session-preview-section .session-card.nocturnal {
+  --session-color: #c084fc;
+  --session-rgb: 192, 132, 252;
+}
+
+.session-preview-section .session-card.fullday {
+  --session-color: #14b8a6;
+  --session-rgb: 20, 184, 166;
+}
+
+/* Only hovered card changes */
+.session-preview-section .session-card:hover {
+  z-index: 5 !important;
+  transform: translateY(-7px);
+
+  border-color: rgba(var(--session-rgb), 0.62) !important;
+
+  background:
+    linear-gradient(145deg, rgba(49, 69, 126, 0.99), rgba(27, 42, 91, 0.99)) !important;
+
+  /*
+    No external colored glow here.
+    This prevents glow from appearing inside neighboring cards.
+  */
+  box-shadow:
+    0 26px 64px rgba(0, 0, 0, 0.32),
+    inset 0 0 0 1px rgba(var(--session-rgb), 0.18),
+    inset 0 0 46px rgba(var(--session-rgb), 0.12) !important;
+}
+
+.session-preview-section .session-card:hover::before {
+  opacity: 1 !important;
+  transform: scale(1.02) !important;
+}
+
+/* Kicker follows the card color */
+.session-preview-section .session-kicker {
+  color: var(--session-color) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Text cleanup */
+.session-preview-section .session-card h3,
+.session-preview-section .session-meta strong {
+  color: #ffffff !important;
+}
+
+.session-preview-section .session-meta {
+  border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+.session-preview-section .session-meta span,
+.session-preview-section .session-card p {
+  color: rgba(255, 255, 255, 0.76) !important;
+}

@@ -11605,7 +11605,7 @@ textarea:focus {
     ),
     url("../images/how-to-book.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 88% center;
   background-repeat: no-repeat;
 }
 

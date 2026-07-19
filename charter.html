@@ -5,212 +5,552 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Charter Session Timings | Mesopelagic Anglers</title>
-  <meta name="description" content="Compare Morning, Afternoon, Nocturnal, and Full-Day offshore fishing charter sessions from Hadsan Beach Park, Mactan, Cebu.">
+  <meta
+    name="description"
+    content="Compare Mesopelagic Anglers morning, afternoon, nocturnal, and full-day offshore fishing charter sessions from Mactan, Cebu."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/social-sticky.css">
+  <link rel="stylesheet" href="css/charter.css">
+  <link rel="stylesheet" href="css/charter-windows.css">
 </head>
 
 <body>
   <div data-include="header"></div>
   <div data-include="social-sticky"></div>
 
-  <main class="charter-info-page">
-    <!-- HERO / PAGE INTRO -->
-    <section class="charter-info-hero">
-      <div class="container charter-info-hero-content">
-        <h1>Charter Session Timings</h1>
+  <main class="charter-page">
+    <!-- HERO -->
+    <section class="charter-hero" aria-labelledby="charter-page-title">
+      <div class="charter-hero__background" aria-hidden="true"></div>
 
-        <p class="hero-copy">
-          Each charter session is structured around departure time, daylight conditions, tide movement,
-          sea state, target activity, and group preference.
+      <div class="container charter-hero__content">
+        <p class="charter-eyebrow">Charter Session Timings</p>
+
+        <h1 id="charter-page-title">
+          Choose Your Fishing Window
+        </h1>
+
+        <p class="charter-hero__copy">
+          Each charter session is structured around departure time, daylight,
+          tide movement, sea state, target activity, and the type of offshore
+          experience your group prefers.
         </p>
 
-        <figure class="charter-hero-image-wrap">
-          <img src="images/fishing-time.png" alt="Fishing charter session timing">
-        </figure>
-      </div>
-    </section>
+        <div class="charter-hero__actions">
+          <a class="btn btn-primary" href="#session-options">
+            Compare Sessions
+          </a>
 
-    <!-- SESSION WINDOWS -->
-    <section class="section charter-session-section">
-      <div class="container">
-        <div class="charter-section-header">
-          <h2 class="section-title">Available Session Windows</h2>
-
-          <p class="section-copy">
-            Mesopelagic Anglers offers four session formats. Each option is planned around a different time window,
-            fishing condition, and level of trip coverage.
-          </p>
+          <a
+            class="btn btn-outline"
+            href="https://wa-psti.monday.com/boards/18415733375"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check Availability
+          </a>
         </div>
 
-        <div class="charter-session-grid">
-          <article class="charter-session-card morning">
-            <span class="charter-session-number">01</span>
-            <p class="charter-session-kicker">Morning</p>
-            <h3>Golden Hour Session</h3>
+        <div class="charter-hero__facts" aria-label="Charter session overview">
+          <div>
+            <strong>4 Session Formats</strong>
+            <span>Morning, afternoon, night, and full-day</span>
+          </div>
 
-            <div class="charter-session-meta">
-              <strong>6 Hours</strong>
-              <span>5:00 AM – 11:00 AM</span>
-            </div>
+          <div>
+            <strong>6–14 Hours</strong>
+            <span>Choose focused or extended offshore coverage</span>
+          </div>
 
-            <p>
-              A focused daylight session for guests who prefer an early departure and a shorter offshore run.
-              This window is commonly selected for sunrise activity and morning fishing conditions.
-            </p>
-          </article>
-
-          <article class="charter-session-card afternoon">
-            <span class="charter-session-number">02</span>
-            <p class="charter-session-kicker">Afternoon</p>
-            <h3>Sunset Drift Session</h3>
-
-            <div class="charter-session-meta">
-              <strong>6 Hours</strong>
-              <span>1:00 PM – 7:00 PM</span>
-            </div>
-
-            <p>
-              A half-day session built around late-afternoon movement and a sunset return. This is practical
-              for guests who prefer a later start while still keeping the trip within daylight hours.
-            </p>
-          </article>
-
-          <article class="charter-session-card nocturnal">
-            <span class="charter-session-number">03</span>
-            <p class="charter-session-kicker">Night Ops</p>
-            <h3>Nocturnal Deep-Sea Session</h3>
-
-            <div class="charter-session-meta">
-              <strong>12 Hours</strong>
-              <span>5:00 PM – 5:00 AM</span>
-            </div>
-
-            <p>
-              A night fishing format planned around darker offshore conditions, underwater blue light support,
-              bait movement, and predator activity after sunset.
-            </p>
-          </article>
-
-          <article class="charter-session-card fullday">
-            <span class="charter-session-number">04</span>
-            <p class="charter-session-kicker">Full-Day</p>
-            <h3>Ultimate Full-Day Expedition</h3>
-
-            <div class="charter-session-meta">
-              <strong>14 Hours</strong>
-              <span>5:00 AM – 7:00 PM</span>
-            </div>
-
-            <p>
-              The longest session option, intended for wider route coverage and more time across different
-              feeding windows, fishing areas, and offshore conditions.
-            </p>
-          </article>
+          <div>
+            <strong>Captain-Planned</strong>
+            <span>Routes remain dependent on safe sea conditions</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- HOW TO CHOOSE -->
-    <section class="section charter-choice-section">
-      <div class="container">
-        <div class="charter-section-header">
-          <h2 class="section-title">How to Choose a Session</h2>
+    <!-- SESSION INTRODUCTION -->
+    <section class="charter-intro" id="session-options">
+      <div class="container charter-intro__grid">
+        <div class="charter-intro__heading">
+          <p class="charter-eyebrow">Available Session Windows</p>
 
-          <p class="section-copy">
-            The best session depends on your schedule, preferred fishing style, target experience, and comfort with
-            longer offshore hours.
-          </p>
+          <h2>Four ways to experience the water.</h2>
         </div>
 
-        <div class="charter-choice-stack">
-          <!-- 01 -->
-          <article class="charter-choice-row">
-            <figure class="charter-choice-media">
-              <img src="images/sunset-1.png" alt="Daytime offshore fishing session">
-            </figure>
+        <div class="charter-window-grid" aria-label="Available charter sessions">
+          <a
+            class="charter-window-card charter-window-card--morning"
+            href="#morning-session"
+          >
+            <span class="charter-window-card__number">01</span>
 
-            <div class="charter-choice-copy">
-              <span class="charter-choice-number">01</span>
-              <h2>Daytime Sessions</h2>
-              <p class="charter-choice-role">Morning or Afternoon</p>
-
-              <p>
-                Morning and afternoon sessions are practical choices for guests who want a focused 6-hour charter.
-                These sessions are easier to schedule, simpler to prepare for, and more suitable for groups who prefer
-                daylight visibility and shorter offshore exposure.
-              </p>
+            <div>
+              <span class="charter-window-card__label">Morning</span>
+              <h3>Golden Hour</h3>
+              <p>5:00 AM – 11:00 AM</p>
             </div>
+          </a>
+
+          <a
+            class="charter-window-card charter-window-card--afternoon"
+            href="#afternoon-session"
+          >
+            <span class="charter-window-card__number">02</span>
+
+            <div>
+              <span class="charter-window-card__label">Afternoon</span>
+              <h3>Sunset Drift</h3>
+              <p>1:00 PM – 7:00 PM</p>
+            </div>
+          </a>
+
+          <a
+            class="charter-window-card charter-window-card--night"
+            href="#night-session"
+          >
+            <span class="charter-window-card__number">03</span>
+
+            <div>
+              <span class="charter-window-card__label">Night Ops</span>
+              <h3>Nocturnal</h3>
+              <p>5:00 PM – 5:00 AM</p>
+            </div>
+          </a>
+
+          <a
+            class="charter-window-card charter-window-card--full"
+            href="#full-day-session"
+          >
+            <span class="charter-window-card__number">04</span>
+
+            <div>
+              <span class="charter-window-card__label">Full-Day</span>
+              <h3>Ultimate Expedition</h3>
+              <p>5:00 AM – 7:00 PM</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORNING -->
+    <section class="charter-session charter-session--morning" id="morning-session">
+      <div class="container">
+        <article class="charter-session__card">
+          <figure class="charter-session__media">
+            <img
+              src="images/morning2.jpg"
+              alt="Morning offshore sportfishing charter at sunrise"
+              loading="eager"
+            >
+
+            <figcaption>
+              <span>Morning Window</span>
+              <strong>Sunrise conditions and focused early-day fishing</strong>
+            </figcaption>
+          </figure>
+
+          <div class="charter-session__content">
+            <div class="charter-session__topline">
+              <span class="charter-session__number">01</span>
+              <span class="charter-session__label">Morning</span>
+            </div>
+
+            <h2>Golden Hour Session</h2>
+
+            <div class="charter-session__schedule">
+              <div>
+                <span>Duration</span>
+                <strong>6 Hours</strong>
+              </div>
+
+              <div>
+                <span>Session Time</span>
+                <strong>5:00 AM – 11:00 AM</strong>
+              </div>
+            </div>
+
+            <p>
+              A focused daylight session for guests who prefer an early
+              departure and a shorter offshore run. This window is commonly
+              selected for sunrise activity and morning fishing conditions.
+            </p>
+
+            <div class="charter-session__highlights">
+              <div>
+                <span>Best for</span>
+                <strong>Early starters and first-time offshore guests</strong>
+              </div>
+
+              <div>
+                <span>Environment</span>
+                <strong>Cooler temperatures and sunrise visibility</strong>
+              </div>
+
+              <div>
+                <span>Trip character</span>
+                <strong>Focused, efficient, and daylight-based</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- AFTERNOON -->
+    <section class="charter-session charter-session--afternoon" id="afternoon-session">
+      <div class="container">
+        <article class="charter-session__card charter-session__card--reverse">
+          <figure class="charter-session__media">
+            <img
+              src="images/afternoon.jpg"
+              alt="Afternoon fishing charter returning during sunset"
+              loading="lazy"
+            >
+
+            <figcaption>
+              <span>Afternoon Window</span>
+              <strong>Late-day movement and a sunset return</strong>
+            </figcaption>
+          </figure>
+
+          <div class="charter-session__content">
+            <div class="charter-session__topline">
+              <span class="charter-session__number">02</span>
+              <span class="charter-session__label">Afternoon</span>
+            </div>
+
+            <h2>Sunset Drift Session</h2>
+
+            <div class="charter-session__schedule">
+              <div>
+                <span>Duration</span>
+                <strong>6 Hours</strong>
+              </div>
+
+              <div>
+                <span>Session Time</span>
+                <strong>1:00 PM – 7:00 PM</strong>
+              </div>
+            </div>
+
+            <p>
+              A half-day session built around late-afternoon movement and a
+              sunset return. This is practical for guests who prefer a later
+              start while still keeping most of the trip within daylight.
+            </p>
+
+            <div class="charter-session__highlights">
+              <div>
+                <span>Best for</span>
+                <strong>Guests who prefer a later departure</strong>
+              </div>
+
+              <div>
+                <span>Environment</span>
+                <strong>Changing afternoon light and sunset conditions</strong>
+              </div>
+
+              <div>
+                <span>Trip character</span>
+                <strong>Relaxed start with a scenic evening return</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- NIGHT -->
+    <section class="charter-session charter-session--night" id="night-session">
+      <div class="container">
+        <article class="charter-session__card">
+          <figure class="charter-session__media">
+            <img
+              src="images/night.jpg"
+              alt="Nocturnal offshore fishing charter with blue underwater lights"
+              loading="lazy"
+            >
+
+            <figcaption>
+              <span>Night-Ops Window</span>
+              <strong>Blue-light support and after-dark offshore conditions</strong>
+            </figcaption>
+          </figure>
+
+          <div class="charter-session__content">
+            <div class="charter-session__topline">
+              <span class="charter-session__number">03</span>
+              <span class="charter-session__label">Night Ops</span>
+            </div>
+
+            <h2>Nocturnal Deep-Sea Session</h2>
+
+            <div class="charter-session__schedule">
+              <div>
+                <span>Duration</span>
+                <strong>12 Hours</strong>
+              </div>
+
+              <div>
+                <span>Session Time</span>
+                <strong>5:00 PM – 5:00 AM</strong>
+              </div>
+            </div>
+
+            <p>
+              A night fishing format planned around darker offshore conditions,
+              underwater blue-light support, bait movement, and predator
+              activity after sunset.
+            </p>
+
+            <div class="charter-session__highlights">
+              <div>
+                <span>Best for</span>
+                <strong>Experienced guests interested in night fishing</strong>
+              </div>
+
+              <div>
+                <span>Environment</span>
+                <strong>Dark-water operations and artificial lighting</strong>
+              </div>
+
+              <div>
+                <span>Trip character</span>
+                <strong>Longer, more technical, and more demanding</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FULL DAY -->
+    <section class="charter-session charter-session--full" id="full-day-session">
+      <div class="container">
+        <article class="charter-session__card charter-session__card--reverse">
+          <figure class="charter-session__media">
+            <img
+              src="images/full.jpg"
+              alt="Full-day offshore sportfishing expedition in bright daylight"
+              loading="lazy"
+            >
+
+            <figcaption>
+              <span>Extended Window</span>
+              <strong>Maximum flexibility and wider offshore coverage</strong>
+            </figcaption>
+          </figure>
+
+          <div class="charter-session__content">
+            <div class="charter-session__topline">
+              <span class="charter-session__number">04</span>
+              <span class="charter-session__label">Full-Day</span>
+            </div>
+
+            <h2>Ultimate Full-Day Expedition</h2>
+
+            <div class="charter-session__schedule">
+              <div>
+                <span>Duration</span>
+                <strong>14 Hours</strong>
+              </div>
+
+              <div>
+                <span>Session Time</span>
+                <strong>5:00 AM – 7:00 PM</strong>
+              </div>
+            </div>
+
+            <p>
+              The longest session option, intended for wider route coverage
+              and more time across different feeding windows, fishing areas,
+              and offshore conditions.
+            </p>
+
+            <div class="charter-session__highlights">
+              <div>
+                <span>Best for</span>
+                <strong>Experienced groups wanting maximum trip coverage</strong>
+              </div>
+
+              <div>
+                <span>Environment</span>
+                <strong>Morning, midday, and late-afternoon conditions</strong>
+              </div>
+
+              <div>
+                <span>Trip character</span>
+                <strong>Extended, adaptable, and expedition-focused</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="charter-comparison" aria-labelledby="charter-comparison-title">
+      <div class="container">
+        <header class="charter-section-heading">
+          <div>
+            <p class="charter-eyebrow">Quick Comparison</p>
+            <h2 id="charter-comparison-title">Which session fits your group?</h2>
+          </div>
+
+          <p>
+            Use this comparison as a starting point. Final recommendations may
+            change based on the forecast, route suitability, and captain assessment.
+          </p>
+        </header>
+
+        <div class="charter-comparison__table-wrap">
+          <table class="charter-comparison__table">
+            <thead>
+              <tr>
+                <th scope="col">Session</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Departure</th>
+                <th scope="col">Best suited to</th>
+                <th scope="col">Offshore exposure</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Morning</th>
+                <td>6 Hours</td>
+                <td>5:00 AM</td>
+                <td>Early starters and focused daylight fishing</td>
+                <td><span class="exposure exposure--low">Focused</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Afternoon</th>
+                <td>6 Hours</td>
+                <td>1:00 PM</td>
+                <td>Later schedules and sunset-oriented trips</td>
+                <td><span class="exposure exposure--low">Focused</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Night Ops</th>
+                <td>12 Hours</td>
+                <td>5:00 PM</td>
+                <td>Experienced guests interested in nocturnal conditions</td>
+                <td><span class="exposure exposure--high">Extended</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Full-Day</th>
+                <td>14 Hours</td>
+                <td>5:00 AM</td>
+                <td>Groups wanting the broadest route and time coverage</td>
+                <td><span class="exposure exposure--high">Maximum</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHOOSING GUIDE -->
+    <section class="charter-guide" aria-labelledby="charter-guide-title">
+      <div class="container">
+        <header class="charter-section-heading charter-section-heading--light">
+          <div>
+            <p class="charter-eyebrow">How to Choose</p>
+            <h2 id="charter-guide-title">Consider more than the clock.</h2>
+          </div>
+
+          <p>
+            The best session depends on your schedule, preferred fishing style,
+            physical comfort, offshore experience, and desired route coverage.
+          </p>
+        </header>
+
+        <div class="charter-guide__grid">
+          <article>
+            <span>01</span>
+            <h3>Available time</h3>
+            <p>
+              Decide whether your group prefers a focused half-day trip or a
+              longer offshore commitment.
+            </p>
           </article>
 
-          <!-- 02 -->
-          <article class="charter-choice-row reverse">
-            <figure class="charter-choice-media">
-              <img src="images/fishing-time-2.png" alt="Nocturnal deep sea fishing session">
-            </figure>
-
-            <div class="charter-choice-copy">
-              <span class="charter-choice-number">02</span>
-              <h2>Nocturnal Session</h2>
-              <p class="charter-choice-role">Night Fishing Format</p>
-
-              <p>
-                The nocturnal session is a longer and more demanding option. It is suited for guests interested in
-                night fishing conditions, blue light support, bait aggregation, and offshore predator movement after dark.
-              </p>
-            </div>
+          <article>
+            <span>02</span>
+            <h3>Experience level</h3>
+            <p>
+              Daylight sessions are generally easier for first-time guests,
+              while night and full-day sessions require more stamina.
+            </p>
           </article>
 
-          <!-- 03 -->
-          <article class="charter-choice-row">
-            <figure class="charter-choice-media">
-              <img src="images/hero-boat2.png" alt="Full day offshore fishing expedition">
-            </figure>
+          <article>
+            <span>03</span>
+            <h3>Preferred conditions</h3>
+            <p>
+              Some guests prefer sunrise, others enjoy sunset, and experienced
+              anglers may specifically seek nocturnal conditions.
+            </p>
+          </article>
 
-            <div class="charter-choice-copy">
-              <span class="charter-choice-number">03</span>
-              <h2>Full-Day Expedition</h2>
-              <p class="charter-choice-role">Extended Offshore Coverage</p>
-
-              <p>
-                The full-day expedition provides the widest time window. This option is best for guests who want more
-                flexibility in route planning, more time on the water, and the chance to fish across multiple periods
-                of the day.
-              </p>
-            </div>
+          <article>
+            <span>04</span>
+            <h3>Route flexibility</h3>
+            <p>
+              Longer sessions provide more time to adapt the route, search
+              different grounds, and respond to changing conditions.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- BOOKING NOTE -->
-    <section class="section charter-note-section">
-      <div class="container charter-note-box">
-        <h2 class="section-title">Booking Note</h2>
+    <section class="charter-booking">
+      <div class="container">
+        <div class="charter-booking__box">
+          <div>
+            <p class="charter-eyebrow">Booking Note</p>
+            <h2>Session availability remains condition-dependent.</h2>
 
-        <p class="section-copy">
-          Availability depends on weather, sea condition, route suitability, and captain assessment. Send your preferred
-          date, session, tier, and group size so the team can recommend a practical option.
-        </p>
+            <p>
+              Availability depends on weather, sea condition, route suitability,
+              vessel readiness, and captain assessment. Send your preferred date,
+              session, tier, and group size so the team can recommend a practical option.
+            </p>
+          </div>
 
-        <div class="hero-actions" style="justify-content:center;">
-          <a href="https://wa-psti.monday.com/boards/18415733375"
-             class="btn btn-primary"
-             target="_blank"
-             rel="noopener noreferrer">
-            Check Availability
-          </a>
+          <div class="charter-booking__actions">
+            <a
+              class="btn btn-primary"
+              href="https://wa-psti.monday.com/boards/18415733375"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check Availability
+            </a>
 
-          <a href="inclusions.html" class="btn btn-outline">
-            Read Policies
-          </a>
+            <a class="btn btn-outline" href="inclusions.html">
+              Read Policies
+            </a>
+          </div>
         </div>
       </div>
     </section>

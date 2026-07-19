@@ -4,179 +4,373 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fishing Spots | Mesopelagic Anglers</title>
-  <meta name="description" content="Explore Mesopelagic Anglers offshore fishing grounds around Mactan, Caubian Islands, Middle Pass, Camotes Sea, and the Danajon Banks.">
+  <title>Fishing Grounds | Mesopelagic Anglers</title>
+  <meta
+    name="description"
+    content="Compare the Middle Pass and Caubian Islands route with the deeper Danajon Bank route. Review fishing environments, target species, techniques, session options, and route suitability."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/social-sticky.css">
+  <link rel="stylesheet" href="css/fishing-spots.css">
 </head>
 
 <body>
   <div data-include="header"></div>
   <div data-include="social-sticky"></div>
 
-  <main class="spots-info-page">
-    <!-- HERO / PAGE INTRO -->
-    <section class="spots-info-hero">
-      <div class="container spots-info-hero-content">
-        <h1>Fishing Spots</h1>
+  <main class="fishing-grounds-page">
+    <!-- HERO -->
+    <section class="grounds-hero" aria-labelledby="grounds-page-title">
+      <div class="container grounds-hero__layout">
+        <div class="grounds-hero__content">
+          <p class="grounds-eyebrow">Offshore route guide</p>
 
-        <p class="hero-copy">
-          This page outlines the offshore route areas used for Mesopelagic Anglers charters, including fishing grounds
-          around Mactan, Caubian, Camotes Sea, Middle Pass, and the Danajon Bank route.
-        </p>
+          <h1 id="grounds-page-title">Explore Our Fishing Grounds</h1>
 
-        <figure class="spots-map-hero-card">
-          <img src="images/maps-1.png" alt="Route reference map showing offshore fishing grounds near Mactan, Caubian, and Camotes Sea">
+          <p class="grounds-hero__lead">
+            Compare the Middle Pass and Caubian Islands with the deeper Danajon Bank route.
+          </p>
 
-          <figcaption>
-            <strong>Route Reference Map</strong>
-            <span>Lapu-Lapu City · Caubian route · Camotes Sea approach</span>
+          <div class="grounds-hero__actions">
+            <a class="btn btn-primary" href="#compare-routes">Compare the routes</a>
+            <a class="btn btn-outline" href="#route-planning">How routes are selected</a>
+          </div>
+        </div>
+
+        <figure class="grounds-map-card">
+          <div class="grounds-map-card__image">
+            <img
+              src="images/maps-1.png"
+              alt="Reference map showing the offshore route from Mactan toward Caubian and the Camotes Sea"
+            >
+          </div>
+
+          <figcaption class="grounds-map-card__caption">
+            <div>
+              <span class="grounds-map-card__label">Route reference</span>
+              <strong>Mactan → Caubian → Danajon approach</strong>
+            </div>
+            <span class="grounds-map-card__note">
+              Actual fishing grounds may change with current, weather, and safety conditions.
+            </span>
           </figcaption>
         </figure>
+
+        <ul class="grounds-hero__facts" aria-label="Important route facts">
+          <li>
+            <strong>Private charter</strong>
+            <span>Maximum of four anglers</span>
+          </li>
+          <li>
+            <strong>Condition-led</strong>
+            <span>Final route depends on sea and weather conditions</span>
+          </li>
+          <li>
+            <strong>Flexible sessions</strong>
+            <span>Daytime, nocturnal, and extended options</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ROUTE LOGIC -->
-    <section class="section spots-logic-section">
+    <!-- ROUTE COMPARISON -->
+    <section class="grounds-section grounds-comparison" id="compare-routes" aria-labelledby="compare-routes-title">
       <div class="container">
-        <div class="spots-section-header">
-          <h2 class="section-title">Route Selection Logic</h2>
-
-          <p class="section-copy">
-            Fishing spots are selected based on structure, current movement, session type, target species,
-            and route suitability for the day.
+        <header class="grounds-section-heading grounds-section-heading--center">
+          <p class="grounds-eyebrow">At a glance</p>
+          <h2 id="compare-routes-title">Choose the route profile that fits your group</h2>
+          <p>
+            The two routes are not simply “near” and “far.” They offer different
+            water structures, travel demands, fishing methods, and levels of offshore exposure.
           </p>
-        </div>
+        </header>
 
-        <div class="spots-logic-grid">
-          <article class="spots-logic-card">
-            <span>01</span>
-            <h3>Current Breaks</h3>
-            <p>
-              Moving water can create feeding lanes where predators ambush baitfish near reef edges,
-              walls, and pass systems.
+        <div class="route-comparison-grid">
+          <article class="route-summary-card route-summary-card--premium">
+            <div class="route-summary-card__topline">
+              <span class="route-tier-label">Tier 1 · Premium</span>
+              <span class="route-number">01</span>
+            </div>
+
+            <h3>The Middle Pass &amp; Caubian Islands</h3>
+
+            <p class="route-summary-card__intro">
+              A versatile reef-and-pass route built around current breaks,
+              wall edges, drop-offs, and structured fishing grounds near the
+              Caubian side of the Danajon system.
             </p>
+
+            <dl class="route-summary-card__specs">
+              <div>
+                <dt>Route character</dt>
+                <dd>Reef edges, walls, passes, and moderate-to-deep structure</dd>
+              </div>
+              <div>
+                <dt>Best suited to</dt>
+                <dd>First-time offshore guests and private groups seeking variety</dd>
+              </div>
+              <div>
+                <dt>Primary methods</dt>
+                <dd>Jigging, trolling, casting, and controlled drift fishing</dd>
+              </div>
+              <div>
+                <dt>Potential targets</dt>
+                <dd>Trevally, Spanish mackerel, barracuda, grouper, and snapper</dd>
+              </div>
+            </dl>
+
+            <a class="route-text-link" href="#middle-pass-route">
+              Explore this route
+              <span aria-hidden="true">→</span>
+            </a>
           </article>
 
-          <article class="spots-logic-card">
-            <span>02</span>
-            <h3>Drop-Offs &amp; Seamounts</h3>
-            <p>
-              Deeper structure provides access to reef predators, bottom fish, and larger fish holding
-              near underwater terrain changes.
-            </p>
-          </article>
+          <article class="route-summary-card route-summary-card--ultra">
+            <div class="route-summary-card__topline">
+              <span class="route-tier-label">Tier 2 · Ultra-Premium</span>
+              <span class="route-number">02</span>
+            </div>
 
-          <article class="spots-logic-card">
-            <span>03</span>
-            <h3>Session Matching</h3>
-            <p>
-              Daytime, nocturnal, and full-day sessions are matched with different feeding windows,
-              water movement, and offshore conditions.
+            <h3>The Deep Blue Danajon Banks</h3>
+
+            <p class="route-summary-card__intro">
+              A longer-range offshore route designed for deeper water,
+              wider search coverage, heavier tackle, and more demanding
+              planning toward the outer bank and Camotes Sea approach.
             </p>
+
+            <dl class="route-summary-card__specs">
+              <div>
+                <dt>Route character</dt>
+                <dd>Outer passes, deeper slopes, offshore water, and extended coverage</dd>
+              </div>
+              <div>
+                <dt>Best suited to</dt>
+                <dd>Experienced guests and groups comfortable with longer offshore travel</dd>
+              </div>
+              <div>
+                <dt>Primary methods</dt>
+                <dd>High-speed trolling, popping, deep jigging, and bottom dropping</dd>
+              </div>
+              <div>
+                <dt>Potential targets</dt>
+                <dd>Tuna, amberjack, Spanish mackerel, barracuda, grouper, and deep snapper</dd>
+              </div>
+            </dl>
+
+            <a class="route-text-link" href="#deep-blue-route">
+              Explore this route
+              <span aria-hidden="true">→</span>
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- TIER 1 GROUNDS -->
-    <section class="section spots-tier-info-section" id="tier-one-grounds">
+    <!-- PLANNING LOGIC -->
+    <section class="grounds-section route-planning-section" id="route-planning" aria-labelledby="route-planning-title">
       <div class="container">
-        <div class="spots-tier-heading">
-          <h2 class="section-title">The Middle Pass &amp; Caubian Islands</h2>
-          <span class="spots-tier-badge">Tier 1 Premium Route</span>
+        <div class="route-planning-layout">
+          <header class="grounds-section-heading">
+            <p class="grounds-eyebrow">How the captain decides</p>
+            <h2 id="route-planning-title">Fishing grounds are selected by conditions, not by a fixed pin</h2>
+            <p>
+              Offshore fishing is dynamic. Productive water can shift as current,
+              bait movement, wind, tide, and visibility change. A responsible charter
+              therefore treats every named area as a route zone rather than a guaranteed spot.
+            </p>
+          </header>
 
-          <p class="section-copy">
-            This route focuses on Caubian-side waters, the Middle Pass, reef edges, current breaks,
-            drop-offs, and selected Danajon Bank fishing grounds.
-          </p>
+          <div class="route-planning-grid">
+            <article class="planning-card">
+              <span class="planning-card__number">01</span>
+              <div>
+                <h3>Current and tide</h3>
+                <p>
+                  Passes, wall edges, and reef corners can concentrate bait when moving water
+                  forms pressure zones and feeding lanes.
+                </p>
+              </div>
+            </article>
+
+            <article class="planning-card">
+              <span class="planning-card__number">02</span>
+              <div>
+                <h3>Underwater structure</h3>
+                <p>
+                  Drop-offs, slopes, reef ledges, and deeper bottom contours determine where
+                  different fish may hold and which tackle is practical.
+                </p>
+              </div>
+            </article>
+
+            <article class="planning-card">
+              <span class="planning-card__number">03</span>
+              <div>
+                <h3>Target and technique</h3>
+                <p>
+                  Trolling covers water for mobile pelagic fish, while jigging and bottom
+                  dropping work specific depths and structure.
+                </p>
+              </div>
+            </article>
+
+            <article class="planning-card">
+              <span class="planning-card__number">04</span>
+              <div>
+                <h3>Safety and comfort</h3>
+                <p>
+                  Wind, swell, travel time, guest experience, and vessel limits always take
+                  priority over reaching a planned fishing ground.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="spots-route-profile">
-          <figure class="spots-route-image">
-            <img src="images/fishing-time.png" alt="Tier 1 fishing trip showing catch and anglers">
+    <!-- ROUTE 1 -->
+    <section class="grounds-section route-dossier route-dossier--premium" id="middle-pass-route" aria-labelledby="middle-pass-title">
+      <div class="container">
+        <header class="route-dossier__header">
+          <div class="route-dossier__title-block">
+            <span class="route-tier-label">Tier 1 · Premium route</span>
+            <p class="route-dossier__kicker">Reef walls · current breaks · versatile techniques</p>
+            <h2 id="middle-pass-title">The Middle Pass &amp; Caubian Islands</h2>
+            <p>
+              This route explores the Caubian-side passages and structured edges of the
+              Danajon reef system. It is the more versatile option for groups that want a
+              mix of trolling, jigging, casting, and bottom-oriented fishing without making
+              the deepest offshore route the sole focus.
+            </p>
+          </div>
+
+          <figure class="route-dossier__image">
+            <img
+              src="images/fishing-time.png"
+              alt="Anglers displaying their catch during a Mesopelagic Anglers fishing trip"
+              loading="lazy"
+            >
           </figure>
+        </header>
 
-          <article class="spots-profile-panel">
-            <h3>Route Profile</h3>
-
-            <ul>
-              <li><strong>Capacity:</strong> Maximum 4 anglers</li>
-              <li><strong>Sessions:</strong> Morning, Afternoon, Nocturnal Night, or Full-Day Marathon</li>
-              <li><strong>Best For:</strong> Private groups, reef-edge routes, current breaks, and Caubian-side fishing areas</li>
-            </ul>
-          </article>
+        <div class="route-profile-strip" aria-label="Middle Pass and Caubian route profile">
+          <div>
+            <span>Capacity</span>
+            <strong>Up to 4 anglers</strong>
+          </div>
+          <div>
+            <span>Experience level</span>
+            <strong>Accessible to mixed groups</strong>
+          </div>
+          <div>
+            <span>Fishing environment</span>
+            <strong>Passes, walls, reefs, drop-offs</strong>
+          </div>
+          <div>
+            <span>Trip emphasis</span>
+            <strong>Variety and adaptable routing</strong>
+          </div>
         </div>
 
-        <div class="spots-ground-stack">
-          <article class="spots-ground-row">
-            <span class="spots-ground-number">01</span>
+        <div class="fishing-zone-list">
+          <article class="fishing-zone-card">
+            <div class="fishing-zone-card__heading">
+              <span class="fishing-zone-card__number">01</span>
+              <div>
+                <p class="fishing-zone-card__type">Wall and drop-off zone</p>
+                <h3>The Caubian Wall &amp; Deep Drop-Offs</h3>
+              </div>
+            </div>
 
-            <div class="spots-ground-copy">
-              <h3>The Caubian Wall &amp; Deep Drop-Offs</h3>
+            <p class="fishing-zone-card__summary">
+              A structured edge where changing depth and moving water can create
+              productive lanes for predators travelling along the reef boundary.
+            </p>
 
-              <div class="spots-ground-details">
-                <p>
-                  <strong>Daytime Targets:</strong>
-                  Mamsa / Giant Trevally, Tanguigue / Spanish Mackerel, and large Barracuda.
-                </p>
-
-                <p>
-                  <strong>Nighttime Targets:</strong>
-                  Bigeye Trevally and Barracuda feeding under blue light support.
-                </p>
-
-                <p>
-                  <strong>Techniques:</strong>
-                  Shallow-water jigging and high-speed trolling.
-                </p>
+            <div class="fishing-zone-card__details">
+              <div>
+                <span class="detail-label">Potential daytime targets</span>
+                <p>Giant trevally, Spanish mackerel, and barracuda.</p>
+              </div>
+              <div>
+                <span class="detail-label">Potential nighttime targets</span>
+                <p>Bigeye trevally and barracuda around illuminated or bait-active water.</p>
+              </div>
+              <div>
+                <span class="detail-label">Typical techniques</span>
+                <p>Jigging along depth changes and trolling across productive edges.</p>
               </div>
             </div>
           </article>
 
-          <article class="spots-ground-row">
-            <span class="spots-ground-number">02</span>
+          <article class="fishing-zone-card">
+            <div class="fishing-zone-card__heading">
+              <span class="fishing-zone-card__number">02</span>
+              <div>
+                <p class="fishing-zone-card__type">Bottom-structure zone</p>
+                <h3>The Outer Barrier Seamounts</h3>
+              </div>
+            </div>
 
-            <div class="spots-ground-copy">
-              <h3>The Outer Barrier Seamounts</h3>
+            <p class="fishing-zone-card__summary">
+              Deeper underwater rises and outer-reef structure where precise depth control
+              becomes more important than simply covering distance.
+            </p>
 
-              <div class="spots-ground-details">
-                <p>
-                  <strong>Targets:</strong>
-                  Lapu-Lapu / Grouper, Ahaan / Red Snapper, and Katambak / Longnose Emperor.
-                </p>
-
-                <p>
-                  <strong>Techniques:</strong>
-                  Slow-pitch vertical jigging.
-                </p>
+            <div class="fishing-zone-card__details">
+              <div>
+                <span class="detail-label">Potential targets</span>
+                <p>Grouper, red snapper, emperor fish, and other structure-associated species.</p>
+              </div>
+              <div>
+                <span class="detail-label">Typical techniques</span>
+                <p>Slow-pitch or vertical jigging presented close to the bottom contour.</p>
+              </div>
+              <div>
+                <span class="detail-label">What anglers should expect</span>
+                <p>More technical depth management and repeated controlled drifts.</p>
               </div>
             </div>
           </article>
 
-          <article class="spots-ground-row">
-            <span class="spots-ground-number">03</span>
+          <article class="fishing-zone-card">
+            <div class="fishing-zone-card__heading">
+              <span class="fishing-zone-card__number">03</span>
+              <div>
+                <p class="fishing-zone-card__type">Current-driven passage</p>
+                <h3>The Middle Pass Drift</h3>
+              </div>
+            </div>
 
-            <div class="spots-ground-copy">
-              <h3>The Middle Pass Drift</h3>
+            <p class="fishing-zone-card__summary">
+              A passage-oriented route where the boat can work moving water, bait signs,
+              and surface activity rather than remaining over one fixed piece of structure.
+            </p>
 
-              <div class="spots-ground-details">
-                <p>
-                  <strong>Targets:</strong>
-                  Schooling jacks and migrating Yellowfin Tuna.
-                </p>
-
-                <p>
-                  <strong>Techniques:</strong>
-                  Light-tackle casting or shallow-water trolling.
-                </p>
+            <div class="fishing-zone-card__details">
+              <div>
+                <span class="detail-label">Potential targets</span>
+                <p>Schooling jacks and passing pelagic fish, including tuna when present.</p>
+              </div>
+              <div>
+                <span class="detail-label">Typical techniques</span>
+                <p>Light-tackle casting, shallow trolling, and drift presentations.</p>
+              </div>
+              <div>
+                <span class="detail-label">What anglers should expect</span>
+                <p>A mobile search pattern guided by current seams and visible bait activity.</p>
               </div>
             </div>
           </article>
@@ -184,126 +378,193 @@
       </div>
     </section>
 
-    <!-- TIER 2 GROUNDS -->
-    <section class="section spots-tier-info-section spots-tier-alt" id="tier-two-grounds">
+    <!-- ROUTE 2 -->
+    <section class="grounds-section route-dossier route-dossier--ultra" id="deep-blue-route" aria-labelledby="deep-blue-title">
       <div class="container">
-        <div class="spots-tier-heading">
-          <h2 class="section-title">The Deep Blue Danajon Banks</h2>
-          <span class="spots-tier-badge ultra">Tier 2 Ultra-Premium Route</span>
+        <header class="route-dossier__header route-dossier__header--reverse">
+          <div class="route-dossier__title-block">
+            <span class="route-tier-label">Tier 2 · Ultra-Premium route</span>
+            <p class="route-dossier__kicker">Longer range · deeper water · heavier tackle</p>
+            <h2 id="deep-blue-title">The Deep Blue Danajon Banks</h2>
+            <p>
+              This extended route pushes farther toward the outer Danajon Bank and the
+              Camotes Sea approach. It is intended for guests who understand that longer
+              travel, deeper presentations, and a more demanding offshore environment are
+              part of the experience.
+            </p>
+          </div>
 
-          <p class="section-copy">
-            This route is designed for longer offshore coverage, deeper fishing grounds, and more demanding
-            route planning around the Danajon Bank and Camotes Sea approach.
-          </p>
-        </div>
-
-        <div class="spots-route-profile reverse">
-          <figure class="spots-route-image">
-            <img src="images/fishing-time-2.png" alt="Tier 2 offshore fishing trip showing large catch">
+          <figure class="route-dossier__image">
+            <img
+              src="images/fishing-time-2.png"
+              alt="Large offshore catch from a Mesopelagic Anglers fishing trip"
+              loading="lazy"
+            >
           </figure>
+        </header>
 
-          <article class="spots-profile-panel">
-            <h3>Route Profile</h3>
-
-            <ul>
-              <li><strong>Capacity:</strong> Maximum 4 anglers</li>
-              <li><strong>Sessions:</strong> Morning, Afternoon, Nocturnal Night, or Full-Day Marathon</li>
-              <li><strong>Best For:</strong> Experienced guests, deeper routes, extended coverage, and sportfishing groups</li>
-            </ul>
-          </article>
+        <div class="route-profile-strip" aria-label="Deep Blue Danajon route profile">
+          <div>
+            <span>Capacity</span>
+            <strong>Up to 4 anglers</strong>
+          </div>
+          <div>
+            <span>Experience level</span>
+            <strong>Best for experienced guests</strong>
+          </div>
+          <div>
+            <span>Fishing environment</span>
+            <strong>Outer passes, slopes, deep water</strong>
+          </div>
+          <div>
+            <span>Trip emphasis</span>
+            <strong>Range, depth, and heavy tackle</strong>
+          </div>
         </div>
 
-        <div class="spots-ground-stack">
-          <article class="spots-ground-row">
-            <span class="spots-ground-number">01</span>
+        <div class="fishing-zone-list">
+          <article class="fishing-zone-card">
+            <div class="fishing-zone-card__heading">
+              <span class="fishing-zone-card__number">01</span>
+              <div>
+                <p class="fishing-zone-card__type">Outer passage and pelagic search zone</p>
+                <h3>The Northeast Pass</h3>
+              </div>
+            </div>
 
-            <div class="spots-ground-copy">
-              <h3>The Northeast Pass</h3>
+            <p class="fishing-zone-card__summary">
+              The Camotes Sea-facing approach provides wider water coverage and access to
+              deeper travel lanes where mobile pelagic species may be encountered.
+            </p>
 
-              <div class="spots-ground-details">
-                <p>
-                  <strong>Route Area:</strong>
-                  Camotes Sea border.
-                </p>
-
-                <p>
-                  <strong>Targets:</strong>
-                  Yellowfin Tuna, Dogtooth Tuna, Tanguigue / Spanish Mackerel, Barracuda,
-                  and deep-dwelling Ruby Snapper.
-                </p>
-
-                <p>
-                  <strong>Techniques:</strong>
-                  High-speed trolling, topwater popping, and deep-drop jigging.
-                </p>
+            <div class="fishing-zone-card__details">
+              <div>
+                <span class="detail-label">Potential targets</span>
+                <p>Yellowfin tuna, dogtooth tuna, Spanish mackerel, barracuda, and deep snapper.</p>
+              </div>
+              <div>
+                <span class="detail-label">Typical techniques</span>
+                <p>High-speed trolling, topwater casting, deep jigging, and selected drops.</p>
+              </div>
+              <div>
+                <span class="detail-label">What anglers should expect</span>
+                <p>Longer search runs and technique changes based on bait, birds, and sonar marks.</p>
               </div>
             </div>
           </article>
 
-          <article class="spots-ground-row">
-            <span class="spots-ground-number">02</span>
+          <article class="fishing-zone-card">
+            <div class="fishing-zone-card__heading">
+              <span class="fishing-zone-card__number">02</span>
+              <div>
+                <p class="fishing-zone-card__type">Pass and reef-transition zone</p>
+                <h3>The Caubian Middle Pass</h3>
+              </div>
+            </div>
 
-            <div class="spots-ground-copy">
-              <h3>The Caubian Middle Pass</h3>
+            <p class="fishing-zone-card__summary">
+              A transition area where current, reef structure, and deeper open water meet,
+              allowing the crew to shift between casting, trolling, and jigging.
+            </p>
 
-              <div class="spots-ground-details">
-                <p>
-                  <strong>Daytime Targets:</strong>
-                  Mamsa / Giant Trevally, Amberjack, and passing Yellowfin Tuna.
-                </p>
-
-                <p>
-                  <strong>Nighttime Targets:</strong>
-                  Bigeye Trevally and Barracuda around reef-patrolling areas.
-                </p>
+            <div class="fishing-zone-card__details">
+              <div>
+                <span class="detail-label">Potential daytime targets</span>
+                <p>Giant trevally, amberjack, and passing tuna when conditions align.</p>
+              </div>
+              <div>
+                <span class="detail-label">Potential nighttime targets</span>
+                <p>Bigeye trevally and barracuda around bait-active reef patrol areas.</p>
+              </div>
+              <div>
+                <span class="detail-label">Typical techniques</span>
+                <p>Jigging, casting, trolling, and drift work selected by current strength.</p>
               </div>
             </div>
           </article>
 
-          <article class="spots-ground-row">
-            <span class="spots-ground-number">03</span>
+          <article class="fishing-zone-card">
+            <div class="fishing-zone-card__heading">
+              <span class="fishing-zone-card__number">03</span>
+              <div>
+                <p class="fishing-zone-card__type">Deep bottom and slope zone</p>
+                <h3>The Danajon Deep Drop</h3>
+              </div>
+            </div>
 
-            <div class="spots-ground-copy">
-              <h3>The Danajon Deep Drop</h3>
+            <p class="fishing-zone-card__summary">
+              A depth-focused section intended for heavier presentations near deep slopes
+              and bottom structure, where tackle control and boat positioning are critical.
+            </p>
 
-              <div class="spots-ground-details">
-                <p>
-                  <strong>Targets:</strong>
-                  Lapu-Lapu / Grouper, Ahaan / Red Snapper, Dogtooth Tuna, and Amberjack.
-                </p>
-
-                <p>
-                  <strong>Techniques:</strong>
-                  Slow-pitch vertical jigging and heavy-tackle bottom dropping with electric reel support.
-                </p>
+            <div class="fishing-zone-card__details">
+              <div>
+                <span class="detail-label">Potential targets</span>
+                <p>Grouper, red snapper, dogtooth tuna, amberjack, and other deep structure fish.</p>
+              </div>
+              <div>
+                <span class="detail-label">Typical techniques</span>
+                <p>Slow-pitch jigging and heavy bottom dropping with electric-reel support when appropriate.</p>
+              </div>
+              <div>
+                <span class="detail-label">What anglers should expect</span>
+                <p>Heavier gear, longer retrieves, and highly controlled positioning over depth.</p>
               </div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPECTATIONS -->
+    <section class="grounds-section expectations-section" aria-labelledby="expectations-title">
+      <div class="container">
+        <div class="expectations-card">
+          <div>
+            <p class="grounds-eyebrow">Responsible expectations</p>
+            <h2 id="expectations-title">A route description is not a catch guarantee</h2>
+          </div>
+
+          <div class="expectations-card__content">
+            <p>
+              Target species describe the type of fish associated with the planned environment
+              and techniques. Actual encounters depend on season, water conditions, fish movement,
+              regulations, and natural variability.
+            </p>
+            <p>
+              The Danajon Bank is a rare and ecologically important double-barrier reef system.
+              Guests should follow the captain’s instructions, respect protected areas, and use
+              responsible handling and release practices whenever required.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section spots-cta-section">
-      <div class="container spots-cta-box">
-        <h2 class="section-title">Need Help Choosing a Route?</h2>
+    <section class="grounds-section grounds-cta" aria-labelledby="grounds-cta-title">
+      <div class="container">
+        <div class="grounds-cta__box">
+          <div>
+            <p class="grounds-eyebrow">Plan your charter</p>
+            <h2 id="grounds-cta-title">Not sure which route matches your group?</h2>
+            <p>
+              Send your preferred date, session, target species, group size, and offshore
+              experience. The team will recommend the most practical route for the expected conditions.
+            </p>
+          </div>
 
-        <p class="section-copy">
-          Share your target species, preferred session, group size, and comfort level. The team can recommend
-          the more practical fishing route based on route suitability and expected offshore conditions.
-        </p>
-
-        <div class="hero-actions" style="justify-content:center;">
-          <a href="https://wa-psti.monday.com/boards/18415733375"
-             class="btn btn-primary"
-             target="_blank"
-             rel="noopener noreferrer">
-            Send Booking Inquiry
-          </a>
-
-          <a href="tiers.html" class="btn btn-outline">
-            Compare Tiers
-          </a>
+          <div class="grounds-cta__actions">
+            <a
+              class="btn btn-primary"
+              href="https://wa-psti.monday.com/boards/18415733375"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Send booking inquiry
+            </a>
+            <a class="btn btn-outline" href="tiers.html">Compare charter tiers</a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,165 @@
+/* =========================================================
+   CHARTER WINDOW CAPSULES
+   File: css/charter-windows.css
+   ========================================================= */
+
+.charter-intro {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+}
+
+.charter-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(520px, 1.18fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.charter-intro__heading h2 {
+  max-width: 11ch;
+}
+
+.charter-window-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.charter-window-card {
+  --window-accent: #1d6f99;
+  --window-accent-soft: rgba(29, 111, 153, 0.09);
+
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 0.9rem;
+  min-height: 142px;
+  padding: 1.15rem;
+  color: #102a3a;
+  text-decoration: none;
+  border: 1px solid rgba(16, 42, 58, 0.12);
+  border-radius: 18px;
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f4f8fa
+    );
+  box-shadow: 0 12px 32px rgba(4, 21, 45, 0.065);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.charter-window-card:hover,
+.charter-window-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--window-accent) 34%, transparent);
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      var(--window-accent-soft)
+    );
+  box-shadow: 0 16px 38px rgba(4, 21, 45, 0.1);
+}
+
+.charter-window-card--morning {
+  --window-accent: #b98224;
+  --window-accent-soft: rgba(225, 181, 98, 0.12);
+}
+
+.charter-window-card--afternoon {
+  --window-accent: #bb6538;
+  --window-accent-soft: rgba(223, 140, 85, 0.12);
+}
+
+.charter-window-card--night {
+  --window-accent: #5368a8;
+  --window-accent-soft: rgba(154, 168, 232, 0.13);
+}
+
+.charter-window-card--full {
+  --window-accent: #177d87;
+  --window-accent-soft: rgba(102, 217, 229, 0.13);
+}
+
+.charter-window-card__number {
+  color: var(--window-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.charter-window-card__label {
+  display: block;
+  color: var(--window-accent);
+  font-size: 0.61rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.charter-window-card h3 {
+  margin: 0.45rem 0 0;
+  color: #04152d;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.charter-window-card p {
+  margin: 0.55rem 0 0;
+  color: #647886;
+  font-size: 0.73rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.charter-window-card:focus-visible {
+  outline: 3px solid #66d9e5;
+  outline-offset: 4px;
+}
+
+#morning-session,
+#afternoon-session,
+#night-session,
+#full-day-session {
+  scroll-margin-top: 92px;
+}
+
+@media (max-width: 960px) {
+  .charter-intro__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charter-intro__heading h2 {
+    max-width: 15ch;
+  }
+
+  .charter-window-grid {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 580px) {
+  .charter-window-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charter-window-card {
+    min-height: 118px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .charter-window-card {
+    transition: none;
+  }
+
+  .charter-window-card:hover {
+    transform: none;
+  }
+}

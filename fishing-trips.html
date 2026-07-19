@@ -4,428 +4,511 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Tiers | Mesopelagic Anglers</title>
-  <meta name="description" content="Compare Mesopelagic Anglers Tier 1 Premium and Tier 2 Deluxe private offshore fishing expeditions from Mactan, Cebu.">
+  <title>Fishing Trips Gallery | Mesopelagic Anglers</title>
+  <meta
+    name="description"
+    content="Explore photos and videos from Mesopelagic Anglers fishing trips, customer outings, offshore adventures, catches, sunsets, and life aboard the boat."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/social-sticky.css">
+  <link rel="stylesheet" href="css/fishing-trips.css">
 </head>
 
 <body>
-    <div data-include="header"></div>
-    <div data-include="social-sticky"></div>
+  <div data-include="header"></div>
+  <div data-include="social-sticky"></div>
 
-    <main class="tiers-page">
-        <!-- HERO -->
-        <section class="tiers-page-hero">
-            <div class="container tiers-hero-grid">
-                <div class="tiers-hero-copy">
-                    <span class="section-label">Expedition Tiers</span>
+  <main class="trip-gallery-page">
+    <!-- HERO -->
+    <section class="trip-gallery-hero" aria-labelledby="trip-gallery-title">
+      <div class="container trip-gallery-hero__inner">
+        <p class="trip-gallery-eyebrow">Life aboard Mesopelagic Anglers</p>
 
-                    <h1>Choose the offshore route that matches your fishing ambition.</h1>
+        <h1 id="trip-gallery-title">Fishing Trips</h1>
 
-                    <p>
-                        Mesopelagic Anglers offers two private expedition tiers built around different fishing
-                        grounds, target species, route intensity, and offshore reach. Both are designed for
-                        private groups of up to four anglers.
-                    </p>
+        <p>
+          Real moments from customer outings, offshore runs, catches,
+          sunsets, and days aboard the Mesopelagic Anglers boat.
+        </p>
 
-                    <div class="hero-actions">
-                        <a href="#tier-comparison" class="btn btn-primary">Compare Tiers</a>
-                        <a href="contact.html" class="btn btn-dark">Send Booking Inquiry</a>
-                    </div>
-                </div>
+        <a class="trip-gallery-scroll" href="#trip-gallery">
+          View the gallery
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
 
-                <div class="tiers-hero-image">
-                    <img src="images/fishing-time-2.png" alt="Mesopelagic Anglers offshore fishing expedition">
-                </div>
+    <!-- INTRO -->
+    <section class="trip-gallery-intro">
+      <div class="container trip-gallery-intro__grid">
+        <div>
+          <p class="trip-gallery-eyebrow">Trip journal</p>
+          <h2>Stories told through the camera.</h2>
+        </div>
+
+        <div class="trip-gallery-intro__copy">
+          <p>
+            This page is a visual record of Mesopelagic Anglers trips.
+            It features the boat, the crew, customers, fishing activity,
+            catches, coastal views, and memorable moments from the water.
+          </p>
+
+          <p>
+            New photos and genuine trip videos can be added here as more
+            expeditions are completed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="trip-gallery-section" id="trip-gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="trip-gallery-heading">
+          <div>
+            <p class="trip-gallery-eyebrow">Photo and video gallery</p>
+            <h2 id="gallery-heading">Recent adventures</h2>
+          </div>
+
+          <div class="trip-gallery-filters" aria-label="Filter gallery items">
+            <button class="trip-filter is-active" type="button" data-filter="all">
+              All
+            </button>
+            <button class="trip-filter" type="button" data-filter="customers">
+              Customers
+            </button>
+            <button class="trip-filter" type="button" data-filter="catch">
+              Catches
+            </button>
+            <button class="trip-filter" type="button" data-filter="boat">
+              Boat Life
+            </button>
+            <button class="trip-filter" type="button" data-filter="scenery">
+              Scenery
+            </button>
+          </div>
+        </div>
+
+        <div class="trip-gallery-grid">
+          <button
+            class="trip-gallery-card trip-gallery-card--feature"
+            type="button"
+            data-category="customers catch"
+            data-gallery-src="images/536285494_1225848222889177_5043625951604212922_n.jpg"
+            data-gallery-alt="Customers displaying their catch during a Mesopelagic Anglers fishing trip"
+          >
+            <img
+              src="images/536285494_1225848222889177_5043625951604212922_n.jpg"
+              alt="Customers displaying their catch during a Mesopelagic Anglers fishing trip"
+              loading="eager"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Featured trip</span>
+              <strong>A day worth remembering</strong>
+              <small>Customer outing and fresh catch</small>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--tall"
+            type="button"
+            data-category="customers boat"
+            data-gallery-src="images/644425809_1384924303648234_7673595510810537828_n.jpg"
+            data-gallery-alt="Guests aboard the Mesopelagic Anglers boat"
+          >
+            <img
+              src="images/644425809_1384924303648234_7673595510810537828_n.jpg"
+              alt="Guests aboard the Mesopelagic Anglers boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Boat life</span>
+              <strong>Out on the water</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="catch customers"
+            data-gallery-src="images/682530505_1434188518721812_7770289035412447444_n.jpg"
+            data-gallery-alt="Fishing trip catch photographed aboard the boat"
+          >
+            <img
+              src="images/682530505_1434188518721812_7770289035412447444_n.jpg"
+              alt="Fishing trip catch photographed aboard the boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Catch</span>
+              <strong>The result of the chase</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="customers"
+            data-gallery-src="images/682992084_1434188548721809_4018429536833011259_n.jpg"
+            data-gallery-alt="Customers enjoying an offshore fishing trip"
+          >
+            <img
+              src="images/682992084_1434188548721809_4018429536833011259_n.jpg"
+              alt="Customers enjoying an offshore fishing trip"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Customers</span>
+              <strong>Shared offshore moments</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--wide"
+            type="button"
+            data-category="boat scenery"
+            data-gallery-src="images/683031450_1434188502055147_943364686898463989_n.jpg"
+            data-gallery-alt="View from the Mesopelagic Anglers boat during a fishing trip"
+          >
+            <img
+              src="images/683031450_1434188502055147_943364686898463989_n.jpg"
+              alt="View from the Mesopelagic Anglers boat during a fishing trip"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">On the water</span>
+              <strong>Beyond the shoreline</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="catch"
+            data-gallery-src="images/683245501_1434187972055200_4709095748128680428_n.jpg"
+            data-gallery-alt="Fresh offshore catch from a Mesopelagic Anglers trip"
+          >
+            <img
+              src="images/683245501_1434187972055200_4709095748128680428_n.jpg"
+              alt="Fresh offshore catch from a Mesopelagic Anglers trip"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Catch</span>
+              <strong>Offshore reward</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--tall"
+            type="button"
+            data-category="customers catch"
+            data-gallery-src="images/683389148_1434188302055167_2285264030603550985_n.jpg"
+            data-gallery-alt="Angler holding a catch aboard the Mesopelagic Anglers boat"
+          >
+            <img
+              src="images/683389148_1434188302055167_2285264030603550985_n.jpg"
+              alt="Angler holding a catch aboard the Mesopelagic Anglers boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Angler moment</span>
+              <strong>A catch for the camera</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="boat customers"
+            data-gallery-src="images/683539404_1434188442055153_5704225369062469666_n.jpg"
+            data-gallery-alt="Customer experience aboard the fishing boat"
+          >
+            <img
+              src="images/683539404_1434188442055153_5704225369062469666_n.jpg"
+              alt="Customer experience aboard the fishing boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Boat life</span>
+              <strong>Part of the journey</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="catch"
+            data-gallery-src="images/683546311_1434188608721803_1708772071397120849_n.jpg"
+            data-gallery-alt="Fish caught during a Mesopelagic Anglers expedition"
+          >
+            <img
+              src="images/683546311_1434188608721803_1708772071397120849_n.jpg"
+              alt="Fish caught during a Mesopelagic Anglers expedition"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Catch</span>
+              <strong>From sea to deck</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--wide"
+            type="button"
+            data-category="scenery boat"
+            data-gallery-src="images/684152012_1434188588721805_1148318638511611606_n.jpg"
+            data-gallery-alt="Open-water scenery during a Mesopelagic Anglers trip"
+          >
+            <img
+              src="images/684152012_1434188588721805_1148318638511611606_n.jpg"
+              alt="Open-water scenery during a Mesopelagic Anglers trip"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Scenery</span>
+              <strong>Blue water and open horizons</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="customers catch"
+            data-gallery-src="images/684230150_1434189122055085_5708986855777702905_n.jpg"
+            data-gallery-alt="Customer posing with a fish after an offshore trip"
+          >
+            <img
+              src="images/684230150_1434189122055085_5708986855777702905_n.jpg"
+              alt="Customer posing with a fish after an offshore trip"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Customers</span>
+              <strong>The trip highlight</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--tall"
+            type="button"
+            data-category="boat scenery"
+            data-gallery-src="images/684748907_1434188055388525_4212461628854999526_n.jpg"
+            data-gallery-alt="Life aboard the Mesopelagic Anglers boat"
+          >
+            <img
+              src="images/684748907_1434188055388525_4212461628854999526_n.jpg"
+              alt="Life aboard the Mesopelagic Anglers boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Boat life</span>
+              <strong>Between fishing grounds</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="customers"
+            data-gallery-src="images/684750194_1434188748721789_1870143518087854624_n.jpg"
+            data-gallery-alt="Guests enjoying their Mesopelagic Anglers experience"
+          >
+            <img
+              src="images/684750194_1434188748721789_1870143518087854624_n.jpg"
+              alt="Guests enjoying their Mesopelagic Anglers experience"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Customers</span>
+              <strong>Good company offshore</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="catch"
+            data-gallery-src="images/685017179_1434188155388515_5070270500638209915_n.jpg"
+            data-gallery-alt="Catch photographed during a fishing expedition"
+          >
+            <img
+              src="images/685017179_1434188155388515_5070270500638209915_n.jpg"
+              alt="Catch photographed during a fishing expedition"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Catch</span>
+              <strong>Another successful run</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--wide"
+            type="button"
+            data-category="customers boat"
+            data-gallery-src="images/685856760_1434189398721724_3901998489780786380_n.jpg"
+            data-gallery-alt="Group moment aboard the Mesopelagic Anglers boat"
+          >
+            <img
+              src="images/685856760_1434189398721724_3901998489780786380_n.jpg"
+              alt="Group moment aboard the Mesopelagic Anglers boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Trip memory</span>
+              <strong>Better shared with the crew</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card"
+            type="button"
+            data-category="scenery"
+            data-gallery-src="images/730414256_1484588130348517_3105433140253366812_n.jpg"
+            data-gallery-alt="Coastal scenery photographed during a fishing trip"
+          >
+            <img
+              src="images/730414256_1484588130348517_3105433140253366812_n.jpg"
+              alt="Coastal scenery photographed during a fishing trip"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Scenery</span>
+              <strong>The route itself is part of the story</strong>
+            </span>
+          </button>
+
+          <button
+            class="trip-gallery-card trip-gallery-card--tall"
+            type="button"
+            data-category="customers boat"
+            data-gallery-src="images/731883908_1484527510354579_8413813446820592292_n.jpg"
+            data-gallery-alt="Fishing trip moment aboard the Mesopelagic Anglers boat"
+          >
+            <img
+              src="images/731883908_1484527510354579_8413813446820592292_n.jpg"
+              alt="Fishing trip moment aboard the Mesopelagic Anglers boat"
+              loading="lazy"
+            >
+            <span class="trip-gallery-card__overlay">
+              <span class="trip-gallery-card__tag">Fishing trip</span>
+              <strong>Made for days like this</strong>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO READY SECTION -->
+    <section class="trip-video-section" aria-labelledby="trip-video-title">
+      <div class="container trip-video-layout">
+        <div class="trip-video-copy">
+          <p class="trip-gallery-eyebrow">Trip videos</p>
+          <h2 id="trip-video-title">More than still photographs.</h2>
+          <p>
+            This section is reserved for genuine Mesopelagic Anglers trip videos:
+            departures, trolling runs, catches, customer moments, and scenes aboard the boat.
+          </p>
+          <p>
+            Add the finished MP4 files to the <code>videos</code> folder, then replace the
+            placeholder cards with standard HTML video elements.
+          </p>
+        </div>
+
+        <div class="trip-video-placeholders">
+          <article class="trip-video-placeholder">
+            <span class="trip-video-placeholder__icon" aria-hidden="true">▶</span>
+            <div>
+              <strong>Customer trip highlight</strong>
+              <small>Video coming soon</small>
             </div>
-        </section>
+          </article>
 
-        <!-- QUICK COMPARISON -->
-        <section class="section tiers-comparison-section" id="tier-comparison">
-            <div class="container">
-                <span class="section-label">Quick Comparison</span>
-                <h2 class="section-title">Premium reef-edge route or deeper deluxe expedition?</h2>
-
-                <p class="section-copy">
-                    Use this comparison to understand the difference between the two packages before reviewing
-                    the detailed route profile below.
-                </p>
-
-                <div class="tiers-compare-grid">
-                    <article class="tiers-compare-card tier-premium-card">
-                        <div class="tiers-card-image">
-                            <img src="images/fishing-time.png" alt="Tier 1 Middle Pass and Caubian Islands fishing route">
-                        </div>
-
-                        <div class="tiers-card-body">
-                            <div class="tiers-title-row">
-                                <h3>Tier 1</h3>
-                                <span class="tiers-badge premium">Premium</span>
-                            </div>
-
-                            <h4>The Middle Pass &amp; Caubian Islands</h4>
-
-                            <p>
-                                A refined Danajon Bank route through rare double-barrier reef waters, current breaks,
-                                deep drop-offs, and productive Caubian-side structure.
-                            </p>
-
-                            <ul class="tiers-checklist">
-                                <li>Maximum 4 anglers</li>
-                                <li>Best for private groups and serious hobbyists</li>
-                                <li>Targets reef-edge predators and current-break species</li>
-                                <li>Available for morning, afternoon, nocturnal, or full-day sessions</li>
-                            </ul>
-
-                            <a href="#tier-one-details" class="btn btn-primary tiers-premium-btn">View Tier 1 Details</a>
-                        </div>
-                    </article>
-
-                    <article class="tiers-compare-card tier-deluxe-card">
-                        <div class="tiers-card-image">
-                            <img src="images/fishing-time-2.png" alt="Tier 2 Deep Blue Danajon Banks fishing route">
-                        </div>
-
-                        <div class="tiers-card-body">
-                            <div class="tiers-title-row">
-                                <h3>Tier 2</h3>
-                                <span class="tiers-badge deluxe">Ultra-Premium</span>
-                            </div>
-
-                            <h4>The Deep Blue Danajon Banks</h4>
-
-                            <p>
-                                A long-range offshore run for experienced anglers chasing heavier pelagics,
-                                deep-water reef predators, and high-adrenaline fishing grounds beyond Mactan.
-                            </p>
-
-                            <ul class="tiers-checklist">
-                                <li>Maximum 4 anglers</li>
-                                <li>Best for sportfishing teams and thrill-seekers</li>
-                                <li>Targets deeper offshore species and heavier pelagics</li>
-                                <li>Available for morning, afternoon, nocturnal, or full-day sessions</li>
-                            </ul>
-
-                            <a href="#tier-two-details" class="btn btn-primary tiers-deluxe-btn">View Tier 2 Details</a>
-                        </div>
-                    </article>
-                </div>
+          <article class="trip-video-placeholder">
+            <span class="trip-video-placeholder__icon" aria-hidden="true">▶</span>
+            <div>
+              <strong>Life aboard the boat</strong>
+              <small>Video coming soon</small>
             </div>
-        </section>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <!-- TIER 1 DETAILS -->
-        <section class="section tiers-detail-section" id="tier-one-details">
-            <div class="container">
-                <div class="tier-detail-header">
-                    <span class="section-label">Tier 1 Premium</span>
-                    <h2 class="section-title">The Middle Pass &amp; Caubian Islands</h2>
+    <!-- CTA -->
+    <section class="trip-gallery-cta">
+      <div class="container">
+        <div class="trip-gallery-cta__box">
+          <div>
+            <p class="trip-gallery-eyebrow">Create your own story</p>
+            <h2>Your next fishing trip could be featured here.</h2>
+            <p>
+              Plan a private offshore trip with Mesopelagic Anglers and experience
+              the boat, the fishing grounds, and the journey firsthand.
+            </p>
+          </div>
 
-                    <p class="section-copy">
-                        An exclusive journey to the Danajon Bank, one of only six double barrier reefs on Earth.
-                        Crossing the Middle Pass by the Caubian Islands, this tier drops lines into rare underwater
-                        topography where massive current breaks create a haven for game fish.
-                    </p>
-                </div>
+          <a
+            class="btn btn-primary"
+            href="https://wa-psti.monday.com/misc/vibe/full-page-app/board-view?board-subset-id=264487519&app-feature-id=22760943"
+          >
+            Book An Expedition
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <div class="tier-detail-grid">
-                    <article class="tier-detail-panel">
-                        <h3>Package Profile</h3>
+  <!-- LIGHTBOX -->
+  <div
+    class="trip-lightbox"
+    id="tripLightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded gallery image"
+    hidden
+  >
+    <button class="trip-lightbox__close" type="button" aria-label="Close image">
+      ×
+    </button>
 
-                        <ul class="tiers-info-list">
-                            <li><strong>Capacity:</strong> Maximum 4 anglers</li>
-                            <li><strong>Available Sessions:</strong> Morning, Afternoon, Nocturnal Night, or Full-Day Marathon</li>
-                            <li><strong>Session Lengths:</strong> 6 hours, 12 hours, or 14 hours depending on selected charter window</li>
-                            <li><strong>Rates:</strong> Rates vary by daytime or nocturnal sessions. Send us a DM at Mesopelagic Anglers for a fully tailored private quote.</li>
-                        </ul>
-                    </article>
+    <button
+      class="trip-lightbox__nav trip-lightbox__nav--previous"
+      type="button"
+      aria-label="Previous image"
+    >
+      ‹
+    </button>
 
-                    <article class="tier-detail-panel">
-                        <h3>Main Fishing Profile</h3>
+    <figure class="trip-lightbox__figure">
+      <img class="trip-lightbox__image" src="" alt="">
+      <figcaption class="trip-lightbox__caption"></figcaption>
+    </figure>
 
-                        <p>
-                            Tier 1 is built for private groups that want a premium reef-edge and current-break fishing
-                            route without pushing as far into the longer-range offshore grounds. It focuses on productive
-                            Danajon Bank structure, Caubian-side drop-offs, and moving-water zones where pelagic and reef
-                            predators actively feed.
-                        </p>
+    <button
+      class="trip-lightbox__nav trip-lightbox__nav--next"
+      type="button"
+      aria-label="Next image"
+    >
+      ›
+    </button>
+  </div>
 
-                        <ul class="tiers-fish-list">
-                            <li>Mamsa / Giant Trevally</li>
-                            <li>Tanguigue / Spanish Mackerel</li>
-                            <li>Barracuda</li>
-                            <li>Bigeye Trevally</li>
-                            <li>Lapu-Lapu / Trophy Grouper</li>
-                            <li>Ahaan / Red Snapper</li>
-                            <li>Katambak / Longnose Emperor</li>
-                            <li>Yellowfin Tuna</li>
-                        </ul>
-                    </article>
-                </div>
+  <div data-include="footer"></div>
 
-                <div class="targeted-grounds-block">
-                    <div class="targeted-grounds-heading">
-                        <span class="section-label">Targeted Fishing Grounds</span>
-                        <h3>Where Tier 1 focuses its fishing effort.</h3>
-                    </div>
-
-                    <div class="fishing-ground-stack">
-                        <article class="fishing-ground-card">
-                            <span>01</span>
-
-                            <div>
-                                <h3>The Caubian Wall &amp; Deep Drop-offs</h3>
-
-                                <div class="ground-detail-list">
-                                    <p>
-                                        <strong>Daytime Targets:</strong>
-                                        Aggressive Mamsa / Giant Trevally, trophy Tanguigue / Spanish Mackerel,
-                                        and large Barracuda.
-                                    </p>
-
-                                    <p>
-                                        <strong>Nighttime Targets:</strong>
-                                        Schooling Bigeye Trevally and predatory Barracuda feeding under the blue lights.
-                                    </p>
-
-                                    <p>
-                                        <strong>Techniques:</strong>
-                                        Shallow-water jigging and high-speed trolling.
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="fishing-ground-card">
-                            <span>02</span>
-
-                            <div>
-                                <h3>The Outer Barrier Seamounts</h3>
-
-                                <div class="ground-detail-list">
-                                    <p>
-                                        <strong>Targets:</strong>
-                                        Deep-dwelling Lapu-Lapu / Trophy Grouper, Ahaan / Red Snapper,
-                                        and Katambak / Longnose Emperor.
-                                    </p>
-
-                                    <p>
-                                        <strong>Techniques:</strong>
-                                        Slow-pitch vertical jigging.
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="fishing-ground-card">
-                            <span>03</span>
-
-                            <div>
-                                <h3>The Middle Pass Drift</h3>
-
-                                <div class="ground-detail-list">
-                                    <p>
-                                        <strong>Targets:</strong>
-                                        Schooling jacks and migrating Yellowfin Tuna.
-                                    </p>
-
-                                    <p>
-                                        <strong>Techniques:</strong>
-                                        Light-tackle casting or shallow-water trolling.
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TIER 2 DETAILS -->
-        <section class="section tiers-detail-section tier-two-detail-section" id="tier-two-details">
-            <div class="container">
-                <div class="tier-detail-header">
-                    <span class="section-label">Tier 2 Ultra-Premium</span>
-                    <h2 class="section-title">The Deep Blue Danajon Banks</h2>
-
-                    <p class="section-copy">
-                        Our ultimate long-range expedition for experienced anglers and thrill-seekers looking for
-                        an adrenaline rush. We leave Mactan far behind to target massive offshore sportfish,
-                        deep-water reef monsters, and heavy pelagics in the untamed channels of the Visayan Sea.
-                    </p>
-                </div>
-
-                <div class="tier-detail-grid">
-                    <article class="tier-detail-panel">
-                        <h3>Package Profile</h3>
-
-                        <ul class="tiers-info-list">
-                            <li><strong>Capacity:</strong> Maximum 4 anglers</li>
-                            <li><strong>Available Sessions:</strong> Morning, Afternoon, Nocturnal Night, or Full-Day Marathon</li>
-                            <li><strong>Session Lengths:</strong> 6 hours, 12 hours, or 14 hours depending on selected charter window</li>
-                            <li><strong>Rates:</strong> Exclusive custom packages are available for serious corporate groups and sportfishing teams. Drop us a message for current seasonal booking rates.</li>
-                        </ul>
-                    </article>
-
-                    <article class="tier-detail-panel">
-                        <h3>Main Fishing Profile</h3>
-
-                        <p>
-                            Tier 2 is the deeper, longer-range expedition for experienced anglers who want heavier
-                            offshore action. It is designed for larger pelagics, deep-water reef predators, and
-                            more demanding fishing grounds beyond the regular Mactan-side charter route.
-                        </p>
-
-                        <ul class="tiers-fish-list">
-                            <li>Yellowfin Tuna</li>
-                            <li>Dogtooth Tuna</li>
-                            <li>Tanguigue / Spanish Mackerel</li>
-                            <li>Barracuda</li>
-                            <li>Ruby Snapper</li>
-                            <li>Mamsa / Giant Trevally</li>
-                            <li>Amberjack</li>
-                            <li>Lapu-Lapu / Grouper</li>
-                            <li>Ahaan / Red Snapper</li>
-                        </ul>
-                    </article>
-                </div>
-
-                <div class="targeted-grounds-block">
-                    <div class="targeted-grounds-heading">
-                        <span class="section-label">Targeted Fishing Grounds</span>
-                        <h3>Where Tier 2 pushes farther offshore.</h3>
-                    </div>
-
-                    <div class="fishing-ground-stack">
-                        <article class="fishing-ground-card">
-                            <span>01</span>
-
-                            <div>
-                                <h3>The Northeast Pass</h3>
-
-                                <div class="ground-detail-list">
-                                    <p>
-                                        <strong>Route Area:</strong>
-                                        Camotes Sea border.
-                                    </p>
-
-                                    <p>
-                                        <strong>Targets:</strong>
-                                        Yellowfin Tuna, Dogtooth Tuna, Tanguigue / Spanish Mackerel,
-                                        Barracuda, and deep-dwelling Ruby Snapper.
-                                    </p>
-
-                                    <p>
-                                        <strong>Techniques:</strong>
-                                        High-speed trolling, topwater popping, and deep-drop jigging.
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="fishing-ground-card">
-                            <span>02</span>
-
-                            <div>
-                                <h3>The Caubian Middle Pass</h3>
-
-                                <div class="ground-detail-list">
-                                    <p>
-                                        <strong>Daytime Targets:</strong>
-                                        Trophy Mamsa / Giant Trevally, Amberjack, and passing Yellowfin Tuna.
-                                    </p>
-
-                                    <p>
-                                        <strong>Nighttime Targets:</strong>
-                                        Heavy shallow-water jigging for massive Bigeye Trevally and reef-patrolling Barracuda.
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="fishing-ground-card">
-                            <span>03</span>
-
-                            <div>
-                                <h3>The Danajon Deep Drop</h3>
-
-                                <div class="ground-detail-list">
-                                    <p>
-                                        <strong>Targets:</strong>
-                                        Trophy-sized Lapu-Lapu / Grouper, giant Ahaan / Red Snapper,
-                                        Dogtooth Tuna, and Amberjack.
-                                    </p>
-
-                                    <p>
-                                        <strong>Techniques:</strong>
-                                        Slow-pitch vertical jigging and heavy-tackle bottom dropping with electric reels.
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SESSION OPTIONS -->
-        <section class="section tiers-session-section">
-            <div class="container">
-                <span class="section-label">Available Sessions</span>
-                <h2 class="section-title">Both tiers can be matched with your preferred fishing window.</h2>
-
-                <div class="tiers-session-grid">
-                    <article>
-                        <h3>Morning</h3>
-                        <p>6 hours · 5:00 AM – 11:00 AM</p>
-                    </article>
-
-                    <article>
-                        <h3>Afternoon</h3>
-                        <p>6 hours · 1:00 PM – 7:00 PM</p>
-                    </article>
-
-                    <article>
-                        <h3>Nocturnal</h3>
-                        <p>12 hours · 5:00 PM – 5:00 AM</p>
-                    </article>
-
-                    <article>
-                        <h3>Full-Day</h3>
-                        <p>14 hours · 5:00 AM – 7:00 PM</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="section section-dark">
-            <div class="container cta-box">
-                <span class="section-label">Book Your Tier</span>
-                <h2 class="section-title">Ready to choose your route?</h2>
-
-                <p class="section-copy">
-                    Send your preferred tier, date, session, and group size. The team will review conditions,
-                    availability, and route suitability before confirming the best charter option.
-                </p>
-
-                <div class="hero-actions" style="justify-content: center;">
-                    <a href="contact.html" class="btn btn-primary">Send Booking Inquiry</a>
-                    <a href="charter.html" class="btn btn-dark">Review Charter Sessions</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div data-include="footer"></div>
-    <script src="assets/js/includes.js"></script>
-    <script src="assets/js/main.js"></script>
+  <script src="assets/js/includes.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/fishing-trips.js"></script>
 </body>
 </html>

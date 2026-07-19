@@ -1,0 +1,57 @@
+/* =========================================================
+   INDEX PAGE FADE-IN / SCROLL REVEAL
+   File: css/reveal.css
+   ========================================================= */
+
+/*
+  JavaScript adds .reveal-ready to <html>.
+  Until then, content remains visible so the page never appears blank
+  if JavaScript is unavailable.
+*/
+
+.reveal-ready .reveal-item {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-ready .reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero should appear quickly on initial page load. */
+.reveal-ready .hero .reveal-item {
+  transform: translateY(18px);
+  transition-duration: 850ms;
+}
+
+/* Slightly smaller movement for cards and repeated elements. */
+.reveal-ready .reveal-card {
+  transform: translateY(18px);
+}
+
+/* Avoid clipping animation shadows near cards. */
+.guides-card-grid,
+.session-grid,
+.package-card-grid,
+.faq-preview-list,
+.fleet-simple-list,
+.armory-simple-list {
+  overflow: visible;
+}
+
+/* Accessibility: respect the user's operating-system preference. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .reveal-item,
+  .reveal-ready .reveal-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+}

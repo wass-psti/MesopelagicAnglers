@@ -4808,7 +4808,8 @@ textarea:focus {
       rgba(13, 10, 61, 0.12) 68%,
       rgba(13, 10, 61, 0.00) 100%
     ),
-    url("../images/hero-boat3.png");
+    url("../images/hero_HDfied.png");
+    /*url("../images/hero-boat3.png");*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

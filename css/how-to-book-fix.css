@@ -1,16 +1,101 @@
-.booking-access-btn{
-background:#ff4fa3;
+.existing-booking-access {
+
+margin-top:32px;
+
+max-width:430px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,.08);
+
+border:
+1px solid rgba(255,255,255,.2);
+
+}
+
+
+.existing-access-header span {
+
+font-size:.65rem;
+
+font-weight:900;
+
+letter-spacing:.15em;
+
+color:#ff8bc7;
+
+}
+
+
+
+.existing-access-header h3 {
+
+margin:8px 0;
+
+font-size:1.15rem;
+
 color:white;
-border:none;
-box-shadow:0 10px 30px rgba(255,79,163,.35);
+
+font-weight:900;
+
 }
-.booking-access-btn:hover{
-background:#ff2d8f;
-transform:translateY(-2px);
-}
-.booking-access-user-note{
-margin-top:18px;
+
+
+
+.existing-access-header p {
+
+margin-bottom:18px;
+
 color:rgba(255,255,255,.75);
-font-size:.9rem;
+
+font-size:.85rem;
+
 line-height:1.6;
+
+}
+
+
+
+.booking-access-btn {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+      135deg,
+      #ff4fa3,
+      #ff2d8f
+    );
+
+    color:white;
+
+    font-weight:900;
+
+    text-decoration:none;
+
+    transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+}
+
+
+
+.booking-access-btn:hover {
+
+transform:translateY(-3px);
+
 }

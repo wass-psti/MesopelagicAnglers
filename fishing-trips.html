@@ -5,17 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Fishing Trips Gallery | Mesopelagic Anglers</title>
-  <meta
-    name="description"
-    content="Explore photos and videos from Mesopelagic Anglers fishing trips, customer outings, offshore adventures, catches, sunsets, and life aboard the boat."
-  >
+  <meta name="description" content="Explore photos and videos from Mesopelagic Anglers fishing trips, customer outings, offshore adventures, catches, sunsets, and life aboard the boat.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/header.css">
@@ -23,492 +17,109 @@
   <link rel="stylesheet" href="css/social-sticky.css">
   <link rel="stylesheet" href="css/fishing-trips.css">
 </head>
-
 <body>
   <div data-include="header"></div>
   <div data-include="social-sticky"></div>
 
   <main class="trip-gallery-page">
-    <!-- HERO -->
     <section class="trip-gallery-hero" aria-labelledby="trip-gallery-title">
       <div class="container trip-gallery-hero__inner">
         <p class="trip-gallery-eyebrow">Life aboard Mesopelagic Anglers</p>
-
         <h1 id="trip-gallery-title">Fishing Trips</h1>
-
-        <p>
-          Real moments from customer outings, offshore runs, catches,
-          sunsets, and days aboard the Mesopelagic Anglers boat.
-        </p>
-
-        <a class="trip-gallery-scroll" href="#trip-gallery">
-          View the gallery
-          <span aria-hidden="true">↓</span>
-        </a>
+        <p>Real moments from customer outings, offshore runs, catches, sunsets, and days aboard the Mesopelagic Anglers boat.</p>
+        <a class="trip-gallery-scroll" href="#trip-gallery">View the gallery <span aria-hidden="true">↓</span></a>
       </div>
     </section>
 
-    <!-- INTRO -->
     <section class="trip-gallery-intro">
       <div class="container trip-gallery-intro__grid">
         <div>
           <p class="trip-gallery-eyebrow">Trip journal</p>
           <h2>Stories told through the camera.</h2>
         </div>
-
         <div class="trip-gallery-intro__copy">
-          <p>
-            This page is a visual record of Mesopelagic Anglers trips.
-            It features the boat, the crew, customers, fishing activity,
-            catches, coastal views, and memorable moments from the water.
-          </p>
-
-          <p>
-            New photos and genuine trip videos can be added here as more
-            expeditions are completed.
-          </p>
+          <p>This page is a visual record of Mesopelagic Anglers trips. It features the boat, the crew, customers, fishing activity, catches, coastal views, and memorable moments from the water.</p>
+          <p>New photographs will continue to be added as more expeditions, customer outings, and offshore journeys are completed.</p>
         </div>
       </div>
     </section>
 
-    <!-- FILTERS -->
     <section class="trip-gallery-section" id="trip-gallery" aria-labelledby="gallery-heading">
       <div class="container">
         <div class="trip-gallery-heading">
           <div>
-            <p class="trip-gallery-eyebrow">Photo and video gallery</p>
+            <p class="trip-gallery-eyebrow">Photo gallery</p>
             <h2 id="gallery-heading">Recent adventures</h2>
           </div>
-
           <div class="trip-gallery-filters" aria-label="Filter gallery items">
-            <button class="trip-filter is-active" type="button" data-filter="all">
-              All
+            <button
+              class="trip-filter is-active"
+              type="button"
+              data-filter="documentation"
+              aria-pressed="true"
+            >
+              Documentation
             </button>
-            <button class="trip-filter" type="button" data-filter="customers">
-              Customers
-            </button>
-            <button class="trip-filter" type="button" data-filter="catch">
-              Catches
-            </button>
-            <button class="trip-filter" type="button" data-filter="boat">
-              Boat Life
-            </button>
-            <button class="trip-filter" type="button" data-filter="scenery">
-              Scenery
+
+            <button
+              class="trip-filter"
+              type="button"
+              data-filter="friends-catches"
+              aria-pressed="false"
+            >
+              Friends &amp; Catches
             </button>
           </div>
         </div>
 
-        <div class="trip-gallery-grid">
-          <button
-            class="trip-gallery-card trip-gallery-card--feature"
-            type="button"
-            data-category="customers catch"
-            data-gallery-src="images/536285494_1225848222889177_5043625951604212922_n.jpg"
-            data-gallery-alt="Customers displaying their catch during a Mesopelagic Anglers fishing trip"
-          >
-            <img
-              src="images/536285494_1225848222889177_5043625951604212922_n.jpg"
-              alt="Customers displaying their catch during a Mesopelagic Anglers fishing trip"
-              loading="eager"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Featured trip</span>
-              <strong>A day worth remembering</strong>
-              <small>Customer outing and fresh catch</small>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--tall"
-            type="button"
-            data-category="customers boat"
-            data-gallery-src="images/644425809_1384924303648234_7673595510810537828_n.jpg"
-            data-gallery-alt="Guests aboard the Mesopelagic Anglers boat"
-          >
-            <img
-              src="images/644425809_1384924303648234_7673595510810537828_n.jpg"
-              alt="Guests aboard the Mesopelagic Anglers boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Boat life</span>
-              <strong>Out on the water</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="catch customers"
-            data-gallery-src="images/682530505_1434188518721812_7770289035412447444_n.jpg"
-            data-gallery-alt="Fishing trip catch photographed aboard the boat"
-          >
-            <img
-              src="images/682530505_1434188518721812_7770289035412447444_n.jpg"
-              alt="Fishing trip catch photographed aboard the boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Catch</span>
-              <strong>The result of the chase</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="customers"
-            data-gallery-src="images/682992084_1434188548721809_4018429536833011259_n.jpg"
-            data-gallery-alt="Customers enjoying an offshore fishing trip"
-          >
-            <img
-              src="images/682992084_1434188548721809_4018429536833011259_n.jpg"
-              alt="Customers enjoying an offshore fishing trip"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Customers</span>
-              <strong>Shared offshore moments</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--wide"
-            type="button"
-            data-category="boat scenery"
-            data-gallery-src="images/683031450_1434188502055147_943364686898463989_n.jpg"
-            data-gallery-alt="View from the Mesopelagic Anglers boat during a fishing trip"
-          >
-            <img
-              src="images/683031450_1434188502055147_943364686898463989_n.jpg"
-              alt="View from the Mesopelagic Anglers boat during a fishing trip"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">On the water</span>
-              <strong>Beyond the shoreline</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="catch"
-            data-gallery-src="images/683245501_1434187972055200_4709095748128680428_n.jpg"
-            data-gallery-alt="Fresh offshore catch from a Mesopelagic Anglers trip"
-          >
-            <img
-              src="images/683245501_1434187972055200_4709095748128680428_n.jpg"
-              alt="Fresh offshore catch from a Mesopelagic Anglers trip"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Catch</span>
-              <strong>Offshore reward</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--tall"
-            type="button"
-            data-category="customers catch"
-            data-gallery-src="images/683389148_1434188302055167_2285264030603550985_n.jpg"
-            data-gallery-alt="Angler holding a catch aboard the Mesopelagic Anglers boat"
-          >
-            <img
-              src="images/683389148_1434188302055167_2285264030603550985_n.jpg"
-              alt="Angler holding a catch aboard the Mesopelagic Anglers boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Angler moment</span>
-              <strong>A catch for the camera</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="boat customers"
-            data-gallery-src="images/683539404_1434188442055153_5704225369062469666_n.jpg"
-            data-gallery-alt="Customer experience aboard the fishing boat"
-          >
-            <img
-              src="images/683539404_1434188442055153_5704225369062469666_n.jpg"
-              alt="Customer experience aboard the fishing boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Boat life</span>
-              <strong>Part of the journey</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="catch"
-            data-gallery-src="images/683546311_1434188608721803_1708772071397120849_n.jpg"
-            data-gallery-alt="Fish caught during a Mesopelagic Anglers expedition"
-          >
-            <img
-              src="images/683546311_1434188608721803_1708772071397120849_n.jpg"
-              alt="Fish caught during a Mesopelagic Anglers expedition"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Catch</span>
-              <strong>From sea to deck</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--wide"
-            type="button"
-            data-category="scenery boat"
-            data-gallery-src="images/684152012_1434188588721805_1148318638511611606_n.jpg"
-            data-gallery-alt="Open-water scenery during a Mesopelagic Anglers trip"
-          >
-            <img
-              src="images/684152012_1434188588721805_1148318638511611606_n.jpg"
-              alt="Open-water scenery during a Mesopelagic Anglers trip"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Scenery</span>
-              <strong>Blue water and open horizons</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="customers catch"
-            data-gallery-src="images/684230150_1434189122055085_5708986855777702905_n.jpg"
-            data-gallery-alt="Customer posing with a fish after an offshore trip"
-          >
-            <img
-              src="images/684230150_1434189122055085_5708986855777702905_n.jpg"
-              alt="Customer posing with a fish after an offshore trip"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Customers</span>
-              <strong>The trip highlight</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--tall"
-            type="button"
-            data-category="boat scenery"
-            data-gallery-src="images/684748907_1434188055388525_4212461628854999526_n.jpg"
-            data-gallery-alt="Life aboard the Mesopelagic Anglers boat"
-          >
-            <img
-              src="images/684748907_1434188055388525_4212461628854999526_n.jpg"
-              alt="Life aboard the Mesopelagic Anglers boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Boat life</span>
-              <strong>Between fishing grounds</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="customers"
-            data-gallery-src="images/684750194_1434188748721789_1870143518087854624_n.jpg"
-            data-gallery-alt="Guests enjoying their Mesopelagic Anglers experience"
-          >
-            <img
-              src="images/684750194_1434188748721789_1870143518087854624_n.jpg"
-              alt="Guests enjoying their Mesopelagic Anglers experience"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Customers</span>
-              <strong>Good company offshore</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="catch"
-            data-gallery-src="images/685017179_1434188155388515_5070270500638209915_n.jpg"
-            data-gallery-alt="Catch photographed during a fishing expedition"
-          >
-            <img
-              src="images/685017179_1434188155388515_5070270500638209915_n.jpg"
-              alt="Catch photographed during a fishing expedition"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Catch</span>
-              <strong>Another successful run</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--wide"
-            type="button"
-            data-category="customers boat"
-            data-gallery-src="images/685856760_1434189398721724_3901998489780786380_n.jpg"
-            data-gallery-alt="Group moment aboard the Mesopelagic Anglers boat"
-          >
-            <img
-              src="images/685856760_1434189398721724_3901998489780786380_n.jpg"
-              alt="Group moment aboard the Mesopelagic Anglers boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Trip memory</span>
-              <strong>Better shared with the crew</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card"
-            type="button"
-            data-category="scenery"
-            data-gallery-src="images/730414256_1484588130348517_3105433140253366812_n.jpg"
-            data-gallery-alt="Coastal scenery photographed during a fishing trip"
-          >
-            <img
-              src="images/730414256_1484588130348517_3105433140253366812_n.jpg"
-              alt="Coastal scenery photographed during a fishing trip"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Scenery</span>
-              <strong>The route itself is part of the story</strong>
-            </span>
-          </button>
-
-          <button
-            class="trip-gallery-card trip-gallery-card--tall"
-            type="button"
-            data-category="customers boat"
-            data-gallery-src="images/731883908_1484527510354579_8413813446820592292_n.jpg"
-            data-gallery-alt="Fishing trip moment aboard the Mesopelagic Anglers boat"
-          >
-            <img
-              src="images/731883908_1484527510354579_8413813446820592292_n.jpg"
-              alt="Fishing trip moment aboard the Mesopelagic Anglers boat"
-              loading="lazy"
-            >
-            <span class="trip-gallery-card__overlay">
-              <span class="trip-gallery-card__tag">Fishing trip</span>
-              <strong>Made for days like this</strong>
-            </span>
-          </button>
-        </div>
+        <div class="trip-gallery-grid" id="tripGalleryGrid"></div>
       </div>
     </section>
 
-    <!-- VIDEO READY SECTION -->
     <section class="trip-video-section" aria-labelledby="trip-video-title">
       <div class="container trip-video-layout">
         <div class="trip-video-copy">
           <p class="trip-gallery-eyebrow">Trip videos</p>
           <h2 id="trip-video-title">More than still photographs.</h2>
-          <p>
-            This section is reserved for genuine Mesopelagic Anglers trip videos:
-            departures, trolling runs, catches, customer moments, and scenes aboard the boat.
-          </p>
-          <p>
-            Add the finished MP4 files to the <code>videos</code> folder, then replace the
-            placeholder cards with standard HTML video elements.
-          </p>
+          <p>This section is reserved for genuine Mesopelagic Anglers trip videos: departures, trolling runs, catches, customer moments, and scenes aboard the boat.</p>
+          <p>Finished MP4 files can be added to the <code>videos</code> folder when genuine trip footage is available.</p>
         </div>
-
         <div class="trip-video-placeholders">
-          <article class="trip-video-placeholder">
-            <span class="trip-video-placeholder__icon" aria-hidden="true">▶</span>
-            <div>
-              <strong>Customer trip highlight</strong>
-              <small>Video coming soon</small>
-            </div>
-          </article>
-
-          <article class="trip-video-placeholder">
-            <span class="trip-video-placeholder__icon" aria-hidden="true">▶</span>
-            <div>
-              <strong>Life aboard the boat</strong>
-              <small>Video coming soon</small>
-            </div>
-          </article>
+          <article class="trip-video-placeholder"><span class="trip-video-placeholder__icon" aria-hidden="true">▶</span><div><strong>Customer trip highlight</strong><small>Video coming soon</small></div></article>
+          <article class="trip-video-placeholder"><span class="trip-video-placeholder__icon" aria-hidden="true">▶</span><div><strong>Life aboard the boat</strong><small>Video coming soon</small></div></article>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="trip-gallery-cta">
       <div class="container">
         <div class="trip-gallery-cta__box">
           <div>
             <p class="trip-gallery-eyebrow">Create your own story</p>
             <h2>Your next fishing trip could be featured here.</h2>
-            <p>
-              Plan a private offshore trip with Mesopelagic Anglers and experience
-              the boat, the fishing grounds, and the journey firsthand.
-            </p>
+            <p>Plan a private offshore trip with Mesopelagic Anglers and experience the boat, the fishing grounds, and the journey firsthand.</p>
           </div>
-
-          <a
-            class="btn btn-primary"
-            href="how-to-book.html"
-          >
-            Book An Expedition
-          </a>
+          <a class="btn btn-primary" href="how-to-book.html">Book An Expedition</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- LIGHTBOX -->
-  <div
-    class="trip-lightbox"
-    id="tripLightbox"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Expanded gallery image"
-    hidden
-  >
-    <button class="trip-lightbox__close" type="button" aria-label="Close image">
-      ×
-    </button>
-
-    <button
-      class="trip-lightbox__nav trip-lightbox__nav--previous"
-      type="button"
-      aria-label="Previous image"
-    >
-      ‹
-    </button>
-
+  <div class="trip-lightbox" id="tripLightbox" role="dialog" aria-modal="true" aria-label="Expanded gallery image" hidden>
+    <button class="trip-lightbox__close" type="button" aria-label="Close image">×</button>
+    <button class="trip-lightbox__nav trip-lightbox__nav--previous" type="button" aria-label="Previous image">‹</button>
     <figure class="trip-lightbox__figure">
       <img class="trip-lightbox__image" src="" alt="">
       <figcaption class="trip-lightbox__caption"></figcaption>
     </figure>
-
-    <button
-      class="trip-lightbox__nav trip-lightbox__nav--next"
-      type="button"
-      aria-label="Next image"
-    >
-      ›
-    </button>
+    <button class="trip-lightbox__nav trip-lightbox__nav--next" type="button" aria-label="Next image">›</button>
   </div>
 
   <div data-include="footer"></div>
 
   <script src="assets/js/includes.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/fishing-trips-gallery-data.js"></script>
   <script src="assets/js/fishing-trips.js"></script>
 </body>
 </html>

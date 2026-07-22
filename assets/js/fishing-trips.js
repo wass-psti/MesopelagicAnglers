@@ -17,23 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
     visibleCards = cards.filter((card) => !card.hidden);
   }
 
+  function applyFilter(selectedFilter) {
+    filters.forEach((filterButton) => {
+      const isActive = filterButton.dataset.filter === selectedFilter;
+      filterButton.classList.toggle("is-active", isActive);
+      filterButton.setAttribute("aria-pressed", String(isActive));
+    });
+
+    cards.forEach((card) => {
+      const categories = (card.dataset.category || "").split(" ");
+      card.hidden = !categories.includes(selectedFilter);
+    });
+
+    updateVisibleCards();
+  }
+
   filters.forEach((button) => {
     button.addEventListener("click", () => {
-      const selectedFilter = button.dataset.filter || "all";
-
-      filters.forEach((filterButton) => {
-        const isActive = filterButton === button;
-        filterButton.classList.toggle("is-active", isActive);
-        filterButton.setAttribute("aria-pressed", String(isActive));
-      });
-
-      cards.forEach((card) => {
-        const categories = (card.dataset.category || "").split(" ");
-        card.hidden =
-          selectedFilter !== "all" && !categories.includes(selectedFilter);
-      });
-
-      updateVisibleCards();
+      applyFilter(button.dataset.filter || "documentation");
     });
   });
 
@@ -113,10 +114,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  filters.forEach((button, index) => {
-    button.setAttribute(
-      "aria-pressed",
-      index === 0 ? "true" : "false"
-    );
-  });
+  const activeFilter =
+    filters.find((button) => button.classList.contains("is-active"))?.dataset.filter ||
+    "documentation";
+
+  applyFilter(activeFilter);
 });

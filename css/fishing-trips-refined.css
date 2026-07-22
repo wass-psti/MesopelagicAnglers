@@ -1,0 +1,104 @@
+/* =========================================================
+   FISHING TRIPS — FRIENDS & CATCHES REFINEMENTS
+   File: css/fishing-trips-refined.css
+   ========================================================= */
+
+/* Less-rounded gallery cards throughout the page. */
+.trip-gallery-card {
+  border-radius: 10px;
+}
+
+.trip-gallery-card img {
+  border-radius: 9px;
+}
+
+/*
+  Friends & Catches photographs use their complete image dimensions.
+  object-fit: contain prevents faces, catches, and group photos from being
+  cropped by the gallery card.
+*/
+.trip-gallery-card[data-category="friends-catches"] {
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  padding: 6px;
+  background: #eef3f6;
+  border-radius: 10px;
+}
+
+.trip-gallery-card[data-category="friends-catches"] img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 6px;
+  background: #eef3f6;
+}
+
+/*
+  Snapper is the main featured Friends & Catches image.
+  It fills a true two-column by two-row area and keeps the original
+  zoomed/cropped presentation.
+*/
+.trip-gallery-card[data-gallery-src="friends-and-catches/snapper.jpg"] {
+  grid-column: span 2;
+  grid-row: span 2;
+  width: 100%;
+  min-height: 516px;
+  aspect-ratio: auto;
+  padding: 0;
+  border-radius: 8px;
+  background: #dbe6ea;
+}
+
+.trip-gallery-card[data-gallery-src="friends-and-catches/snapper.jpg"] img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* Keep the featured caption readable over the enlarged photograph. */
+.trip-gallery-card[data-gallery-src="friends-and-catches/snapper.jpg"]::after {
+  display: block;
+  background: linear-gradient(
+    180deg,
+    transparent 42%,
+    rgba(2, 16, 26, 0.9) 100%
+  );
+}
+
+/* No dark caption gradient on caption-free images. */
+.trip-gallery-card--no-caption::after,
+.trip-gallery-card--no-caption::before {
+  display: none;
+}
+
+/* Lightbox images also display in full rather than being cropped. */
+.trip-lightbox__image {
+  max-width: min(92vw, 1500px);
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.trip-lightbox__caption[hidden] {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .trip-gallery-card[data-category="friends-catches"] {
+    aspect-ratio: 1 / 1;
+    padding: 4px;
+  }
+
+  .trip-gallery-card[data-gallery-src="friends-and-catches/snapper.jpg"] {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 380px;
+    aspect-ratio: auto;
+  }
+}

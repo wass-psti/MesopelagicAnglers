@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = visibleCards[currentIndex];
     const source = card.dataset.gallerySrc;
     const alt = card.dataset.galleryAlt || "Mesopelagic Anglers fishing trip";
+    const caption = card.dataset.galleryCaption || "";
 
     if (!source) {
       return;
@@ -55,7 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     lightboxImage.src = source;
     lightboxImage.alt = alt;
-    lightboxCaption.textContent = alt;
+    lightboxCaption.textContent = caption;
+    lightboxCaption.hidden = caption.length === 0;
   }
 
   function openLightbox(card) {

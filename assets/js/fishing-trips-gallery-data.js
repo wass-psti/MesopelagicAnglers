@@ -20,7 +20,7 @@
    * those extensions.
    */
   const diverPhoto = {
-    src: "images/Diver.png",
+    src: "images/diver.jpg",
     fallbackSources: [
       "images/Diver.jpg",
       "images/Diver.jpeg",
